@@ -1,0 +1,4 @@
+
+
+
+Create a schedule for me for the remainder of the project. Assume that I will be using an AI LLM like chatgpt to help me. Make the schedule detailed with a proper breakdown of tasks I need to do. You can do an hour wise breakdown if required. I am providing you with the template of the previous routine and my resume too. This is a portfolio project and I want to get hired as junior entry level job for data science so this project should have unique selling point and must leave impact on my fathers business

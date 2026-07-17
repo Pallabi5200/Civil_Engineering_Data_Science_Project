@@ -1,0 +1,1384 @@
+# PMPL Business Workflow
+
+Client identifies structural damage in Wind Turbine Foundation
+
+↓
+
+Client prepares Tender
+
+↓
+
+Contractor submits Quotation
+
+↓
+
+Client awards Work Order
+
+↓
+
+Engineering Team prepares BOQ
+
+↓
+
+Procurement Team creates Purchase Orders
+
+↓
+
+Supplier delivers materials
+
+↓
+
+Construction Activities
+
+• Excavation
+
+• Demolition
+
+• Pressure Grouting
+
+• Reinforcement
+
+• Concreting
+
+↓
+
+Proforma Invoice
+
+↓
+
+Tax Invoice
+
+↓
+
+Client Payment
+
+↓
+
+Project Completion
+
+↓
+
+Handing Over
+
+↓
+
+Warranty / Retention Release
+
+==================================================================
+
+Business Departments Involved
+
+Client
+
+↓
+
+Engineering
+
+↓
+
+Procurement
+
+↓
+
+Finance
+
+↓
+
+Construction
+
+↓
+
+Quality Control
+
+↓
+
+Management
+
+
+
+=======================================================================================
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Supplier
+
+↓
+
+Proforma Invoice
+
+↓
+
+Advance Payment
+
+↓
+
+Material Dispatch
+
+↓
+
+Tax Invoice
+
+↓
+
+Construction Activities
+
+↓
+
+Project Completion
+
+↓
+
+Handing Over
+
+↓
+
+Retention Release
+
+
+===================================================================================
+
+Updated workflow
+
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Proforma Invoice
+
+↓
+
+Advance Payment
+
+↓
+
+Material Dispatch
+
+↓
+
+Tax Invoice
+
+↓
+
+Construction
+
+↓
+
+Project Completion
+
+↓
+
+Handing Over
+
+↓
+
+Retention Release
+
+
+######################################################################
+
+TAX INOVICE
+
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Supplier
+
+↓
+
+Proforma Invoice
+
+↓
+
+Advance Payment
+
+↓
+
+Material Procurement
+
+↓
+
+Construction Activities
+
+↓
+
+Tax Invoice
+
+↓
+
+Client Verification
+
+↓
+
+Client Payment
+
+↓
+
+Project Completion
+
+↓
+
+Handing Over
+
+↓
+
+Retention Release
+
+
+
+#######################################
+UPDATED PMPL LIFE CYCLE
+
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Supplier
+
+↓
+
+Proforma Invoice
+
+↓
+
+Advance Payment
+
+↓
+
+Material Procurement
+
+↓
+
+Construction Activities
+
+↓
+
+Milestone Completion
+
+↓
+
+Tax Invoice
+
+↓
+
+Client Verification
+
+↓
+
+Payment Received
+
+↓
+
+Project Completion
+
+↓
+
+Handing Over
+
+↓
+
+Retention Release
+
+
+
+#################################################################################
+
+HANDING OVER DOCUMENTS
+
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Material Procurement
+
+↓
+
+Construction Activities
+
+↓
+
+Quality Inspection
+
+↓
+
+Handing Over Records
+
+↓
+
+Client Verification
+
+↓
+
+Final Acceptance
+
+↓
+
+Project Closeout
+
+↓
+
+Warranty Period
+
+
+##################################################
+
+UPDATED PMPL BUSINESS WORKFLOW
+
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Proforma Invoice
+
+↓
+
+Advance Payment
+
+↓
+
+Material Procurement
+
+↓
+
+Construction Activities
+
+↓
+
+Quality Inspection
+
+↓
+
+Handing Over Records
+
+↓
+
+Client Verification
+
+↓
+
+Final Acceptance
+
+↓
+
+Project Closeout
+
+↓
+
+Warranty / Maintenance
+
+
+
+####################################
+
+TEST CERTIFICATES
+
+Client Requirement
+
+↓
+
+Tender
+
+↓
+
+Quotation
+
+↓
+
+Work Order
+
+↓
+
+BOQ
+
+↓
+
+Purchase Order
+
+↓
+
+Material Procurement
+
+↓
+
+Material Test Certificates
+
+↓
+
+Construction Activities
+
+↓
+
+Quality Inspection
+
+↓
+
+NDT & Cube Testing
+
+↓
+
+Handing Over Records
+
+↓
+
+Client Verification
+
+↓
+
+Final Acceptance
+
+↓
+
+Project Closeout
+
+
+##########################################################################################
+
+RENEW 
+DATASET _2
+
+###################################################################################################
+
+GROUTING 
+
+####################################################################################################
+
+Document _1 Project_Scope
+
+Inspection
+      ↓
+Damage Identification
+      ↓
+Planning
+      ↓
+Material Preparation
+      ↓
+Repair Execution
+      ↓
+Quality Check
+      ↓
+Protective Coating
+      ↓
+Project Completion
+
+
+#######################################################################
+Document_2 Grout Application Guide
+
+Damaged Foundation
+        ↓
+Engineering Inspection
+        ↓
+Select Repair Material
+        ↓
+Store Materials Correctly
+        ↓
+Prepare Foundation
+        ↓
+Install Formwork
+        ↓
+Mix Grout
+        ↓
+Pump Grout
+        ↓
+Curing
+        ↓
+Compression Strength Test
+        ↓
+Quality Inspection
+        ↓
+Project Completion
+
+
+
+
+##################################################################
+Document_3 Repair Proposal
+
+Foundation Inspection
+        ↓
+Identify Crack Pattern
+        ↓
+Select Repair Option
+        ↓
+Estimate Cost
+        ↓
+Execute Repair
+        ↓
+Final Protection
+        ↓
+Client Approval
+
+
+###############################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 1, 1.2, 1.3
+
+
+Project Requirement
+
+↓
+
+Tender / Vendor Selection
+
+↓
+
+Purchase Order Issued
+
+↓
+
+BOQ & Drawings Approved
+
+↓
+
+Site Mobilization
+
+↓
+
+Foundation Construction
+
+↓
+
+Quality Testing (Cube Tests)
+
+↓
+
+Inspection & Work Completion Certificate
+
+↓
+
+Invoice Submission
+
+↓
+
+95% Payment Release
+
+↓
+
+Warranty Period
+
+↓
+
+Final Acceptance
+
+↓
+
+Release of Retention Amount
+
+################################################################################################################
+
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 2, 2.2, 2.3
+
+Wind Turbine Inspection
+        ↓
+Foundation Tilt Identified
+        ↓
+Engineering Assessment
+        ↓
+Purchase Order Issued
+        ↓
+Repair Planning
+        ↓
+Quality Plan Approval
+        ↓
+Foundation Repair
+        ↓
+Material Testing
+        ↓
+Quality Inspection
+        ↓
+Non-Conformance Rectification (if required)
+        ↓
+Work Completion
+        ↓
+Invoice Submission
+        ↓
+Payment Release
+
+
+#####################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 3, 3.2, 3.3
+
+Foundation Inspection
+
+↓
+
+Structural Damage Identified
+
+↓
+
+Engineering Assessment
+
+↓
+
+Purchase Order Issued
+
+↓
+
+Site Mobilization
+
+↓
+
+Excavation
+
+↓
+
+Drilling
+
+↓
+
+PVC Nozzle Installation
+
+↓
+
+Epoxy Pressure Grouting
+
+↓
+
+Waterproofing
+
+↓
+
+Quality Inspection
+
+↓
+
+Work Completion Certificate
+
+↓
+
+Tax Invoice Submission
+
+↓
+
+Payment Release
+
+#############################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 4, 4.2
+
+Foundation Damage Identified
+        │
+        ▼
+Technical Assessment
+        │
+        ▼
+Purchase Order Issued
+        │
+        ▼
+Contractor Mobilization
+        │
+        ▼
+Quality Planning
+        │
+        ▼
+Safety Planning
+        │
+        ▼
+Material Testing
+        │
+        ▼
+Foundation Repair (Grouting)
+        │
+        ▼
+Inspection
+        │
+        ▼
+Quality Approval
+        │
+        ▼
+Work Completion Certificate (WCC)
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment Released
+
+
+############################################################################################################
+
+BOQ and Quotation RENEW GROUTING 
+
+
+Foundation Damage Identified
+        │
+        ▼
+Site Inspection
+        │
+        ▼
+Damage Measurement
+        │
+        ▼
+BOQ Preparation
+        │
+        ▼
+Material Estimation
+        │
+        ▼
+Labour Estimation
+        │
+        ▼
+Quotation Preparation
+        │
+        ▼
+Client Review
+        │
+        ▼
+Purchase Order Issued
+        │
+        ▼
+Project Execution
+
+##################################################################################################################
+
+TAX INVOICE Renew Grouting 
+
+Purchase Order
+        │
+        ▼
+Project Execution
+        │
+        ▼
+Site Measurement
+        │
+        ▼
+Running Account (RA) Bill
+        │
+        ▼
+Quality Verification
+        │
+        ▼
+Work Completion Certificate
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+GST Verification
+        │
+        ▼
+Payment Released
+
+#############################################################################################################
+
+Renew Grouting
+Engineering
+Damage Reports
+
+
+Wind Turbine Inspection
+          │
+          ▼
+Damage Report
+          │
+          ▼
+Engineering Assessment
+          │
+          ▼
+Repair Recommendation
+          │
+          ▼
+Quotation
+          │
+          ▼
+Purchase Order
+          │
+          ▼
+BOQ
+          │
+          ▼
+Repair Execution
+          │
+          ▼
+Tax Invoice
+          │
+          ▼
+Work Completion Certificate
+
+
+##################################################################################################################
+
+Renew Grouting
+Engineering
+Material Data Sheets
+
+Damage Inspection
+        │
+        ▼
+Engineering Assessment
+        │
+        ▼
+Material Selection
+        │
+        ▼
+Technical Data Sheet Review
+        │
+        ▼
+Material Approval
+        │
+        ▼
+BOQ Preparation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Repair Execution
+        │
+        ▼
+Quality Inspection
+        │
+        ▼
+Project Completion
+
+These data sheets fit into the project before procurement and execution, ensuring that the correct materials are specified.
+
+###################################################################################################################
+
+Renew Grouting
+Engineering
+Repair Methods
+
+Damage Inspection
+        │
+        ▼
+BOQ Prepared
+        │
+        ▼
+Engineering Compliance Review
+        │
+        ▼
+Material Data Sheet Verification
+        │
+        ▼
+Quantity Verification
+        │
+        ▼
+Technical Approval
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Repair Execution
+
+###################################################################################################################
+
+Renew Grouting
+WCC Work Completion Certificate
+
+Damage Inspection
+        │
+        ▼
+Engineering Assessment
+        │
+        ▼
+BOQ & Quotation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Repair Execution
+        │
+        ▼
+Site Inspection
+        │
+        ▼
+Work Completion Certificate
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment Release
+
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+SCOPE OF WORK 
+
+Client Requirement
+        │
+        ▼
+Site Selection
+        │
+        ▼
+Scope of Work (SOW)
+        │
+        ▼
+BOQ Preparation
+        │
+        ▼
+Cost Estimation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Construction Execution
+        │
+        ▼
+Quality Inspection
+        │
+        ▼
+Work Completion Certificate
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+BOQ
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ Preparation
+        │
+        ▼
+Cost Estimation
+        │
+        ▼
+Quotation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Construction
+        │
+        ▼
+WCC
+        │
+        ▼
+Tax Invoice
+
+
+#################################################################################################################
+
+RENEW SHED
+PURCHASE ORDER
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Quotation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Mobilization
+        │
+        ▼
+Subcontractor Assignment
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Construction Execution
+        │
+        ▼
+Quality Inspection
+        │
+        ▼
+WCC
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+
+This Purchase Order stage links engineering planning with project execution and financial control.
+
+
+##################################################################################################################
+
+RENEW SHED PROJECT 
+PERFORMA INVOICE
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Quotation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Site Mobilization
+        │
+        ▼
+Construction Progress
+        │
+        ▼
+Proforma Invoice
+        │
+        ▼
+Client Verification
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+
+The Proforma Invoice represents the commercial checkpoint between construction progress and formal billing.
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 1 
+1.1,1.2,1.3, 1.4
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Quotation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction Execution
+        │
+        ▼
+Quality Verification
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Client Payment Processing
+        │
+        ▼
+Revenue Received
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 2
+2.1,2.2,2.3, 2.4
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction Execution
+        │
+        ▼
+Measurement of Completed Work
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Client Verification
+        │
+        ▼
+Payment
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 3
+3.1,3.2
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction Starts
+        │
+        ▼
+40% Construction Completed
+        │
+        ▼
+40% Tax Invoice
+        │
+        ▼
+Continue Construction
+        │
+        ▼
+Project Completion
+        │
+        ▼
+60% Tax Invoice
+        │
+        ▼
+Final Payment
+        │
+        ▼
+Project Closure
+
+#############################################################################################################
+
+RENEW SHED 
+WCC 
+
+Client Requirement
+        │
+        ▼
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction
+        │
+        ▼
+Site Inspection
+        │
+        ▼
+Work Completion Certificate
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+        │
+        ▼
+Project Closure
+
+
+#################################################################################################################
+
+RENEW SHED WORK 
+DRAWINGS
+
+Client Requirement
+        │
+        ▼
+Engineering Design
+        │
+        ▼
+Engineering Drawings
+        │
+        ▼
+BOQ Preparation
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Site Layout
+        │
+        ▼
+Foundation Construction
+        │
+        ▼
+Steel Erection
+        │
+        ▼
+Roof Installation
+        │
+        ▼
+Inspection
+        │
+        ▼
+WCC
+        │
+        ▼
+Invoice
+        │
+        ▼
+Payment

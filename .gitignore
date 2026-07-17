@@ -1,0 +1,11 @@
+# Ignore raw business documents containing proprietary data
+/PMPL/
+/ReNew/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore local python environments or credentials if added later
+.venv/
+*.env

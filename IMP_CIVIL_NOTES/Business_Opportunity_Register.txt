@@ -1,0 +1,1327 @@
+Business Problem
+Why it matters
+Required Data
+Possible Data Science Solution
+Expected Business Impact
+Priority (High / Medium / Low)
+
+
+
+# Business Opportunity Register
+
+## Document 1 – Work Order
+
+### Business Opportunity 1
+
+Problem:
+Can historical work orders be used to predict project completion risk?
+
+Business Impact:
+Helps management identify projects likely to exceed the planned schedule and take corrective action early.
+
+Priority:
+High
+
+---
+
+### Business Opportunity 2
+
+Problem:
+Can contract value and payment milestones be used to forecast project cash flow?
+
+Business Impact:
+Improves financial planning and working capital management.
+
+Priority:
+High
+
+---
+
+### Business Opportunity 3
+
+Problem:
+Which contract clauses (timeline, retention, penalties) have the greatest impact on project profitability?
+
+Business Impact:
+Supports better contract negotiation and tender evaluation.
+
+Priority:
+Medium
+
+============================================================
+
+## Document 2 – BOQ
+
+### Business Opportunity 4
+
+Problem:
+Which engineering activities consume the greatest share of project resources?
+
+Business Impact:
+Improves manpower allocation and project planning.
+
+Priority:
+High
+
+---
+
+### Business Opportunity 5
+
+Problem:
+Which BOQ activities contribute most to procurement cost?
+
+Business Impact:
+Optimizes material purchasing and budgeting.
+
+Priority:
+High
+
+---
+
+### Business Opportunity 6
+
+Problem:
+Can similar BOQ patterns be reused to improve future tender estimation?
+
+Business Impact:
+Reduces tender preparation time and improves estimate consistency.
+
+Priority:
+Very High ⭐⭐⭐⭐⭐
+
+============================================================
+
+## Document 3 – Purchase Order
+
+### Business Opportunity 7
+
+Problem:
+Which materials contribute the highest procurement cost?
+
+Business Impact:
+Supports procurement optimization and supplier negotiations.
+
+Priority:
+High
+
+---
+
+### Business Opportunity 8
+
+Problem:
+Can supplier lead time affect project completion?
+
+Business Impact:
+Helps prevent delays by improving procurement planning.
+
+Priority:
+High
+
+---
+
+### Business Opportunity 9
+
+Problem:
+Can historical procurement data identify the best suppliers based on cost, delivery time, and quality?
+
+Business Impact:
+Improves supplier selection and reduces project risk.
+
+Priority:
+Very High ⭐⭐⭐⭐⭐
+
+
+
+## Document 4 – Proforma Invoice
+
+### Business Opportunity 10
+
+Problem
+
+Can historical Proforma Invoices be used to forecast project cash-flow requirements before execution begins?
+
+Business Impact
+
+Helps management estimate working capital requirements before starting new projects.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+---
+
+### Business Opportunity 11
+
+Problem
+
+Can supplier advance payment patterns be optimized to improve cash-flow management?
+
+Business Impact
+
+Improves liquidity and reduces financial pressure during project execution.
+
+Priority
+
+⭐⭐⭐⭐ High
+
+---
+
+### Business Opportunity 12
+
+Problem
+
+Can procurement costs be monitored in real time by linking Purchase Orders and Proforma Invoices?
+
+Business Impact
+
+Improves financial transparency and prevents procurement cost overruns.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+
+
+
+==================================================================
+
+Document 5 – Tax Invoice
+
+Business Opportunity 13
+
+Problem
+
+Can milestone billing data be used to predict project cash-flow and revenue timing?
+
+Business Impact
+
+Improves financial planning and cash-flow forecasting.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+------------------------------------------------------------
+
+Business Opportunity 14
+
+Problem
+
+Which project milestones contribute the highest project revenue?
+
+Business Impact
+
+Helps management identify the most financially significant stages of project execution.
+
+Priority
+
+⭐⭐⭐⭐ High
+
+------------------------------------------------------------
+
+Business Opportunity 15
+
+Problem
+
+Can delayed invoicing increase payment delays?
+
+Business Impact
+
+Improves billing efficiency and accelerates cash collection.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+------------------------------------------------------------
+
+Business Opportunity 16
+
+Problem
+
+Can historical invoice data be used to forecast future project revenue?
+
+Business Impact
+
+Supports budgeting and business planning.
+
+Priority
+
+⭐⭐⭐⭐ High
+
+
+
+==================================================================
+
+Document 6 – Handing Over Records
+
+Business Opportunity 17
+
+Problem
+
+Can historical quality inspection records predict projects that are likely to require rework?
+
+Business Impact
+
+Reduces repair costs and improves project quality.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+------------------------------------------------------------
+
+Business Opportunity 18
+
+Problem
+
+Which engineering activities consume the most grout, epoxy, and reinforcement materials?
+
+Business Impact
+
+Improves material planning and reduces waste.
+
+Priority
+
+⭐⭐⭐⭐ High
+
+------------------------------------------------------------
+
+Business Opportunity 19
+
+Problem
+
+Can excavation depth, grouting pressure, and reinforcement data be used to estimate project duration?
+
+Business Impact
+
+Improves project scheduling and tender planning.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+------------------------------------------------------------
+
+Business Opportunity 20
+
+Problem
+
+Which quality inspection steps most frequently delay project handover?
+
+Business Impact
+
+Improves operational efficiency and speeds up project completion.
+
+Priority
+
+⭐⭐⭐⭐ High
+
+------------------------------------------------------------
+
+Business Opportunity 21
+
+Problem
+
+Can a quality score be developed for every completed project using inspection records?
+
+Business Impact
+
+Creates a measurable KPI for benchmarking projects and demonstrating performance to clients.
+
+Priority
+
+⭐⭐⭐⭐⭐ Very High
+
+
+
+==================================================================
+
+Document 7 – Test Certificates
+
+Business Opportunity 22
+
+Problem
+
+Can material test results predict long-term structural performance?
+
+Business Impact
+
+Supports preventive maintenance and improves asset reliability.
+
+Priority
+
+⭐⭐⭐⭐⭐
+
+------------------------------------------------------------
+
+Business Opportunity 23
+
+Problem
+
+Which suppliers consistently deliver the highest-quality construction materials?
+
+Business Impact
+
+Improves supplier selection and procurement decisions.
+
+Priority
+
+⭐⭐⭐⭐⭐
+
+------------------------------------------------------------
+
+Business Opportunity 24
+
+Problem
+
+Can laboratory test failures be predicted using batch-level material information?
+
+Business Impact
+
+Reduces quality failures and material wastage.
+
+Priority
+
+⭐⭐⭐⭐
+
+------------------------------------------------------------
+
+Business Opportunity 25
+
+Problem
+
+How does material quality influence project delays or rework?
+
+Business Impact
+
+Improves planning, scheduling, and project profitability.
+
+Priority
+
+⭐⭐⭐⭐⭐
+
+------------------------------------------------------------
+
+Business Opportunity 26
+
+Problem
+
+Can historical cube strength and NDT results be used to develop a quality score for each project?
+
+Business Impact
+
+Creates measurable KPIs for benchmarking projects and demonstrating quality performance to clients.
+
+Priority
+
+⭐⭐⭐⭐⭐
+
+
+
+
+#############################################################################################################
+
+RENEW DATASET_2
+
+#############################################################################################################
+
+GROUTING 
+
+####################################################################################################
+
+DOCUMENT 1 PROJECT_SCOPE
+
+
+Questions this document enables include:
+
+Which repair step consumes the most time?
+Which materials drive repair cost?
+Which repair methods reduce repeat failures?
+Which foundation damage types occur most often?
+How can material planning reduce wastage?
+
+
+
+DOCUMENT 2 GROUT APPLICATION GUIDE
+
+Business Questions
+Which weather conditions produce the best grout quality?
+Does curing time affect repair success?
+Which grout material performs best?
+Which sites experience the highest failure rate?
+Does improper storage increase defects?
+Which crews consistently achieve better quality?
+
+These are valuable because they connect engineering operations to business performance.
+
+
+DOCUMENT_3 REPAIR PROPOSAL
+
+Possible business questions:
+
+Which repair option delivers the best long-term performance?
+Which repair option has the lowest lifecycle cost?
+Which damage patterns are most common?
+Can certain failure types be predicted from project conditions?
+Which repair methods minimize future maintenance?
+
+
+################################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 1, 1.2, 1.3
+
+
+Project Cost Analysis
+Which foundation type has the highest construction cost?
+Does project size influence contract value?
+
+
+Project Timeline Analysis
+How long does it take from Purchase Order issuance to completion?
+Which projects experience longer execution periods?
+
+
+Payment Analytics
+Which documents are mandatory before payment?
+Which compliance requirements are most likely to delay payment?
+What proportion of payment remains under retention?
+
+
+Quality Analytics
+Are all projects supported by required quality documentation?
+How frequently are cube tests performed?
+Which inspections are required before completion?
+
+Compliance Analytics
+Which statutory documents are consistently requested?
+Can missing compliance documents predict payment delays?
+
+
+Operations Analytics
+Which sites involve repair work versus new construction?
+What construction activities are common across all projects?
+
+
+##################################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 2, 2.2, 2.3
+
+Project Performance
+
+Which sites experience the highest number of foundation tilt repairs?
+Which locations require repeated repairs?
+
+
+Cost Analysis
+
+Does repair cost increase with the number of affected turbines?
+Which repair projects generate the highest revenue?
+
+
+Quality Analytics
+
+How frequently are Non-Conformance Reports generated?
+Which projects require the greatest amount of quality documentation?
+
+
+Operational Analytics
+
+Which quality checks consume the most project time?
+How much effort is spent on inspections compared with actual repair work?
+
+Compliance Analytics
+
+Which compliance documents are mandatory before payment?
+Do missing quality documents delay project completion or invoice approval?
+
+
+Predictive Opportunities
+
+Once all ReNew and PMPL documents are integrated, these variables could support models to:
+
+Predict project completion time.
+Predict repair cost.
+Identify projects at higher risk of delays.
+Estimate documentation requirements based on project type.
+
+#####################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 3, 3.2, 3.3
+
+Cost Analysis
+
+Which repair activity contributes the highest cost?
+How much epoxy grout is consumed per foundation?
+Does waterproofing significantly increase project cost?
+
+Productivity Analysis
+
+How many drilling operations are required per foundation?
+What is the average excavation time?
+Which strengthening activity consumes the most labour?
+
+
+Material Analytics
+
+Which materials are used most frequently?
+What is the average epoxy consumption per WTG?
+Which waterproofing products are specified across projects?
+
+Project Performance
+
+Does foundation strengthening reduce future repair requirements?
+Which sites receive repeated strengthening work?
+Can repair complexity predict project duration?
+
+Predictive Analytics Opportunities
+
+Once all PMPL and ReNew datasets are combined, these variables can support predictive models to:
+
+Estimate project cost based on repair activities.
+Predict project duration from BOQ quantities.
+Forecast material requirements.
+Identify projects with higher execution complexity.
+Estimate labour requirements from engineering scope.
+
+#############################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 4, 4.2
+
+Business Question 1
+
+Which foundation repair projects generate the highest revenue?
+
+Business Question 2
+
+Which repair locations experience repeated foundation problems?
+
+Business Question 3
+
+How much revenue is generated from foundation repair compared with new construction?
+
+Business Question 4
+
+Do larger repair projects require proportionally more quality-control documentation?
+
+Business Question 5
+
+Can QA and EHSS compliance indicators help predict project completion time or the likelihood of rework?
+
+Business Question 6
+
+Which project characteristics lead to higher profitability?
+
+Examples:
+
+repair type
+project value
+site
+documentation effort
+testing requirements
+
+Business Question 7 (Portfolio USP)
+
+Can we build an AI model that predicts project profitability or risk before work starts using procurement, technical, quality, and financial variables?
+
+This remains one of the strongest candidate hypotheses for your portfolio because it combines business value with machine learning.
+
+
+#############################################################################################################
+
+BOQ and Quotation RENEW GROUTING 
+
+The BOQ and quotation introduce many high-value analytical questions.
+
+Cost Analytics
+
+Which BOQ activity contributes the highest percentage of repair cost?
+Which materials are the most expensive?
+How much does labour contribute compared with material cost?
+
+
+Productivity Analytics
+
+Which repair activities require the most effort?
+Which tasks are repeated across every repair project?
+Can standard repair templates reduce estimating time?
+
+
+Material Analytics
+
+Which repair materials are used most frequently?
+Does damage size correlate with grout consumption?
+Can material demand be forecast from inspection measurements?
+
+
+Financial Analytics
+
+What percentage of the quotation is overhead and profit?
+Which repair activities have the highest margins?
+How do estimated costs compare with actual invoiced amounts?
+
+
+Business Optimization
+
+Can we predict quotation value from the damage measurements?
+Which BOQ items consistently drive project cost?
+Can similar damage cases be grouped to produce faster quotations?
+
+Portfolio USP
+
+These documents open the door to a strong machine learning problem:
+
+Predict repair cost or quotation value directly from damage characteristics and BOQ quantities.
+
+That is a much more business-oriented prediction task than generic examples like house prices because it is based on a real industrial workflow.
+
+################################################################################################################
+
+TAX INVOICES (RENEW GROUTING)
+
+Revenue Analysis
+
+Which client generates the highest total revenue?
+Which project sites contribute the most income?
+
+
+Cash Flow Analysis
+
+Which projects require multiple RA Bills?
+Which projects take longer to convert completed work into invoices?
+
+Billing Efficiency
+
+How much work is billed as additional work beyond the original scope?
+Which projects show the largest difference between estimated and billed amounts?
+
+
+Project Cost Analysis
+
+Which sites have the highest average invoice value?
+Which repair types generate the highest revenue?
+
+Quality Analysis
+
+Does attaching complete quality documentation (WCC, test reports, certificates) shorten payment processing?
+Are projects with more quality evidence associated with fewer disputes or rework?
+
+
+Business Optimization
+
+Can future invoice amounts be predicted using BOQ quantities and project characteristics?
+Can expected cash flow be forecast from project progress and RA billing patterns?
+
+Portfolio USP
+
+One of the strongest analytics modules you can build is a Project Financial Intelligence Dashboard that combines:
+
+BOQ estimates
+Quotation values
+Purchase Orders
+RA Bills
+Tax Invoices
+WCC status
+
+to provide real-time visibility into project progress, billing, and revenue.
+
+#################################################################################################################
+
+
+
+Renew Grouting
+Engineering
+Damage Reports
+
+Damage Analytics
+
+Which wind turbine sites experience the highest number of grout failures?
+Which turbine models require repairs most frequently?
+Which damage categories occur most often?
+
+
+Predictive Maintenance
+
+Can historical damage reports predict future failures?
+Can we identify high-risk turbines before major damage occurs?
+
+
+Repair Optimization
+
+Which damage type requires the highest repair cost?
+Which repairs require complete reconstruction versus crack sealing?
+
+Material Optimization
+
+Which repair material is used most often for different crack types?
+Which repair method provides the best long-term performance?
+
+
+Geographic Analysis
+
+Which states have the highest frequency of grout damage?
+Do environmental conditions influence repair frequency?
+
+
+Machine Learning Opportunities
+
+Using this data, you can eventually build models to:
+
+Predict repair cost from damage characteristics.
+Classify damage severity from inspection data.
+Recommend repair methods based on observed defects.
+Forecast material requirements before procurement.
+
+
+###################################################################################################################
+
+
+Renew Grouting
+Engineering
+Material Data Sheets
+
+Material Performance
+
+Which repair materials are used most frequently?
+Which materials are associated with the fewest repeat repairs?
+
+
+Cost Optimization
+
+Can equivalent performance be achieved with lower-cost materials?
+Which material contributes most to the total repair cost?
+
+
+Inventory Planning
+
+Which materials should always be stocked because they are used across most repair projects?
+Which products have long lead times and require advance procurement?
+
+Quality Management
+
+Which material properties are most critical for successful repairs?
+Do projects using higher-performance materials show fewer post-repair issues?
+
+
+Predictive Analytics
+
+Can damage characteristics be used to recommend the most suitable repair material?
+Can expected material consumption be predicted before procurement?
+
+Portfolio USP
+
+A particularly strong feature of your project could be a Material Recommendation Engine:
+
+Based on the type of damage, crack dimensions, environmental conditions, and repair requirements, the system recommends the most appropriate repair materials and estimates their quantities.
+
+This is much more distinctive than a standard machine learning project because it combines engineering knowledge with predictive analytics.
+
+###################################################################################################################
+
+Renew Grouting
+Engineering
+Repair Methods
+
+Engineering Quality
+
+Which BOQ items require the most engineering clarification?
+Which materials generate the highest number of compliance comments?
+
+
+Material Optimization
+
+Can engineering compliance data help standardize material selection?
+Which repair materials consistently receive approval without modification?
+
+
+Procurement Optimization
+
+How often are BOQ quantities adjusted after engineering review?
+Which materials have the highest quantity revisions?
+
+Knowledge Management
+
+Can frequently asked engineering questions be converted into a reusable knowledge base?
+Can standard repair templates reduce engineering review time?
+
+
+Predictive Analytics
+
+Can the repair material be recommended automatically from the damage characteristics?
+Can the required quantity be predicted before engineering review?
+
+Portfolio USP
+
+This document enables a distinctive feature for your project:
+
+Engineering Decision Support Module
+
+The platform can compare:
+
+BOQ
+Technical Data Sheets
+Engineering comments
+Final compliance decisions
+
+to automatically flag inconsistencies or suggest standard material selections.
+
+This is much more advanced than a typical dashboard because it incorporates engineering reasoning into analytics.
+
+###################################################################################################################
+
+Renew Grouting
+WCC Work Completion Certificate
+
+Project Performance
+
+Which projects are completed within the planned schedule?
+Which sites require the greatest amount of additional work?
+
+
+Scope Change Analysis
+
+Which BOQ activities most frequently require extra quantities?
+How often do actual quantities exceed planned quantities?
+
+
+Cost Control
+
+Does additional work significantly increase project cost?
+Which repair activities generate the largest scope changes?
+
+Timeline Analysis
+
+How long does it take to complete projects after the Purchase Order is issued?
+Which project characteristics influence completion time?
+
+
+Client Analytics
+
+Which clients approve WCCs most quickly?
+Does faster WCC approval lead to quicker invoice submission and payment?
+
+Portfolio USP
+
+A powerful feature for your Construction Intelligence Platform would be a Project Execution Performance Dashboard that compares:
+
+Planned BOQ quantities vs. completed quantities.
+Original scope vs. additional work.
+Planned duration vs. actual duration.
+Work completion vs. billing status.
+
+This provides actionable insights for improving planning and project execution.
+
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+SCOPE OF WORK 
+
+Project Planning
+Which construction activities consume the most time?
+Which stages require the greatest labour effort?
+
+Material Planning
+Which materials are required across every shed project?
+Can procurement be standardized for recurring shed designs
+
+Safety Analytics
+Which safety requirements appear in every project?
+Can a compliance checklist reduce site incidents?
+
+Construction Analytics
+Which construction stage contributes the highest cost?
+Which activities are common across all shed locations?
+
+
+Resource Optimization
+Can manpower requirements be predicted from the SOW?
+Can material quantities be estimated automatically for standard shed sizes?
+
+Portfolio USP
+
+A valuable feature for your Construction Intelligence Platform would be a Construction Planning Engine that:
+
+reads the Scope of Work,
+identifies required activities,
+estimates materials and resources,
+generates a preliminary project plan before execution.
+
+This would be a distinctive capability compared with typical entry-level projects.
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+BOQ
+
+Cost Analysis
+Which construction activity contributes the highest percentage of total project cost?
+Which materials have the highest impact on project cost?
+
+Material Optimization
+Can material consumption be optimized without affecting quality?
+Which materials should be purchased in bulk across multiple shed projects?
+
+Productivity Analysis
+Which activities consume the largest proportion of labour effort?
+Can standard BOQ templates reduce estimation time?
+
+Site Comparison
+How do costs differ between Kudligi, Otha PH-3, Chikodi, Jagalur, and Patan?
+Which sites require additional work or unique materials?
+
+Financial Planning
+Can the total project cost be predicted from the BOQ quantities?
+Which activities are the strongest predictors of final project value?
+
+Resource Planning
+Can labour and equipment requirements be estimated directly from the BOQ?
+Can procurement schedules be generated automatically?
+
+Portfolio USP
+
+One of the strongest modules you can build is an AI-Assisted BOQ Intelligence Engine.
+
+Instead of simply visualizing BOQ data, the system could:
+
+identify major cost drivers,
+compare BOQs across projects,
+estimate future project costs,
+recommend procurement priorities,
+forecast material demand,
+highlight unusually expensive activities.
+
+This would be a genuinely distinctive feature compared with typical entry-level projects.
+
+#################################################################################################################
+
+RENEW SHED
+PURCHASE ORDER
+
+Procurement Analytics
+Which project locations have the highest contract value?
+How do contract values differ across shed types?
+
+Payment Analytics
+How long does it take to receive the final payment after project completion?
+Which payment milestones create the greatest cash flow pressure?
+
+Payment Analytics
+How long does it take to receive the final payment after project completion?
+Which payment milestones create the greatest cash flow pressure?
+
+Subcontractor Analytics
+Which work packages are frequently subcontracted?
+Which subcontractors consistently deliver on time?
+
+Quality Analytics
+Which projects require the greatest number of quality inspections?
+Which materials require the most testing?
+
+Financial Analytics
+How much GST is associated with each project?
+Which construction activities contribute the largest share of contract value?
+
+Portfolio USP
+
+One of the strongest features you can build is a Procurement & Contract Intelligence Dashboard.
+
+Potential modules include:
+
+Purchase Order Tracker
+Contract Value Dashboard
+Payment Milestone Tracker
+Vendor Performance Dashboard
+Subcontractor Performance Dashboard
+Quality Compliance Dashboard
+Construction Progress Dashboard
+
+This goes well beyond a simple invoice dashboard and reflects real construction operations.
+
+
+##################################################################################################################
+
+RENEW SHED PROJECT 
+PERFORMA INVOICE
+
+Cash Flow Analytics
+Which projects generate the largest milestone payments?
+How much working capital is tied up before each billing milestone?
+
+
+Billing Analytics
+How many Proforma Invoices are raised per project?
+Which projects follow the standard milestone pattern?
+
+
+Financial Planning
+What percentage of the contract value is billed at each milestone?
+How much revenue remains unbilled at any point in time?
+
+
+Client Analytics
+Which ReNew entity generates the highest milestone billing?
+Which sites have the highest average milestone value?
+
+
+Project Performance
+How long after the Purchase Order is the first Proforma Invoice raised?
+Does faster progress billing correlate with faster project completion?
+Portfolio USP
+
+These invoices enable a Project Cash Flow Intelligence Module within your Construction Intelligence Platform.
+
+Possible dashboard features include:
+
+Milestone Billing Tracker
+Contract Value vs. Amount Billed
+Outstanding Revenue
+
+Client-wise Billing
+Site-wise Billing
+GST Summary
+Project Cash Flow Timeline
+
+This is a practical business application that goes beyond simple invoice visualization.
+
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 1 
+1.1,1.2,1.3, 1.4
+
+Revenue Analysis
+
+Which client contributes the highest revenue?
+Which project sites generate the highest billing?
+
+
+Project Finance
+
+What is the average invoice value for hazardous waste shed projects?
+Which project types generate the largest invoices?
+
+
+Client Analytics
+
+Which ReNew entity awards the highest-value projects?
+Which client has the greatest number of completed projects?
+
+
+Timeline Analysis
+
+How long does it take to raise a Tax Invoice after the Purchase Order?
+Which projects have the fastest billing cycle?
+
+Financial Planning
+
+Can future project revenue be forecast using historical invoices?
+Which project characteristics influence invoice value?
+Portfolio USP
+
+A valuable dashboard module for your Construction Intelligence Platform would be a Revenue & Billing Intelligence Dashboard that displays:
+
+Revenue by client
+Revenue by project site
+Invoice trends over time
+GST summary
+Purchase Order vs. Invoice value
+Billing timeline
+
+This provides practical business insights that a construction company can use for financial planning.
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 2
+2.1,2.2,2.3, 2.4
+
+Billing Analytics
+
+Which projects use milestone billing?
+Which projects are billed in a single invoice?
+
+
+Revenue Analysis
+
+Which construction package generates the highest revenue?
+Which sites contribute the largest share of revenue?
+
+
+Client Analysis
+
+Which ReNew company awards the highest-value work?
+Which client has the highest average invoice value?
+
+
+Project Monitoring
+
+Which projects have multiple invoices?
+Which projects progress from Purchase Order to billing most quickly?
+
+
+Financial Planning
+
+Can expected revenue be predicted from BOQ quantities?
+Can milestone billing schedules be optimized for improved cash flow?
+
+Portfolio USP
+
+These invoices allow you to build a Construction Revenue Intelligence Dashboard that can display:
+
+Revenue by site
+Revenue by client
+Revenue by work type
+Milestone vs. full billing
+GST summary
+Billing timeline
+Invoice trends
+
+This adds a practical financial decision-support component to your Construction Intelligence Platform.
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 3
+3.1,3.2
+
+Milestone Billing Analytics
+
+Which projects use two-stage billing?
+Which projects use a single final invoice?
+
+Revenue Completion Analysis
+
+What percentage of contract value has been billed?
+Which projects still have pending revenue?
+
+Cash Flow Analytics
+
+How much revenue is realized at each milestone?
+How does milestone billing affect working capital?
+
+Timeline Analytics
+
+How long does it take to move from the first invoice to the final invoice?
+Which projects close financially the fastest?
+
+Client Analytics
+
+Which ReNew entities consistently follow milestone billing?
+Which sites have the highest completed revenue?
+
+Portfolio USP
+
+These invoices enable a Milestone Billing & Cash Flow Dashboard that can show:
+
+Contract value vs. billed value
+40% vs. 60% billing comparison
+Revenue realization percentage
+Billing timelines
+Outstanding revenue
+Project completion status
+
+This is a practical business tool that construction companies can use to monitor project finances.
+
+
+
+#############################################################################################################
+
+RENEW SHED 
+WCC 
+
+Project Performance
+
+Which projects finish on time?
+Which projects take longer than expected?
+
+
+Site Performance
+
+Which locations consistently complete projects faster?
+Are some sites more challenging than others?
+
+
+Contractor Performance
+
+How many projects are completed without delays?
+What is the average completion time?
+
+
+Timeline Analytics
+
+What is the average time between Purchase Order and WCC?
+What is the average time between WCC and Tax Invoice?
+
+Quality Analytics
+Do projects requiring rework take longer to receive WCC approval?
+Which construction activities are most likely to delay completion?
+Portfolio USP
+
+The WCC enables a Project Completion Intelligence Dashboard with:
+
+Project completion status.
+Planned vs. actual duration.
+Site-wise completion performance.
+WCC approval tracking.
+Construction timeline.
+Delay analysis.
+
+This dashboard complements the financial and procurement dashboards developed from the other documents
+
+#################################################################################################################
+
+RENEW SHED WORK 
+DRAWINGS
+
+Engineering Analytics
+
+Which building design is used most frequently?
+Which foundation design requires the most concrete?
+Which projects require the largest roof area?
+
+Material Planning
+
+
+How much steel is required for each shed?
+Which project consumes the most concrete?
+What is the total roofing sheet requirement?
+
+Construction Planning
+
+Which activities are on the critical path?
+Which structures take the longest to construct?
+
+Cost Analytics
+
+How does building size affect project cost?
+Which structural components contribute most to the total cost?
+
+Procurement Analytics
+
+Can material quantities from drawings be compared with BOQ quantities?
+Are procurement quantities aligned with the engineering design?
+
+
+Portfolio USP
+
+
+These drawings enable an Engineering Design Intelligence Dashboard that could display:
+
+Building dimensions
+Foundation layouts
+Structural member counts
+Material quantities
+Building area comparisons
+Cost estimation linked to design
+
+This adds a design-engineering layer to your Construction Intelligence Platform that most entry-level portfolios do not include.

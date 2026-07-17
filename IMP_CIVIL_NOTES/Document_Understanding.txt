@@ -1,0 +1,2334 @@
+# Document Understanding
+
+==================================================================
+
+## Document 1 – Work Order
+
+Purpose
+
+The Work Order is the official authorization issued by the client to the contractor to begin the project. It defines the project scope, commercial terms, timeline, payment milestones, contractual obligations, and project conditions. It is the first document in the project lifecycle.
+
+Who Creates It?
+
+Client
+
+Who Receives It?
+
+Contractor
+
+When Is It Used?
+
+Before project execution begins.
+
+Why Is It Important?
+
+* Starts the project officially.
+* Defines legal obligations.
+* Specifies project duration.
+* Defines payment milestones.
+* Establishes penalties for delays.
+
+==================================================================
+
+## Document 2 – BOQ
+
+Purpose
+
+The Bill of Quantities (BOQ) is the operational planning document of the project. It describes every engineering activity required to complete the work along with quantities and units.
+
+Who Creates It?
+
+Engineering Team / Estimation Team
+
+Who Uses It?
+
+Project Manager
+
+Procurement Team
+
+Site Engineer
+
+Finance Team
+
+Why Is It Important?
+
+* Cost estimation
+* Material planning
+* Manpower planning
+* Billing
+* Procurement
+* Project execution
+
+==================================================================
+
+## Document 3 – Purchase Order
+
+Purpose
+
+The Purchase Order is an official procurement document issued by the contractor to suppliers for purchasing materials required for project execution.
+
+Who Creates It?
+
+Procurement Team
+
+Who Receives It?
+
+Material Supplier
+
+Why Is It Important?
+
+* Material procurement
+* Cost control
+* Supplier management
+* Delivery planning
+* Inventory planning
+
+
+
+
+## Document 4- Performance Invoice PI
+
+# Document 4 – Proforma Invoice (PI)
+
+## What is a Proforma Invoice?
+
+A Proforma Invoice (PI) is a preliminary commercial invoice issued by the supplier before the actual sale takes place. It is not a tax invoice and is not used for accounting or tax purposes. Instead, it serves as a formal request for advance payment based on the agreed Purchase Order.
+
+In this project, DYWIDAG Bridgecon India Pvt. Ltd. issued the Proforma Invoice to Pallabi Infracon Pvt. Ltd. for the supply of GEWI Bars and related accessories after receiving the Purchase Order. The invoice refers to Purchase Order No. PIPL/DSI/4/25-26 dated 08/10/2025 and includes the agreed quantity (54 units), pricing, GST, and payment terms.
+
+---
+
+## Why is a Proforma Invoice Required?
+
+The supplier issues the Proforma Invoice to:
+
+* Confirm the agreed commercial terms.
+* Request the advance payment.
+* Confirm material quantity and pricing.
+* Initiate material manufacturing or dispatch.
+* Allow the buyer to arrange funds before shipment.
+
+---
+
+## Who Creates It?
+
+Supplier
+
+DYWIDAG Bridgecon India Pvt. Ltd.
+
+---
+
+## Who Receives It?
+
+Contractor
+
+Pallabi Infracon Pvt. Ltd.
+
+---
+
+## When Is It Used?
+
+After the Purchase Order has been accepted but before the actual Tax Invoice is generated and before material dispatch.
+
+---
+
+## Why is it Important?
+
+* Starts the financial transaction.
+* Confirms commercial agreement.
+* Initiates supplier payment.
+* Supports procurement planning.
+* Acts as the bridge between procurement and accounting.
+
+---
+
+## Key Takeaways
+
+* The Proforma Invoice is not the final invoice.
+* It requests advance payment before dispatch.
+* It confirms the commercial details agreed in the Purchase Order.
+* It begins the project's financial transaction between supplier and contractor.
+
+
+
+==================================================================
+
+Document 5 – Tax Invoice
+
+What is a Tax Invoice?
+
+A Tax Invoice is the official commercial and legal invoice issued after goods are supplied or services are performed. Unlike a Proforma Invoice, a Tax Invoice is an accounting document that records an actual business transaction and is used for GST compliance.
+
+In the PMPL project, Pallabi Infracon Pvt. Ltd. issues Tax Invoices to Maharaja Shree Umaid Mills Ltd. after completing specific contractual milestones such as:
+
+• 40% Advance Stage
+• 25% After Chipping, Drilling and Grouting
+• 20% After Steel Work and Concreting
+• 10% After Project Completion and Submission of Tax Invoice
+
+The invoices include:
+
+• Invoice Number
+• Invoice Date
+• Client Details
+• Project Details
+• Description of Work
+• Quantity
+• GST
+• Gross Amount
+• Net Payable Amount
+
+------------------------------------------------------------
+
+Why is a Tax Invoice Required?
+
+• Official billing document
+• Legal proof of sale/service
+• GST compliance
+• Payment request
+• Accounting records
+• Revenue recognition
+
+------------------------------------------------------------
+
+Who Creates It?
+
+Contractor
+
+(Pallabi Infracon Pvt. Ltd.)
+
+------------------------------------------------------------
+
+Who Receives It?
+
+Client
+
+(Maharaja Shree Umaid Mills Ltd.)
+
+------------------------------------------------------------
+
+When is it Used?
+
+After completing a project milestone defined in the Work Order.
+
+------------------------------------------------------------
+
+Why is it Important?
+
+• Generates project revenue
+• Triggers client payment
+• Records completed work
+• Supports taxation and accounting
+• Measures project progress
+
+------------------------------------------------------------
+
+Key Takeaways
+
+Unlike a Proforma Invoice, a Tax Invoice represents actual work completed and officially requests payment from the client.
+
+
+
+################################################
+
+HANDING OVER REPORTS 
+
+==================================================================
+
+Document 6 – Handing Over Records
+
+What is a Handing Over Record?
+
+A Handing Over Record is the final technical quality documentation submitted by the contractor after completing the construction work. It provides evidence that every engineering activity has been completed according to project specifications and quality standards before the project is formally handed over to the client.
+
+Unlike invoices, this document is not primarily financial—it is a quality assurance and project completion document.
+
+------------------------------------------------------------
+
+Why is it Required?
+
+• Confirms completion of construction work.
+• Demonstrates compliance with engineering specifications.
+• Records quality inspections.
+• Provides traceability of executed work.
+• Supports client acceptance.
+• Serves as a reference for future maintenance and audits.
+
+------------------------------------------------------------
+
+Who Creates It?
+
+Contractor
+
+(Pallabi Infracon Pvt. Ltd.)
+
+------------------------------------------------------------
+
+Who Reviews It?
+
+Client
+
+Project Engineer
+
+Quality Engineer
+
+Site Engineer
+
+------------------------------------------------------------
+
+Who Receives It?
+
+Client
+
+------------------------------------------------------------
+
+When is it Used?
+
+After project execution is completed and before the project is officially handed over.
+
+------------------------------------------------------------
+
+Contents Observed in the PMPL Records
+
+• Excavation Checklist
+• Pedestal Demolition Checklist
+• Chipping Checklist
+• Pressure Grouting Checklist
+• Injection Grouting Records
+• Reinforcement Checklist
+• Anchor Bolt & Shear Rod Fixing Checklist
+• Batching Report / Pour Card
+• Level Sheet
+• Cube Test Results
+• Miscellaneous Records
+
+------------------------------------------------------------
+
+Why is it Important?
+
+This document provides proof that the engineering work was completed correctly and meets contractual quality requirements.
+
+------------------------------------------------------------
+
+Key Takeaways
+
+The Handing Over Record is the final engineering evidence of project completion and quality assurance before client acceptance.
+
+
+
+==================================================================
+
+Document 7 – Test Certificates
+
+What is a Test Certificate?
+
+A Test Certificate is an official quality assurance document issued by the material manufacturer or an authorized testing laboratory. It confirms that construction materials or completed construction work have been tested according to relevant engineering standards and meet the required specifications.
+
+Unlike a Proforma Invoice, a Test Certificate is not a commercial document. It is a technical quality document.
+
+------------------------------------------------------------
+
+Why is it Issued?
+
+• To verify material quality before use.
+• To demonstrate compliance with engineering standards.
+• To confirm that completed work meets structural requirements.
+• To support project quality audits.
+• To provide traceability of construction materials.
+• To satisfy client and consultant quality requirements.
+
+------------------------------------------------------------
+
+Who Creates It?
+
+Material Manufacturer
+OR
+
+Independent Testing Laboratory
+
+Examples found in the PMPL project:
+
+• Fosroc Chemicals
+• Sika India
+• Yashodhan Control Lab
+• Disan RMC Laboratory
+
+------------------------------------------------------------
+
+Who Receives It?
+
+Contractor
+
+↓
+
+Quality Engineer
+
+↓
+
+Client
+
+↓
+
+Consultant
+
+------------------------------------------------------------
+
+When is it Used?
+
+Before material approval
+
+During construction
+
+During quality inspection
+
+Before project handover
+
+------------------------------------------------------------
+
+Types of Certificates Observed
+
+• Manufacturer Quality Certificate
+• Material Test Certificate
+• Non-Destructive Test (NDT)
+• Ultrasonic Pulse Velocity Test
+• Concrete Cube Test
+• Chemical Property Certificate
+• Mechanical Strength Test
+
+------------------------------------------------------------
+
+Purpose
+
+These certificates prove that the materials supplied and the completed construction satisfy the engineering specifications required by the project.
+
+
+
+
+################################################################################################################
+
+Anshu da
+9284349628
+
+
+
+Data Analyst
+https://careers.equifax.com/en/jobs/j00177327/data-analyst/?source=Applied_LinkedIn
+
+User id - pallabi5200@gmail.com
+Password Pallabi@5200
+
+https://app.flexiple.com/signup?intent=talent
+
+User id - pallabi5200@gmail.com
+Password Pallabi@5200
+
+
+
+
+
+Phone Number 9325378458
+
+
+
+
+https://career4.successfactors.com/career?company=Agco&site=&lang=en_US&requestParams=fqep0jBtuxwnF2fsFJZn2o3nv8142m1R0UpCQRCdNFNTSgl66xfkamVBDyWFJRQEYi893Na9k65s%0au9fZMY2gL6qPiL6gHvuB6KF%2faLUopQZmB2bOzJwze%2f8BKUdQ7IlrURqw0qUj4bonIk6lXx%2bfVi%2be%0ak5Cow6K2IqoLyZYakOUuoetaHY3i3T0YW36Y8W%2fBe45h3inGAcHK%2bfFkqhamU2oyKdPZeXg5e3tf%0auz1MAIxiD59jAIaM1AoNN6JBH%2b4g%2bZXP9GzbVYbYZihKQYgU%2bkxI2A%2fVDHChHGxUtqoMOWelEroW%0ax%2fpmGpC6FNqhr%2fv%2bUxWjVgZnBhwoQskMS9ISoRasrAln2eTLweZ6sLVdDbx5pHINw0hG6JZD%2bm9b%0aWtqrWJhfJgl%2fmlpH2p%2bQ%2fZZl3HT%2f8lil8BqUnBDx8PEFZ1agCVtNhoL%2fhWFNI%2fE%2boWCM%2fvIYfQLI%0aQYc1&login_ns=register&career_ns=job%5fapplication&career_job_req_id=104276&jobPipeline=Direct&clientId=jobs2web&_s.crb=eB%2fnj6mNEh70Hoh3%2bG39lHmXZdPQICuoUQ5POLMPVZ4%3d
+
+email id - pallabi5200@gmail.com
+password - Pallabi@5200
+
+
+
+#################################################################################################################
+
+
+RENEW DATASET 1
+
+###################################################################################################
+
+GROUTING 
+
+####################################################################################################
+
+
+
+Document 1 — Scope of Work and Process for Grouting Damage Repair
+1. Document Understanding
+
+This is the project-specific Standard Operating Procedure (SOP) created for ReNew's grouting repair work. It converts the manufacturer's recommendations into the exact steps Pallabi Infracon follows on site.
+
+It contains an ordered sequence of repair activities, including cleaning, removing damaged grout, installing formwork, applying bonding agents, grouting, curing, sealing, carbon fiber wrapping, and UV coating
+
+
+
+##############################################################################################################
+
+Document-2 GROUT GUIDE APPLICATION
+
+
+What is this document?
+
+This is a technical application manual issued by the grout material manufacturer (Fosroc) for applying Conbextra BB92-O grout in wind turbine foundations. It is not project-specific; instead, it defines the engineering standard that should be followed during grouting work.
+
+Why is it issued?
+
+Its purpose is to ensure that every contractor follows the same approved procedure so that the repaired foundation achieves the required strength, durability, and quality.
+
+Who prepares it?
+
+The grout manufacturer (Fosroc).
+
+Who uses it?
+Civil Engineers
+Site Engineers
+Quality Engineers
+Contractors
+Client QA/QC teams
+What does it contain?
+
+The guide covers the complete grouting lifecycle, including:
+
+Required equipment
+Material storage conditions
+Hot, cold, and rainy weather precautions
+Surface preparation
+Formwork installation
+Mixing and pumping procedures
+Curing methods
+Compression strength testing
+Crack repair methods
+Quality recommendations
+
+
+######################################################################################################
+
+DOCUMENT 3 -REPAIR PROPOSAL
+
+This is an engineering proposal describing alternative methods for repairing wind turbine foundation grout damage. It illustrates the problem (45° cracking and grout debonding) and proposes two repair options using diagrams and sequential repair stages.
+
+The diagrams clearly show:
+
+Typical foundation structure.
+Crack formation.
+Removal of damaged grout.
+Installation of formwork.
+Recasting or repair.
+Carbon fiber strengthening.
+Final protective coating.
+
+#######################################################################################################
+
+
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 1, 1.2, 1.3
+
+What is this document?
+
+This document is a Purchase Order (PO) issued by ReNew to Pallabi Infracon Pvt. Ltd. Although named a Purchase Order, it functions as the primary contract authorizing the contractor to execute wind turbine foundation works. It defines the scope of work, contract value, payment milestones, quality requirements, safety obligations, warranty conditions, and documentation needed for project completion.
+
+Purpose of the Document
+
+The Purchase Order serves to:
+
+Officially award civil construction work.
+Define the contractor's responsibilities.
+Specify project location and foundation type.
+Establish commercial terms.
+Define quality and safety requirements.
+Specify documentation required for payment.
+Create the legal agreement between client and contractor.
+Information Available
+
+The three Purchase Orders collectively provide:
+
+Commercial Information
+Client name
+Contractor name
+Purchase Order number
+Purchase Order date
+Contract value
+GST details
+Payment terms
+Delivery schedule
+Engineering Information
+Project location
+Foundation type
+Number of foundations
+Scope of construction
+BOQ reference
+Engineering specifications
+Project Management Information
+Completion schedule
+Warranty period
+Required approvals
+Inspection requirements
+Compliance Information
+Labour compliance
+Insurance
+EHSS requirements
+Quality Assurance requirements
+Anti-bribery policy
+Project Summary
+
+The documents indicate that Pallabi Infracon was engaged to perform:
+
+Construction of Wind Turbine Generator (WTG) foundations.
+Additional foundation repair work.
+Civil construction activities excluding concrete supply for one project.
+Construction according to approved BOQ and engineering drawings.
+
+
+
+#############################################################################################################
+
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 2, 2.2, 2.3
+
+What is this document?
+
+These documents are Purchase Orders issued by ReNew, but for the grouting projects they also function as the official Work Orders. They formally authorize Pallabi Infracon Pvt. Ltd. to carry out foundation tilt repair work on existing Wind Turbine Generator (WTG) foundations.
+
+Unlike the Purchase Orders in Session 1, which included construction of new foundations and additional foundation work, these Purchase Orders focus specifically on repairing foundations that have developed tilt or settlement problems.
+
+Why are these documents issued?
+
+These Purchase Orders are issued to:
+
+Authorize foundation repair work.
+Define the number of WTG foundations requiring repair.
+Specify payment conditions.
+Establish quality requirements.
+Define safety obligations.
+Specify engineering standards to be followed.
+List mandatory documents required before payment.
+
+Information Available
+
+These Purchase Orders provide:
+
+Commercial Information
+
+Purchase Order Number
+Client
+Contractor
+Site Location
+Contract Value
+GST
+Payment Terms
+Delivery Date
+
+Engineering Information
+
+Foundation Tilt Repair
+Number of WTG Foundations
+Repair Service Category
+Scope of Repair Work
+
+
+Quality Information
+
+Quality Assurance Plan (QAP)
+Project Quality Plan (PQP)
+Field Quality Plan (FQP)
+Inspection Requirements
+Cube Testing
+NABL Laboratory Testing
+Material Approval Process
+
+
+Compliance Information
+
+EHSS Requirements
+Labour Compliance
+Site Safety
+Insurance
+Environmental Compliance
+
+
+#####################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 3, 3.2, 3.3
+
+What is this document?
+
+These are Purchase Orders issued by ReNew to Pallabi Infracon for specialized structural repair and strengthening of existing Wind Turbine Generator (WTG) foundations.
+
+Unlike Session 2, which mainly authorized repair work, these documents contain a detailed method statement describing exactly how the strengthening work should be carried out, including excavation, drilling, epoxy pressure grouting, waterproofing, testing, documentation, and final acceptance.
+
+Purpose of the Document
+
+The Purchase Orders are issued to:
+
+Appoint Pallabi Infracon for foundation strengthening.
+Define the engineering methodology.
+Specify BOQ activities.
+Define payment milestones.
+Establish quality and safety requirements.
+Specify documentation required before payment.
+Standardize repair procedures across multiple wind farm sites.
+
+
+
+Information Available
+
+Commercial Information
+Purchase Order Number
+Client
+Contractor
+GST
+Contract Value
+Payment Terms
+Delivery Schedule
+
+
+Engineering Information
+
+Foundation Strengthening
+Pressure Grouting
+Waterproofing
+Drilling
+Excavation
+PVC Nozzle Installation
+Epoxy Injection
+
+
+Quality Information
+
+
+Work Completion Certificate
+Original Tax Invoice
+Quality Inspection
+Quality Assurance
+GCC Compliance
+Material Specifications
+
+Compliance Information
+
+HSSE
+Environmental Compliance
+Labour Safety
+Insurance
+Site Management
+
+Major Difference from Previous Sessions
+
+Session 1 introduced new foundation construction.
+
+Session 2 introduced foundation tilt repair.
+
+Session 3 introduces foundation strengthening, showing the complete repair methodology and engineering process. This makes these documents especially valuable because they contain operational details that can later be converted into structured analytical features.
+
+
+#############################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 4, 4.2
+
+
+What is this document?
+
+These Purchase Orders formally authorize Pallabi Infracon Pvt. Ltd. to perform foundation tilt repair (grouting) work at two different ReNew wind farm locations. The POs specify the work scope, project value, taxes, delivery deadline, and include detailed quality and safety obligations.
+
+Unlike a simple order, these POs also function as the governing contract because they define:
+
+Technical specifications
+Quality standards
+Safety obligations
+Inspection process
+Material testing
+Documentation requirements
+Project acceptance conditions
+
+Why is it issued?
+
+It is issued to:
+
+officially assign the repair work
+authorize project execution
+define payment
+establish quality expectations
+define contractor responsibilities
+create the legal basis for billing and project completion
+
+Who creates it?
+
+ReNew Procurement Team / Project Management.
+
+Who receives it?
+
+Pallabi Infracon Pvt. Ltd.
+
+Why is this document important?
+
+Without the Purchase Order:
+
+work cannot officially begin
+invoices cannot be processed
+WCC cannot be issued
+payment cannot be released
+
+It acts as the starting point for the entire project lifecycle.
+
+
+##############################################################################################################
+
+BOQ and Quotation RENEW GROUTING
+
+
+What is the BOQ?
+
+A Bill of Quantities (BOQ) is a detailed list of all activities, materials, labour, equipment, and estimated quantities required to complete the repair work.
+
+Unlike the Purchase Order, which awards the contract, the BOQ breaks the project into measurable tasks with quantities, units, rates, and total values.
+
+From the uploaded workbook, the BOQ includes:
+
+Project inputs (site, location, damage dimensions)
+A summary of estimated costs by location
+Detailed BOQs for each turbine location (for example GML-25 and GML-52), listing activities, quantities, units, unit rates, totals, and remarks.
+What is the Quotation?
+
+The quotation is Pallabi Infracon's commercial proposal submitted before work begins.
+
+It estimates the cost of repairing different types of damage, including:
+
+grout damage repair
+crack repair
+labour
+material
+supervision
+contractor profit
+
+The quotation therefore explains how the selling price is calculated, not just what the client eventually pays.
+
+
+Relationship Between BOQ and Quotation
+
+Site Inspection
+        │
+        ▼
+Damage Measurement
+        │
+        ▼
+BOQ Preparation
+        │
+        ▼
+Quotation Submitted
+        │
+        ▼
+Client Approval
+        │
+        ▼
+Purchase Order Issued
+
+
+The BOQ is the technical estimate.
+
+The quotation converts that estimate into a commercial proposal.
+
+
+###################################################################################################################
+
+RENEW---- TAX INVOICES-------GROUTING
+
+
+What is a Tax Invoice?
+
+A Tax Invoice is the official commercial document issued by Pallabi Infracon after completing part or all of the approved work.
+
+It serves multiple purposes:
+
+requests payment
+records GST
+proves services were delivered
+links completed work to the Purchase Order
+becomes the accounting document used by both companies
+
+Unlike the quotation (estimated cost), the Tax Invoice represents the actual billed value.
+
+Who creates it?
+
+Pallabi Infracon Pvt. Ltd.
+
+Who receives it?
+
+Depending on the project:
+
+ReNew Wind Energy Pvt. Ltd.
+ReNew Solar Services Pvt. Ltd.
+
+The invoices cover multiple project locations including Rajkot, Devgarh and Otha Solar Project
+
+Why is it issued?
+
+After work is completed (or a milestone is achieved), Pallabi Infracon raises the invoice to request payment.
+
+The invoice contains:
+
+Invoice Number
+Invoice Date
+Client Details
+GST Information
+PO Reference
+Description of Work
+Quantity
+Rate
+Taxable Value
+GST
+Gross Amount
+Net Amount Payable
+
+What is unique in these invoices?
+
+Unlike standard invoices, several of these documents include:
+
+Work Completion Certificate (WCC)
+Running Account (RA) Bills
+Additional Work Bills
+Compaction Test Reports
+Soil Test Reports
+Material Test Certificates
+
+This creates a complete evidence package supporting payment.
+
+##################################################################################################################
+
+Renew Grouting
+Engineering
+Damage Reports
+
+What is a Damage Report?
+
+A Damage Report is an engineering inspection document prepared after site inspection.
+
+Its purpose is to:
+
+identify damaged wind turbine foundations
+record the severity of damage
+recommend repair methods
+estimate repair requirements
+justify the need for repair work
+
+Unlike a BOQ or Tax Invoice, this document focuses on the technical condition of the asset.
+
+The inspection spreadsheet records information such as:
+
+Wind Turbine Number
+Turbine Model
+Site
+State
+Nature of damage
+Repair recommendation
+Engineering remarks
+
+The entries include issues like:
+
+Foundation grouting damaged
+Vertical face cracks
+One-side grout damage
+Approximate damaged length
+Reconstruction required
+Repair according to SOP procedure
+
+These are the observations that trigger the repair project.
+
+###################################################################################################################
+
+
+Renew Grouting
+Engineering
+Material Data Sheets
+
+
+What are Material Data Sheets?
+
+A Material Technical Data Sheet (TDS) is a manufacturer-issued engineering document.
+
+It explains:
+
+what the product is,
+where it should be used,
+engineering properties,
+application procedure,
+mixing instructions,
+curing requirements,
+storage conditions,
+safety precautions.
+
+These documents are issued by Fosroc, the manufacturer of the repair materials.
+
+Why are they important?
+
+Before repairing a damaged wind turbine foundation, engineers must ensure that the selected material is suitable.
+
+These documents verify:
+
+strength
+durability
+chemical resistance
+waterproofing capability
+structural compatibility
+installation procedure
+
+They serve as technical evidence supporting the repair methodology.
+
+What does each document contribute?
+1. Nitowrap FRC
+
+Used when additional structural strengthening is required.
+
+It is a carbon fibre reinforcement system that:
+
+increases structural strength,
+improves load-carrying capacity,
+enhances shear performance,
+resists corrosion,
+provides high strength with low weight.
+
+2. Nitomortar S
+
+Used for repairing damaged concrete and grout.
+
+It offers:
+
+very high compressive strength,
+abrasion resistance,
+chemical resistance,
+low permeability,
+rapid strength development.
+
+It is one of the primary repair materials for damaged foundations.
+
+
+3. Nitocote UR512
+
+Applied after repair as a protective coating.
+
+Its purpose is to:
+
+waterproof repaired surfaces,
+resist UV exposure,
+resist industrial chemicals,
+improve durability,
+protect repaired concrete.
+
+4. Nitoseal PU40
+
+Used to seal joints after repair.
+
+It:
+
+accommodates movement,
+prevents water ingress,
+seals expansion joints,
+adheres to concrete and steel,
+remains flexible after curing
+
+###################################################################################################################
+
+Renew Grouting
+Engineering
+Repair Methods
+
+What is this document?
+
+This is an Engineering Compliance Register prepared during the planning stage of the repair work.
+
+It records:
+
+engineering observations,
+material selection discussions,
+quantity verification,
+technical clarifications,
+compliance decisions,
+final engineering approvals.
+
+The workbook contains:
+
+Sheet 1 – Inputs
+
+This sheet summarizes the repair site:
+
+State
+Site
+Wind Turbine Location
+Grout Thickness
+Damage Shape
+Damage Dimensions
+Number of damaged locations
+Engineering remarks
+
+For example, the uploaded file records circular grout damage at the Molagavali-1 site and notes that the affected perimeter needs to be rebuilt.
+
+Sheet 2 – Grouting Compliances
+
+This sheet compares:
+
+BOQ item
+Material
+Quantity
+Engineering comments
+Technical clarification
+Final compliance decision
+
+Rather than simply listing materials, it documents discussions such as:
+
+expected coverage of Nito Bond EP,
+whether Conbextra BB92 or BB92-O should be used,
+quantity conversions,
+sealing requirements for Nitoseal PU40,
+selection of Nitowrap CWS,
+coating coverage for Nitocote UR512,
+and the agreed engineering response for each point.
+
+Why is this document important?
+
+This document acts as an engineering review and approval checklist.
+
+It ensures that:
+
+the BOQ is technically correct,
+selected materials match the repair requirements,
+quantities are realistic,
+engineering standards are followed before execution.
+
+This reduces the risk of errors during construction.
+
+Who prepares it?
+
+Typically:
+
+Project Engineer
+QA/QC Engineer
+Structural Engineer
+Material Specialist
+Who uses it?
+Site Engineers
+Procurement Team
+Construction Team
+QA/QC Team
+Project Manager
+
+
+###################################################################################################################
+
+Renew Grouting
+WCC Work Completion Certificate
+
+What is a Work Completion Certificate (WCC)?
+
+A Work Completion Certificate (WCC) is the official document issued after the contractor has completed the assigned work and the client (or client's representative) verifies that the work has been executed according to the approved scope.
+
+Unlike the Purchase Order, which authorizes work, or the Tax Invoice, which requests payment, the WCC confirms that the work has actually been completed and accepted.
+
+Why is a WCC issued?
+
+The WCC serves several important purposes:
+
+Confirms the repair work has been completed.
+Confirms the work matches the Purchase Order.
+Records the completion date.
+Verifies that the client has inspected the work.
+Acts as supporting evidence before payment is released.
+
+Without a WCC, the contractor generally cannot justify the final billing.
+
+
+Who prepares the WCC?
+
+The contractor prepares the certificate after completing the work.
+
+It is then reviewed and acknowledged by the client's representatives, such as the Site Engineer or Site In-charge.
+
+Information Available
+
+The uploaded WCCs contain:
+
+Project Information
+Vendor Name
+Client Name
+Project Site
+Work Location
+Purchase Order Number
+Purchase Order Date
+WCC Number
+Work Start Date
+Work Completion Date
+
+Work Information
+Description of Work
+Quantity Completed
+Work Status
+SAC Code
+
+Both uploaded certificates confirm that the foundation strengthening work was completed successfully.
+
+Additional Work
+
+One certificate includes an Additional Work Measurement Sheet that records work outside the original scope, including:
+
+Extra drilling holes
+Extra nozzles
+Additional Conbextra EP10 grout
+
+This shows that project execution can differ from the original BOQ and provides evidence for additional billing
+
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+SCOPE OF WORK 
+
+What is a Scope of Work (SOW)?
+
+A Scope of Work (SOW) is one of the first engineering documents created before construction begins.
+
+It defines:
+
+what has to be constructed,
+where it will be constructed,
+technical specifications,
+responsibilities of both the client and contractor,
+safety requirements,
+quality expectations,
+and the major construction activities.
+
+Unlike a Purchase Order, which formally awards the contract, the SOW explains exactly what the contractor is expected to deliver.
+
+Why is it issued?
+
+The SOW is issued to ensure that both the client and contractor have a common understanding of:
+
+project objectives,
+construction activities,
+quality standards,
+safety requirements,
+contractual responsibilities,
+expected deliverables.
+
+It minimizes misunderstandings during execution.
+
+Who prepares it?
+
+Typically, the client's engineering or project management team prepares the Scope of Work before procurement.
+
+Who receives it?
+
+The contractor (Pallabi Infracon Pvt. Ltd.) uses the SOW to:
+
+prepare the BOQ,
+estimate costs,
+plan manpower,
+procure materials,
+execute the work.
+
+Information Available in These Documents
+Project Information
+
+Each SOW specifies:
+
+Site Name (Kudligi, Otha PH-3, Chikodi)
+Project Location
+Measurement basis (BOQ and actual measurements)
+Work specification
+Scope of construction
+
+Client Responsibilities (ReNew Scope)
+
+The documents specify responsibilities such as:
+
+resolving Right of Way (ROW) issues,
+supervising activities,
+conducting EHS induction,
+sharing Job Safety Analysis (JSA),
+implementing Tool Box Talks (TBT) and HIRA,
+arranging permits,
+conducting final audits after completion.
+
+Contractor Responsibilities (Vendor Scope)
+
+The contractor is responsible for:
+
+providing skilled manpower,
+arranging PPE,
+complying with the no-child-labour policy,
+providing medically fit workers,
+assigning a dedicated supervisor,
+following ReNew safety standards,
+clearing debris,
+arranging transportation and logistics,
+supplying construction materials,
+ensuring proper quality.
+
+Construction BOQ
+
+Pages 2 and 3 list the principal construction activities, including:
+
+Earthwork and excavation
+Backfilling
+Rubble stone filling
+Murrum filling
+PCC
+RCC (M25)
+Reinforcement steel
+Formwork
+Structural steel fabrication
+Roofing with GI sheets
+Brickwork
+Plastering
+Plinth protection
+Foundation bolts
+Anti-corrosion painting
+Rainwater drainage
+Gates
+Windows
+Turbo ventilator
+Internal electrical works
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+BOQ
+
+What is this document?
+
+This BOQ (Bill of Quantities) is the engineering cost estimate for constructing a Hazardous Waste Storage Shed.
+
+Unlike the Scope of Work, which explains what must be built, the BOQ explains:
+
+every construction activity,
+estimated quantities,
+units of measurement,
+unit rates,
+estimated cost of every activity.
+
+The BOQ therefore becomes the technical and financial foundation for procurement and execution.
+
+What information is available?
+
+The uploaded workbooks contain:
+
+Project Information
+Client
+Site
+Structure Type
+Shed Size (5 × 6 m)
+Offer Title
+
+Construction Activities
+
+Examples include:
+
+Earthwork
+Excavation
+Backfilling
+Rubble Stone Filling
+Murrum Filling
+PCC
+M25 RCC
+Reinforcement Steel
+Formwork
+Structural Steel
+Roofing
+Brickwork
+Plaster
+Plinth Protection
+Foundation Bolts
+Painting
+Rainwater Pipe
+Gates
+Windows
+Turbo Ventilator
+Electrical Works
+
+Why is a BOQ prepared?
+
+The BOQ is prepared so that:
+
+project cost can be estimated,
+contractors can submit quotations,
+procurement can be planned,
+project budgets can be controlled,
+construction progress can be measured.
+
+Who prepares it?
+
+Normally:
+
+Civil Engineer
+Quantity Surveyor
+Project Engineer
+
+Who uses it?
+Contractor
+Procurement Team
+Project Manager
+Finance Team
+Client
+Site Engineers
+
+
+#################################################################################################################
+
+RENEW SHED
+PURCHASE ORDER
+
+What is a Purchase Order (PO)?
+
+A Purchase Order is the formal legal document issued by the client that authorizes the contractor to begin work.
+
+For the Shed project, the Purchase Order acts as both:
+
+Contract Award
+Work Authorization
+
+Unlike the Scope of Work, which explains what needs to be built, the Purchase Order officially authorizes Pallabi Infracon Pvt. Ltd. to execute the construction.
+
+Purpose of these Purchase Orders
+
+These Purchase Orders authorize the construction of:
+
+Hazardous Waste Storage Shed (5 × 6 m)
+Storage Yard Shed
+Hazardous Waste & Oil Shed
+Rainwater Harvesting
+Earthing Works
+
+across different ReNew project locations.
+
+Information Available
+
+The Purchase Orders provide:
+
+Project Information
+
+Purchase Order Number
+Purchase Order Date
+Client Company
+Vendor Name
+Project Site
+Delivery Location
+Contact Person
+Delivery Deadline
+
+Financial Information
+
+Basic Contract Value
+GST
+Total Contract Value
+Payment Terms
+Invoice Requirements
+Delivery Terms (DAP/FOR Site Basis)
+
+Execution Information
+
+Construction deadline
+Mobilization timeline
+Completion period
+Material specifications
+Service codes
+Scope description
+
+Quality Requirements
+
+The draft Purchase Orders include extensive Quality Assurance (QA), Environment, Health, Safety and Social (EHSS) clauses requiring:
+
+quality plans,
+testing procedures,
+inspection records,
+NABL-certified test reports,
+site laboratory setup,
+material approvals,
+compliance documentation.
+
+Subcontractor Information
+
+The uploaded subcontractor work order reveals that Pallabi Infracon outsourced part of the Jagalur shed work (up to floor level) to another contractor.
+
+This introduces another layer of business workflow:
+
+ReNew
+      │
+      ▼
+Pallabi Infracon
+      │
+      ▼
+Sub Contractor
+
+The handwritten payment sheet also records instalments made to the subcontractor, making it possible to study payment tracking and cash flow
+
+
+##################################################################################################################
+
+RENEW SHED PROJECT 
+PERFORMA INVOICE
+
+
+What is a Proforma Invoice?
+
+A Proforma Invoice is a preliminary commercial invoice issued before the final Tax Invoice.
+
+Unlike a Tax Invoice, a Proforma Invoice does not record the final sale. Instead, it informs the client about:
+
+the work completed up to a billing milestone,
+the amount that will be billed,
+applicable taxes,
+payment due,
+and the Purchase Order against which the claim is made.
+
+Think of it as a payment request based on project progress rather than a completed financial transaction.
+
+Why is a Proforma Invoice issued?
+
+Construction projects usually last several weeks or months.
+
+If the contractor waits until the entire project finishes, there could be significant cash-flow challenges.
+
+Instead, milestone billing is used.
+
+For example:
+
+Purchase Order Issued
+        │
+        ▼
+Project Starts
+        │
+        ▼
+40% Work Completed
+        │
+        ▼
+Proforma Invoice Raised
+        │
+        ▼
+Client Reviews
+        │
+        ▼
+Payment Process
+        │
+        ▼
+Continue Construction
+
+This allows the contractor to receive partial payments while the project is still underway.
+
+Who prepares the Proforma Invoice?
+
+The contractor:
+
+Pallabi Infracon Private Limited
+
+Who receives it?
+
+The respective ReNew project company, such as:
+
+ReNew Wind Energy (AP) Pvt. Ltd.
+ReNew Green (KAK Three) Pvt. Ltd.
+ReNew Ravi Tejas Pvt. Ltd.
+
+depending on the project location.
+
+Purpose of the Proforma Invoice
+
+The uploaded invoices demonstrate that the Proforma Invoice is used to:
+
+request milestone payment,
+reference the approved Purchase Order,
+identify the construction site,
+calculate GST,
+specify the amount payable,
+support future Tax Invoice generation,
+maintain project cash flow.
+
+Information Available
+Supplier Information
+
+The invoices identify the contractor:
+
+Company Name
+Address
+GST Number
+PAN Number
+
+These fields establish the legal identity of the billing organization.
+
+Client Information
+
+The invoices provide:
+
+Client Company
+Billing Address
+GST Number
+PAN Number
+
+This ensures that the invoice is correctly linked to the purchasing organization.
+
+Project Information
+
+The invoices specify:
+
+Site Name
+Place of Work
+Project Location
+Name of Work
+Purchase Order Number
+Purchase Order Date
+
+This links the invoice directly to the engineering project.
+
+Commercial Information
+
+Each invoice contains:
+
+Service Code
+SAC Code
+Description of Work
+Quantity
+Unit
+Unit Price
+Milestone Percentage (40%)
+Taxable Value
+GST @18%
+Gross Total
+Net Payable
+
+A notable feature is that the invoices request 40% of the total contract value, indicating a milestone-based payment schedule rather than full billing.
+
+Authorization
+
+Each invoice is signed by an Authorized Signatory of Pallabi Infracon, confirming that the billing request has been formally approved by the contractor.
+
+Relationship with Other Documents
+
+The Proforma Invoice connects directly with previously analyzed documents:
+
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction Progress
+        │
+        ▼
+Proforma Invoice
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+
+
+##############################################################################################################
+
+RENEW SHED WORK
+
+SESSION 1 - TAX INVOICES
+1.1,1.2,1.3, 1.4
+
+
+What is a Tax Invoice?
+
+A Tax Invoice is the final commercial document issued after the contractor completes an approved stage of work or completes the entire work as per the Purchase Order.
+
+Unlike a Proforma Invoice, which is only a payment request, the Tax Invoice is the official accounting document used for payment processing and GST compliance.
+
+It becomes part of both the contractor's and the client's financial records.
+
+Why is a Tax Invoice issued?
+
+The Tax Invoice serves multiple purposes:
+
+Requests payment for completed work.
+Records GST liability.
+Confirms the value of work executed.
+Links completed work with the Purchase Order.
+Provides legal proof of the commercial transaction.
+
+Without a Tax Invoice, payment cannot normally be processed.
+
+
+Who prepares the Tax Invoice?
+
+The contractor:
+
+Pallabi Infracon Private Limited
+
+Who receives it?
+
+The client company responsible for the project, such as:
+
+ReNew Green (KAK Three) Pvt. Ltd.
+Narmada Wind Energy Pvt. Ltd.
+
+depending on the project site
+
+Difference between Proforma Invoice and Tax Invoice
+Proforma Invoice	Tax Invoice
+Preliminary billing document	Final billing document
+Payment request	Official financial record
+Does not create tax liability	Creates GST liability
+Raised before final billing	Raised after bill is finalized
+Used for payment approval	Used for accounting and payment
+
+Purpose of These Tax Invoices
+
+These invoices confirm the completion and billing of works such as:
+
+Hazardous Waste Shed (5 × 6 m)
+Hazardous Waste & Oil Shed (10 × 6 m)
+Rainwater Harvesting
+Earthing Works
+
+at different ReNew locations.
+
+Information Available
+Supplier Information
+
+Each invoice includes:
+
+Contractor Name
+Address
+GST Number
+PAN Number
+
+This establishes the legal identity of the contractor.
+
+Client Information
+
+Each invoice provides:
+
+Client Name
+Billing Address
+GST Number
+PAN Number
+
+This identifies the purchasing organization.
+
+Project Information
+
+The invoices specify:
+
+Site Name
+Project Location
+Name of Work
+Purchase Order Number
+Purchase Order Date
+Delivery Address
+
+This directly links the financial document to the construction project.
+
+Financial Information
+
+The invoices include:
+
+Invoice Number
+Invoice Date
+Service Code
+SAC Code
+Description of Work
+Quantity
+Unit
+Unit Price
+Taxable Value
+GST @18%
+Gross Total
+Net Payable
+
+These values represent the final amount claimed for the completed work.
+
+Engineering Information
+
+The invoices also identify:
+
+Type of civil structure constructed
+Project site
+Construction package
+Associated Purchase Order
+
+This creates a direct link between engineering execution and commercial billing.
+
+Relationship with Other Documents
+
+Scope of Work
+       │
+       ▼
+BOQ
+       │
+       ▼
+Quotation
+       │
+       ▼
+Purchase Order
+       │
+       ▼
+Construction
+       │
+       ▼
+Work Completion
+       │
+       ▼
+Tax Invoice
+       │
+       ▼
+Payment
+
+The Tax Invoice is the final commercial document before payment is released.
+
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 2
+2.1,2.2,2.3, 2.4
+
+
+What is a Tax Invoice?
+
+A Tax Invoice is the official commercial document issued by the contractor after completing an approved portion of construction work.
+
+It represents the actual amount being claimed from the client and serves as the legal document for accounting, GST compliance, and payment processing.
+
+Unlike the Purchase Order, which authorizes work, or the BOQ, which estimates work quantities, the Tax Invoice confirms the financial value of the work completed.
+
+Why is the Tax Invoice issued?
+
+The contractor issues the Tax Invoice to:
+
+claim payment for completed work,
+record GST,
+establish a legal financial transaction,
+link completed work with the approved Purchase Order,
+initiate the client's payment process.
+Who prepares it?
+
+The contractor:
+
+Pallabi Infracon Private Limited
+
+Who receives it?
+
+Depending on the project:
+
+ReNew Green (KAK Three) Pvt. Ltd.
+ReNew Wind Energy (AP) Pvt. Ltd.
+
+These represent different ReNew entities responsible for different project sites.
+
+Purpose of these Tax Invoices
+
+The uploaded invoices are raised for:
+
+Hazardous Waste Shed (5 × 6 m)
+Rainwater Harvesting
+Earthing Work
+
+at locations such as:
+
+Kudligi
+Chickodi
+
+The invoices convert completed engineering work into recognized project revenue.
+
+Information Available
+Contractor Information
+
+Each invoice contains:
+
+Company Name
+Company Address
+GST Number
+PAN Number
+
+These identify the billing organization.
+
+Client Information
+
+The invoices include:
+
+Client Name
+Billing Address
+Delivery Address
+GST Number
+PAN Number
+
+This identifies the customer responsible for payment.
+
+Project Information
+
+Each invoice specifies:
+
+Project Site
+Place of Work
+Name of Work
+Purchase Order Number
+Purchase Order Date
+
+This links the invoice to the construction contract.
+
+Financial Information
+
+The invoices include:
+
+Invoice Number
+Invoice Date
+Service Code
+SAC Code
+Quantity
+Unit
+Unit Price
+Taxable Value
+GST
+Gross Total
+Net Payable
+
+One important observation is that some invoices represent the full contract value, while others bill only 40% of the contract value, showing different billing milestones depending on the agreement.
+
+Engineering Information
+
+The invoices identify:
+
+Type of construction
+Construction location
+Civil work package
+Related Purchase Order
+
+This connects engineering execution with commercial billing
+
+Difference between Session 1 and Session 2
+
+Session 2 introduces an important concept:
+
+Different construction packages follow different billing patterns.
+
+Examples include:
+
+Full project billing
+Milestone billing (40%)
+Separate billing for rainwater harvesting and earthing
+
+This demonstrates that construction billing depends on the specific contractual agreement.
+
+Relationship with Other Documents
+
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction Progress
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 3
+3.1,3.2
+
+What is a Tax Invoice?
+
+A Tax Invoice is the final legal financial document issued by the contractor after completing an approved stage of construction work.
+
+It is used to:
+
+request payment,
+calculate GST,
+record revenue,
+maintain financial records,
+complete commercial documentation.
+
+Unlike a Proforma Invoice, a Tax Invoice becomes part of the official accounting records of both the contractor and the client.
+
+Purpose of these Tax Invoices
+
+These invoices are raised for the remaining 60% payment of the Hazardous Waste Shed project.
+
+This confirms that:
+
+the remaining construction work has been completed,
+the contractor has completed the agreed milestone,
+the client can now process the remaining payment.
+
+This completes the billing cycle for this contract.
+
+Who prepares the Tax Invoice?
+
+The contractor:
+
+Pallabi Infracon Private Limited
+
+Who receives it?
+
+The client:
+
+ReNew Wind Energy (AP) Pvt. Ltd.
+
+for the Chickodi project.
+
+Who prepares the Tax Invoice?
+
+The contractor:
+
+Pallabi Infracon Private Limited
+
+Who receives it?
+
+The client:
+
+ReNew Wind Energy (AP) Pvt. Ltd.
+
+for the Chickodi project.
+
+Client Information
+
+The invoices include:
+
+Client Name
+Billing Address
+Delivery Address
+GST Number
+PAN Number
+
+Project Information
+
+The invoices identify:
+
+Site Name (Chickodi, Belgaum)
+Project Location
+Purchase Order Number
+Purchase Order Date
+Name of Work
+Place of Work
+
+These details link the invoice to the exact construction contract.
+
+Financial Information
+
+Each invoice contains:
+
+Invoice Number
+Invoice Date
+Service Code
+SAC Code
+Quantity
+Unit
+Unit Price
+60% Contract Amount
+Taxable Value
+GST @18%
+Gross Total
+Net Payable
+
+Unlike the previous session's 40% invoice, these invoices bill the remaining 60%, completing the full contract value.
+
+Engineering Significance
+
+These invoices indicate that:
+
+the final construction stage has been completed,
+the contractor has reached the final billing milestone,
+the project is ready for financial closure.
+
+Relationship with Previous Tax Invoices
+
+The complete billing cycle now looks like:
+
+Purchase Order
+      │
+      ▼
+Construction Begins
+      │
+      ▼
+40% Progress Completed
+      │
+      ▼
+40% Tax Invoice
+      │
+      ▼
+Continue Construction
+      │
+      ▼
+100% Construction Completed
+      │
+      ▼
+60% Tax Invoice
+      │
+      ▼
+Full Contract Payment
+This is a practical example of milestone-based construction billing.
+
+#############################################################################################################
+
+RENEW SHED 
+WCC 
+
+What is a Work Completion Certificate (WCC)?
+
+A Work Completion Certificate (WCC) is an official document issued after the client verifies that the contractor has completed the work according to the Purchase Order, Scope of Work, BOQ, and quality requirements.
+
+It confirms that:
+
+Construction work has been completed.
+The client has inspected the work.
+The completed work meets the agreed specifications.
+The contractor is eligible to raise the final invoice.
+
+The WCC acts as the technical acceptance document before financial closure.
+
+Why is a WCC issued?
+
+The WCC is issued to:
+
+Confirm physical completion of construction.
+Verify that work meets the required quality standards.
+Record the official completion date.
+Authorize the contractor to proceed with final billing.
+Maintain project completion records.
+
+Without a WCC, disputes can arise about whether the contracted work was actually completed.
+
+Who prepares the WCC?
+
+Normally, the contractor prepares the certificate and submits it after completing the work.
+
+The client's site engineer or authorized representative then inspects the work and signs the certificate to confirm acceptance.
+
+
+Who signs the WCC?
+
+The uploaded certificates include signatures from:
+
+Pallabi Infracon Pvt. Ltd. (Contractor)
+ReNew Site Engineer
+ReNew Site Incharge
+
+This indicates mutual agreement that the work has been completed satisfactorily.
+
+Information Available
+Contractor Information
+
+Each WCC contains:
+
+Contractor Name
+Vendor Code
+GST Number
+PAN Number
+
+Client Information
+
+The certificates identify:
+
+Client Company
+Client Address
+Work Location
+Project Information
+
+Each certificate provides:
+
+WCC Number
+Project Name
+Purchase Order Number
+Purchase Order Date
+Work Start Date
+Work Completion Date
+
+These fields create a direct link between project execution and project completion.
+
+Engineering Information
+
+The WCC records:
+
+Description of Work
+Unit of Measurement (UOM)
+Quantity Completed
+SAC Code
+Status of Work
+
+In the uploaded documents, the status is recorded as Completed, confirming successful completion of the assigned work.
+
+Why is the Work Completion Date important?
+
+The work completion date is used to:
+
+Measure project duration.
+Compare planned vs. actual completion.
+Track contractor performance.
+Trigger final billing and payment.
+
+Relationship with Other Documents
+
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Construction Execution
+        │
+        ▼
+Work Completion Certificate
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment
+
+The WCC connects the engineering execution stage with the financial closure stage.
+
+
+#################################################################################################################
+
+RENEW SHED WORK 
+DRAWINGS
+
+What is an Engineering Drawing?
+
+An Engineering Drawing is the official technical document that tells engineers and contractors exactly how a structure should be built.
+
+Unlike the BOQ, which tells how much work is required, or the Purchase Order, which authorizes the work, the engineering drawing specifies:
+
+What to build
+Exact dimensions
+Structural layout
+Foundation details
+Material placement
+Construction levels
+Elevations
+Sections
+Structural connections
+
+It serves as the primary technical reference during construction.
+
+Purpose of Engineering Drawings
+
+These drawings define the construction requirements for:
+
+Hazardous Waste Scrap Room (5 m × 6 m)
+Hazardous Waste & Oil Shed (10 m × 6 m)
+Storage Yard Shed (38 m × 8 m)
+
+They provide all the information needed to construct the structures according to ReNew's engineering standards.
+
+Information Available
+
+The drawings contain:
+
+General Project Information
+Drawing Title
+Revision Number
+Scale
+Project Location
+Customer
+Drawing Number
+Drawing Date
+Architectural Information
+Floor Plan
+Roof Plan
+Front Elevation
+Side Elevation
+Section Views
+
+Structural Information
+Foundation Plan
+Footing Details
+Column Schedule
+Plinth Beam Plan
+Base Plate Detail
+Anchor Bolt Detail
+Construction Information
+Length
+Width
+Height
+Ground Level
+Finished Floor Level (FFL)
+Finished Ground Level (FGL)
+Elevation (EL)
+
+
+Material Information
+
+The drawings indicate components such as:
+
+Steel Columns
+Roof Sheets
+Brick/ACC Block Walls
+RCC Foundation
+PCC Layer
+Reinforcement
+Anchor Bolts
+Base Plates
+
+Important Components in the Drawings
+Floor Plan
+
+Shows the internal layout of the structure.
+
+Purpose:
+
+Building dimensions
+Door position
+Internal arrangement
+Construction footprint
+
+Roof Plan
+
+Shows:
+
+Roof dimensions
+Roof sheet arrangement
+Structural members
+Rainwater drainage direction
+Foundation Plan
+
+Shows:
+
+Footing locations
+Column positions
+Foundation layout
+
+This is the first construction activity after site preparation.
+Section View
+
+A sectional drawing cuts through the structure to show:
+
+Foundation depth
+Floor levels
+Roof height
+Wall thickness
+Structural connections
+Elevation
+
+Shows the external appearance of the building including wall heights, roof slope, and openings.
+
+Detail Drawings
+
+These provide enlarged views of critical construction elements such as:
+
+Base plate
+Anchor bolts
+Isolated footing
+Plinth protection
+Oil sump pit
+
+These details ensure correct construction of critical structural components.

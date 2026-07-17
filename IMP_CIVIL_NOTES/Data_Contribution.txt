@@ -1,0 +1,1940 @@
+| Document       | Tables Created             | Variables Extracted                                                                      | Future Use                               |
+| -------------- | -------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------- |
+| Work Order     | Projects                   | Project ID, Client, Site, Contract Value, Start Date, Duration, Payment Terms, Retention | SQL, Dashboard, ML                       |
+| BOQ            | BOQ_Items                  | Activity, Quantity, Unit, Work Phase, Material Type                                      | EDA, Feature Engineering, Statistics     |
+| Purchase Order | Purchase_Orders, Suppliers | Supplier, Material, Quantity, Unit Price, Delivery Time, Payment Terms                   | Procurement Analytics, Cost Analysis, ML |
+
+
+
+Projects
+
+BOQ_Items
+
+Purchase_Orders
+
+Suppliers
+
+Invoices
+
+Payments
+
+Quality_Certificates
+
+Project_Completion
+
+
+
+📄 3. Data_Contribution.txt
+
+This is probably the most important file for a Data Scientist.
+
+Every document must answer:
+
+"What data does this document contribute?"
+
+
+
+
+
+| Document         | Tables Created    | Variables Extracted                                                                                                                                                          | Future Use                                                  |
+| ---------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Proforma Invoice | Proforma_Invoices | PI Number, PI Date, PO Number, Supplier Name, Buyer Name, Material Description, Quantity, Unit Rate, Taxable Amount, GST, Total Amount, Advance Payment Terms, Delivery Time | Financial Analysis, Cash Flow Analytics, SQL, Dashboard, ML |
+
+
+
+Proforma_Invoices
+
+PI_Number
+
+PO_Number
+
+Supplier
+
+Buyer
+
+Material
+
+Quantity
+
+Unit_Rate
+
+Taxable_Value
+
+GST
+
+Grand_Total
+
+Advance_Payment
+
+Delivery_Time
+
+Invoice_Date
+
+
+
+
+
+
+
+
+
+
+
+
+
+| Document    | Tables Created | Variables Extracted                                                                                                                   | Future Use                                                           |
+| ----------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Tax Invoice | Tax_Invoices   | Invoice Number, Invoice Date, Project ID, Client, Milestone, Work Description, Quantity, Taxable Value, GST, Gross Total, Net Payable | Revenue Analysis, Cash Flow Analysis, SQL, Dashboard, Financial KPIs |
+
+
+
+Tax_Invoices
+
+Invoice_Number
+
+Invoice_Date
+
+Project_ID
+
+Client
+
+Milestone
+
+Work_Description
+
+Quantity
+
+Taxable_Value
+
+GST
+
+Gross_Total
+
+Net_Payable
+
+Payment_Status
+
+
+############################################################
+
+HANDING OVER REPORTS 
+
+| Document             | Tables Created                                                        | Variables Extracted                                                                                                                                                          | Future Use                                       |
+| -------------------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Handing Over Records | Quality_Inspection, Excavation, Grouting, Reinforcement, Test_Results | Site ID, Excavation Depth, Excavation Dates, Grouting Pressure, Grout Consumption, Number of Holes, Anchor Diameter, Stud Count, Test Dates, Cube Strength, Checklist Status | Quality Analytics, Process Mining, ML, Dashboard |
+
+
+
+Quality_Checklists
+
+Excavation_Records
+
+Injection_Grouting
+
+Anchor_Fixing
+
+Reinforcement
+
+Concrete_Test_Results
+
+Project_Completion
+
+
+
+
+| Document          | Tables Created                                                          | Variables Extracted                                                                                                                                                                                  | Future Use                                                                                     |
+| ----------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Test Certificates | Material_Test, Laboratory_Test, NDT_Results, Cube_Test, Product_Quality | Product Name, Batch Number, Manufacturing Date, Expiry Date, Test Date, Density, Viscosity, Pot Life, Gel Time, Compressive Strength, Pulse Velocity, Concrete Grade, Quality Grade, Laboratory Name | Quality Analytics, Predictive Maintenance, Material Performance Analysis, Compliance Dashboard |
+
+
+
+Material_Certificates
+
+Laboratory_Tests
+
+Concrete_Cube_Test
+
+NDT_Test
+
+Material_Properties
+
+Quality_Compliance
+
+
+
+
+
+
+
+
+
+#########################################################################################################
+
+RENEW
+
+######################################################################################################
+
+GROUTING 
+
+####################################################################################################
+
+DOCUMENT 1 Project Scope
+
+Potential variables include:
+
+Foundation ID
+Damage Type
+Damage Location
+Repair Area
+Repair Method
+Materials Used
+Quantity of Grout
+Quantity of Epoxy
+Carbon Fiber Used
+Repair Duration
+Completion Status
+
+#####################################################################################
+DOCUMENT _2 GROUT APPLICATION GUIDE
+Potential datasets
+
+Material Master
+
+Material Name
+Product Code
+Manufacturer
+Shelf Life
+
+Weather Conditions
+
+Ambient Temperature
+Concrete Temperature
+Grout Temperature
+
+Mixing Data
+
+Water Quantity
+Batch Size
+Mixing Time
+
+Quality Control
+
+Flow Test
+Compression Strength
+Curing Time
+
+Inspection
+
+Crack Type
+Repair Method
+Final Status
+
+These variables can later become engineered features in your master dataset.
+
+#########################################################################################
+
+DOCUMENT _3 REPAIR PROPOSAL
+
+Potential fields:
+
+Damage Severity
+Crack Angle
+Repair Option
+Material Cost
+Labour Hours
+Carbon Fiber Requirement
+UV Coating Requirement
+Repair Completion Time
+
+###############################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 1, 1.2, 1.3
+
+Project Master Data
+Purchase Order Number
+Project Name
+Client
+Contractor
+Project Location
+Purchase Order Date
+Delivery Date
+Foundation Type
+Number of Foundations
+
+
+Commercial Data
+Contract Value
+GST Amount
+Total Invoice Value
+Payment Terms
+Retention Percentage
+Warranty Duration
+
+
+Construction Data
+Scope of Work
+Excavation
+PCC
+Reinforcement
+Shuttering
+Concrete Finishing
+Repair Work
+Foundation Type
+
+Quality Data
+Cube Test Requirement
+Quality Assurance Plan
+Project Quality Plan
+Field Quality Plan
+Inspection Records
+NABL Test Certificates
+Work Completion Certificate
+
+
+Compliance Data
+Labour Licence
+BOCW Registration
+PF Compliance
+ESIC Compliance
+Attendance Register
+Wage Register
+Insurance
+EHSS Compliance
+
+
+| Category    | Example Variables                |
+| ----------- | -------------------------------- |
+| Project     | PO Number, Client, Site          |
+| Engineering | Foundation Type, Quantity        |
+| Financial   | Contract Value, GST              |
+| Timeline    | PO Date, Completion Date         |
+| Quality     | Cube Test, QA Documents          |
+| Compliance  | Labour Documents, Insurance      |
+| Warranty    | Warranty Start, Retention Amount |
+
+
+############################################################################################################
+
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 2, 2.2, 2.3
+
+Project Information
+
+Purchase Order Number
+Project Site
+Client Name
+Contractor Name
+
+
+Project Type
+
+Number of WTG Foundations
+Delivery Date
+
+
+Financial Information
+
+Contract Value
+GST Amount
+Total Contract Amount
+Payment Terms
+Advance Payment
+Final Payment
+
+Engineering Information
+
+Repair Type
+Foundation Tilt Repair
+Number of Turbines
+Service Category
+
+Quality Information
+
+Quality Assurance Plan
+Project Quality Plan
+Field Quality Plan
+Cube Test
+NABL Test Certificates
+Material Inspection
+Calibration Certificates
+Site Inspection Records
+
+Compliance Information
+
+EHSS Compliance
+Labour Compliance
+Insurance
+Safety Requirements
+Environmental Compliance
+
+| Category    | Variables                               |
+| ----------- | --------------------------------------- |
+| Project     | PO Number, Site, Client                 |
+| Engineering | Repair Type, WTG Count                  |
+| Financial   | Contract Value, GST, Payment Terms      |
+| Timeline    | PO Date, Delivery Date                  |
+| Quality     | Cube Test, NABL Test, Inspection Status |
+| Compliance  | EHSS, Insurance, Safety Documents       |
+
+
+#####################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 3, 3.2, 3.3
+
+Project Data
+
+Purchase Order Number
+Client
+Project Site
+Project Type
+Foundation ID
+Delivery Date
+
+Financial Data
+
+Contract Value
+GST
+Payment Terms
+Advance Payment
+Final Payment
+
+
+Engineering Data
+
+Repair Category
+Foundation Strengthening
+Excavation Hours
+Drilling Count
+PVC Nozzle Quantity
+Epoxy Quantity
+Waterproofing Area
+Backfilling Quantity
+Compaction Requirement
+
+Material Data
+
+
+Conbextra EP10 Epoxy Grout
+PVC Nozzles
+Polyester Resin Anchor Grout
+BASF MasterProtect 300
+MasterKure 181
+MasterEmaco N303
+
+Quality Data
+
+
+Work Completion Certificate
+Quality Inspection
+HSSE Compliance
+GCC Compliance
+Material Usage Records
+
+
+| Category    | Variables                                           |
+| ----------- | --------------------------------------------------- |
+| Project     | PO Number, Site, Client                             |
+| Engineering | Excavation, Drilling, Grouting, Waterproofing       |
+| Materials   | Epoxy Quantity, PVC Nozzles, Waterproofing Material |
+| Finance     | Contract Value, GST, Payment Terms                  |
+| Timeline    | PO Date, Delivery Date                              |
+| Quality     | WCC, HSSE, QA Compliance                            |
+
+#############################################################################################################
+
+WORK ORDER/ PURCHASE ORDER 
+
+SESSION - 4, 4.2
+
+Purchase Order Master
+
+| Variable            |
+| ------------------- |
+| PO Number           |
+| Client Name         |
+| Vendor Name         |
+| Project Site        |
+| Repair Type         |
+| Project Description |
+| PO Date             |
+| Delivery Deadline   |
+| Quantity            |
+| Unit                |
+| Unit Price          |
+| Basic Amount        |
+| GST                 |
+| Total Amount        |
+
+Quality Compliance Table
+
+| Variable                      |
+| ----------------------------- |
+| QA Requirement                |
+| QC Requirement                |
+| Inspection Frequency          |
+| Test Required                 |
+| Material Certificate Required |
+| Calibration Required          |
+| Site Laboratory Required      |
+| Field Quality Plan Required   |
+
+
+EHSS Compliance Table
+
+| Variable                 |
+| ------------------------ |
+| Hazard Assessment        |
+| Safety Engineer Required |
+| Training Plan            |
+| Incident Reporting       |
+| Environmental Plan       |
+| Social Compliance        |
+| KPI Monitoring           |
+| Audit Requirement        |
+
+Project Risk Table
+
+| Variable          |
+| ----------------- |
+| Risk Category     |
+| Risk Description  |
+| Preventive Action |
+| Corrective Action |
+| Owner Approval    |
+| Compliance Status |
+
+
+Relationships
+
+Purchase Order → BOQ
+
+Purchase Order → Tax Invoice
+
+Purchase Order → WCC
+
+Purchase Order → Damage Report
+
+Purchase Order → Test Certificate
+
+Purchase Order → Final Payment
+
+This strengthens the relational structure of your master dataset.
+
+
+###################################################################################################################
+
+BOQ and Quotation  RENEW GROUTING
+
+These documents are extremely valuable because they introduce activity-level costing, which was not available in the Purchase Orders.
+
+Table 1 – Project Input
+
+Variables include:
+
+State
+Site
+WTG Location
+Grout Thickness
+Damage Shape
+Damage Dimension
+Number of Damage Points
+Remarks
+Table 2 – BOQ Activity Table
+
+Variables:
+
+Activity ID
+Activity Description
+Quantity
+Unit
+Unit Rate
+Total Value
+Remarks
+Table 3 – Material Consumption
+
+Potential variables:
+
+Material Name
+Quantity
+Unit
+Rate
+Total Cost
+
+Examples:
+
+Nito Bond EP
+Conbextra BB92
+Thermocol
+Foam Board
+Table 4 – Labour Activities
+
+Potential variables:
+
+Dismantling
+Cleaning
+Formwork
+Grouting
+Finishing
+Waterproofing
+Table 5 – Quotation Costing
+
+Variables:
+
+Direct Cost
+Labour Cost
+Material Cost
+Supervision Cost
+Profit Margin
+Final Quotation Value
+
+
+BOQ
+
+↓
+
+Quotation
+
+↓
+
+Purchase Order
+
+↓
+
+Tax Invoice
+
+↓
+
+Work Completion Certificate
+
+
+#############################################################################################################
+
+Tax Invoices (RENEW GROUTING)
+
+
+Table 1 – Invoice Master
+
+Variables:
+
+Invoice Number
+Invoice Date
+Client
+Client GST
+Vendor
+Vendor GST
+Project Site
+PO Number
+Work Description
+Service Code
+SAC Code
+Quantity
+Unit Rate
+Taxable Amount
+GST
+Gross Amount
+Net Amount
+
+Table 2 – Payment Tracking
+
+Variables:
+
+PO Number
+Invoice Number
+Invoice Date
+Invoice Amount
+Payment Stage
+Running Bill Number
+Previous Amount
+Current Amount
+Cumulative Amount
+
+This allows you to monitor project cash flow over time.
+
+Table 3 – Quality Evidence
+
+Variables:
+
+WCC Available
+Soil Test Available
+Compaction Test Available
+Material Test Certificate Available
+Inspection Status
+Quality Approved
+
+Table 4 – Project Financials
+
+Variables:
+
+Project Site
+Invoice Value
+GST
+Net Payable
+Additional Work Value
+RA Bill Value
+Final Billing Value
+
+Relationships
+
+Quotation
+      │
+      ▼
+Purchase Order
+      │
+      ▼
+BOQ
+      │
+      ▼
+Tax Invoice
+      │
+      ▼
+Running Account Bill
+      │
+      ▼
+Work Completion Certificate
+      │
+      ▼
+Final Payment
+
+This relationship will become a core part of your SQL schema.
+
+###############################################################################################################
+
+Renew Grouting
+Engineering
+Damage Reports
+
+Damage Report Table
+
+Variables include:
+
+Turbine Number
+Turbine Model
+Site
+State
+Damage Category
+Damage Description
+Approximate Damage Length
+Repair Recommendation
+Engineering Remarks
+
+Repair Planning Dataset
+
+Variables:
+
+Repair Required
+Reconstruction Required
+SOP Repair Required
+Material Needed
+Labour Requirement
+Estimated Repair Complexity
+
+Crack Classification Dataset
+
+Possible variables:
+
+Hairline Crack
+Vertical Crack
+Peripheral Crack
+Shoulder Damage
+Loose Grouting
+Reconstruction Needed
+
+Engineering Relationship
+
+Damage Report
+       │
+       ▼
+Repair Method
+       │
+       ▼
+Repair Material
+       │
+       ▼
+BOQ Quantity
+       │
+       ▼
+Purchase Order
+       │
+       ▼
+Invoice
+
+###################################################################################################################
+
+
+Renew Grouting
+Engineering
+Material Data Sheets
+
+Although these are not transactional documents, they contribute valuable reference data.
+
+Table 1 – Material Master
+
+Variables:
+
+Material Name
+Manufacturer
+Product Category
+Product Type
+Application Area
+Structural Function
+
+Table 2 – Engineering Properties
+
+Variables:
+
+Compressive Strength
+Tensile Strength
+Flexural Strength
+Adhesion Strength
+Chemical Resistance
+Water Resistance
+UV Resistance
+Abrasion Resistance
+Elastic Modulus
+Cure Time
+Pot Life
+
+These values come directly from the technical specifications
+
+Table 3 – Material Usage
+
+Variables:
+
+Repair Stage
+Recommended Thickness
+Coverage
+Mixing Procedure
+Number of Coats
+Application Temperature
+Storage Conditions
+Shelf Life
+
+Table 4 – Safety & Handling
+
+Variables:
+
+PPE Required
+Skin Contact Warning
+Eye Protection
+Ventilation Requirement
+Fire Risk
+Storage Precautions
+
+These can support a future compliance or safety analysis.
+
+Relationships
+
+Damage Report
+      │
+      ▼
+Repair Method
+      │
+      ▼
+Material Selection
+      │
+      ▼
+Technical Data Sheet
+      │
+      ▼
+BOQ
+      │
+      ▼
+Purchase Order
+      │
+      ▼
+Repair Execution
+
+This creates a bridge between engineering decisions and project execution.
+
+###################################################################################################################
+
+Renew Grouting
+Engineering
+Repair Methods
+
+Table 1 – Engineering Compliance Register
+
+Variables
+
+BOQ Item Number
+Activity Description
+Material Name
+Quantity
+Unit
+Engineering Comment
+Technical Clarification
+Final Compliance Decision
+
+
+Table 2 – Material Verification
+
+Variables
+
+Material Name
+Coverage
+Quantity Required
+Manufacturer Recommendation
+Engineering Decision
+Final Approved Material
+
+Examples include:
+
+Nito Bond EP
+Conbextra BB92 / BB92-O
+Nitoseal PU40
+Nitowrap CWS
+Nitocote UR512
+
+
+Table 3 – Engineering Decisions
+
+Variables
+
+Question Raised
+Proposed Solution
+Final Compliance
+Status
+
+Examples from the workbook include:
+
+Coverage verification
+Unit conversion
+Water–material ratio
+Number of protective coats
+Material selection
+
+Table 4 – Quality Assurance Dataset
+
+Variables
+
+Material Verified
+Technical Specification Available
+BOQ Matches Specification
+Compliance Approved
+Additional Clarification Required
+
+Relationships
+
+Damage Report
+        │
+        ▼
+Material Data Sheet
+        │
+        ▼
+Engineering Compliance
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Execution
+
+This document creates a strong link between technical specifications and project execution.
+
+###################################################################################################################
+
+Renew Grouting
+WCC Work Completion Certificate
+
+Table 1 – Work Completion Register
+
+Variables:
+
+WCC Number
+Project Name
+Site
+Client
+Vendor
+Purchase Order Number
+Work Start Date
+Work Completion Date
+Work Status
+Quantity Completed
+SAC Code
+
+Table 2 – Project Timeline
+
+Variables:
+
+PO Date
+Work Start Date
+Completion Date
+Project Duration
+
+This allows calculation of project execution time.
+
+Table 3 – Additional Work Register
+
+Variables:
+
+Extra Activity
+Location
+Unit
+Quantity
+Remarks
+
+Examples:
+
+Extra drilling holes
+Extra nozzles
+Additional Conbextra EP10 grout
+
+These records help quantify scope changes.
+
+Table 4 – Project Closure Dataset
+
+Variables:
+
+Completion Status
+Client Acceptance
+Vendor Approval
+Site Engineer Approval
+Site In-charge Approval
+WCC Issued
+Ready for Invoice
+
+Relationships
+
+Damage Report
+      │
+      ▼
+BOQ
+      │
+      ▼
+Quotation
+      │
+      ▼
+Purchase Order
+      │
+      ▼
+Repair Execution
+      │
+      ▼
+Work Completion Certificate
+      │
+      ▼
+Tax Invoice
+      │
+      ▼
+Payment
+
+
+
+
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+SCOPE OF WORK 
+
+Table 1 – Project Master
+
+Variables:
+
+Project Name
+Site Name
+State
+Project Type
+Structure Type
+Shed Size (5 × 6 m)
+Measurement Method
+
+Table 2 – Scope Responsibility Matrix
+
+Variables:
+
+Responsibility ID
+Activity
+Responsible Party (ReNew / Vendor)
+Status
+Compliance Required
+
+Table 3 – Safety Compliance
+
+Variables:
+
+JSA Required
+TBT Required
+HIRA Required
+PPE Required
+Medical Certificate Required
+Supervisor Required
+Audit Required
+
+Table 4 – Construction Activity Master
+
+Variables:
+
+Activity ID
+Activity Name
+Unit
+Quantity
+Construction Stage
+
+Examples:
+
+Excavation
+RCC
+Steel
+Roofing
+Brickwork
+Painting
+Electrical Work
+
+Table 5 – Material Planning
+
+Variables:
+
+Cement
+Sand
+Steel
+GI Sheets
+Purlins
+Structural Steel
+PVC Pipe
+Turbo Ventilator
+Electrical Materials
+
+Relationships
+
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Material Procurement
+        │
+        ▼
+Construction
+        │
+        ▼
+WCC
+        │
+        ▼
+Tax Invoice
+
+The SOW becomes the starting point for the Shed project.
+
+#################################################################################################################
+
+RENEW SHED PROJECT
+BOQ
+
+Table 1 – BOQ Master
+
+Variables:
+
+BOQ Item Number
+Activity Description
+Unit
+Quantity
+Unit Rate
+Total Amount
+
+Table 2 – Construction Activities
+
+Variables:
+
+Earthwork
+PCC
+RCC
+Reinforcement
+Structural Steel
+Roofing
+Masonry
+Plaster
+Painting
+Electrical Work
+
+Table 3 – Material Planning
+
+Variables:
+
+Cement
+Steel
+Sand
+Aggregate
+GI Sheet
+PVC Pipe
+Structural Steel
+Paint
+Electrical Items
+
+Table 4 – Cost Breakdown
+
+Variables:
+
+Activity
+Quantity
+Unit Rate
+Estimated Cost
+Cost Percentage
+
+This table will allow you to identify the major cost drivers.
+
+Table 5 – Site Comparison
+
+Since you have BOQs for multiple locations (Kudligi, Otha PH-3, Chikodi, Jagalur, Patan), you can create:
+
+Variables:
+
+Site
+Project Cost
+Activity Cost
+Material Requirement
+Quantity Differences
+
+This will be a unique dataset because most portfolio projects do not compare engineering BOQs across multiple sites.
+
+Relationships
+
+Scope of Work
+      │
+      ▼
+BOQ
+      │
+      ▼
+Quotation
+      │
+      ▼
+Purchase Order
+      │
+      ▼
+Construction
+      │
+      ▼
+WCC
+      │
+      ▼
+Tax Invoice
+
+#################################################################################################################
+
+RENEW SHED
+PURCHASE ORDER
+
+Table 1 – Purchase Order Master
+
+Variables:
+
+PO Number
+PO Date
+Client
+Vendor
+Project Site
+Project Type
+Project Description
+Delivery Date
+Contract Value
+GST
+Total Value
+
+Table 2 – Payment Dataset
+
+Variables:
+
+Advance Payment %
+Balance Payment %
+Invoice Date
+Payment Status
+Payment Terms
+Due Date
+
+Table 3 – Procurement Dataset
+
+Variables:
+
+Material Description
+Quantity
+Service Code
+Delivery Terms
+Site
+Contractor
+
+Table 4 – Project Timeline
+
+Variables:
+
+PO Date
+Mobilization Date
+Planned Completion Date
+Construction Duration
+
+Table 5 – Quality Compliance
+
+Variables:
+
+QA Plan
+Inspection Required
+Material Testing
+NABL Test
+Site Lab
+Quality Approval
+
+Table 6 – Safety Compliance
+
+Variables:
+
+PPE
+EHSS
+Safety Training
+Documentation
+Site Audit
+
+Table 7 – Subcontractor Dataset
+
+Variables:
+
+Subcontractor Name
+Assigned Work
+Project
+Payment
+Completion Date
+Progress %
+Outstanding Amount
+
+This dataset is unique because most public datasets do not contain subcontractor-level information.
+
+
+Relationships
+
+Scope of Work
+      │
+      ▼
+BOQ
+      │
+      ▼
+Purchase Order
+      │
+      ▼
+Subcontractor
+      │
+      ▼
+Material Procurement
+      │
+      ▼
+Construction
+      │
+      ▼
+Quality Inspection
+      │
+      ▼
+WCC
+      │
+      ▼
+Tax Invoice
+      │
+      ▼
+Payment
+
+##################################################################################################################
+
+RENEW SHED PROJECT 
+PERFORMA INVOICE
+
+
+
+Table 1 – Proforma Invoice Master
+
+Variables:
+
+Proforma Invoice Number
+Invoice Date
+Purchase Order Number
+Purchase Order Date
+Client
+Supplier
+Site
+Project Name
+Place of Work
+
+
+Table 2 – Billing Dataset
+
+Variables:
+
+Service Code
+SAC Code
+Description
+Quantity
+Unit
+Unit Price
+Milestone Percentage
+Taxable Value
+GST
+Gross Amount
+Net Payable
+
+Table 3 – Payment Milestone Dataset
+
+Variables:
+
+Contract Value
+Milestone Percentage
+Amount Claimed
+Remaining Contract Value
+Billing Stage
+
+Table 4 – Client Billing Dataset
+
+Variables:
+
+Client Name
+Project Site
+Invoice Date
+Invoice Value
+GST
+Payment Status (to be linked later with Tax Invoice/WCC)
+
+Relationships
+
+Scope of Work
+        │
+        ▼
+BOQ
+        │
+        ▼
+Purchase Order
+        │
+        ▼
+Proforma Invoice
+        │
+        ▼
+Tax Invoice
+        │
+        ▼
+Payment Register
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 1 
+1.1,1.2,1.3, 1.4
+
+Table 1 – Tax Invoice Master
+
+Variables:
+
+Invoice Number
+Invoice Date
+Purchase Order Number
+Purchase Order Date
+Client Name
+Supplier Name
+Project Site
+Place of Work
+
+Table 2 – Financial Dataset
+
+Variables:
+
+Service Code
+SAC Code
+Description
+Quantity
+Unit
+Unit Price
+Taxable Value
+GST
+Gross Amount
+Net Payable
+
+Table 3 – Project Billing Dataset
+
+Variables:
+
+Project Name
+Project Site
+Invoice Value
+Billing Date
+Purchase Order Reference
+Client
+
+Table 4 – Revenue Dataset
+
+Variables:
+
+Total Revenue
+GST Collected
+Net Revenue
+Revenue by Site
+Revenue by Client
+
+Table 5 – Timeline Dataset
+
+Variables:
+
+Purchase Order Date
+Invoice Date
+Days from PO to Invoice
+Billing Stage
+
+SQL Relationships
+
+Project
+      │
+      ▼
+Scope_of_Work
+      │
+      ▼
+BOQ
+      │
+      ▼
+Purchase_Order
+      │
+      ▼
+Tax_Invoice
+      │
+      ▼
+Payment
+
+Data Science Concepts
+
+These invoices introduce structured financial features that can be used for:
+
+Revenue forecasting
+Client-wise revenue analysis
+Site-wise billing analysis
+Time-to-bill analysis
+Project lifecycle analytics
+Financial KPI dashboards
+
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 2
+2.1,2.2,2.3, 2.4
+
+
+Table 1 – Tax Invoice Master
+
+Variables:
+
+Invoice Number
+Invoice Date
+Purchase Order Number
+Client
+Supplier
+Project Site
+Place of Work
+
+Table 2 – Financial Dataset
+
+Variables:
+
+Service Code
+SAC Code
+Quantity
+Unit
+Unit Price
+Taxable Value
+GST
+Gross Amount
+Net Payable
+
+Table 3 – Construction Billing Dataset
+
+Variables:
+
+Project Name
+Construction Type
+Invoice Amount
+Billing Stage
+Purchase Order Reference
+Table 4 – Revenue Dataset
+
+Variables:
+
+Revenue by Client
+Revenue by Site
+Revenue by Construction Type
+GST Collected
+
+Table 5 – Billing Timeline
+
+Variables:
+
+Purchase Order Date
+Invoice Date
+Billing Delay
+Billing Stage
+
+SQL Relationships
+
+Project
+     │
+     ▼
+Scope_of_Work
+     │
+     ▼
+BOQ
+     │
+     ▼
+Purchase_Order
+     │
+     ▼
+Tax_Invoice
+     │
+     ▼
+Revenue
+
+Data Science Concepts
+
+These invoices introduce additional analytical features:
+
+Billing Pattern Analysis: Compare milestone billing versus full billing.
+Revenue Segmentation: Analyze revenue by construction package (shed, rainwater harvesting, earthing).
+Client Segmentation: Compare revenue generated from different ReNew entities.
+Time-Series Analysis: Track billing amounts over project timelines.
+Feature Engineering: Create variables such as billing percentage, invoice frequency, and days from PO to invoice for later modeling.
+
+###############################################################################################################
+
+RENEW SHED PROJECT
+TAX INVOICE SESSION 3
+3.1,3.2
+
+Table 1 – Tax Invoice Master
+
+Variables:
+
+Invoice Number
+Invoice Date
+Purchase Order Number
+Project Site
+Client Name
+Supplier Name
+Table 2 – Financial Dataset
+
+Variables:
+
+Service Code
+SAC Code
+Quantity
+Unit
+Unit Price
+60% Amount
+GST
+Gross Total
+Net Payable
+
+Table 3 – Milestone Billing Dataset
+
+Variables:
+
+Project Name
+Purchase Order
+40% Billing Amount
+60% Billing Amount
+Total Contract Value
+Billing Stage
+Table 4 – Revenue Dataset
+
+Variables:
+
+Revenue by Project
+Revenue by Client
+Revenue by Site
+Total GST
+Final Revenue
+
+Table 5 – Billing Timeline
+
+Variables:
+
+Purchase Order Date
+First Invoice Date
+Final Invoice Date
+Days Between Billing Milestones
+Project Completion Time
+
+SQL Relationships
+
+Project
+      │
+      ▼
+Purchase_Order
+      │
+      ▼
+Milestone_Invoice
+      │
+      ▼
+Final_Invoice
+      │
+      ▼
+Payment
+
+Data Science Concepts
+
+These final invoices add several important analytical features:
+
+Milestone Analysis
+
+Compare:
+
+40% billing
+60% billing
+Total contract value
+Revenue Completion
+
+Calculate:
+
+Total billed amount
+Remaining balance
+Revenue realization
+
+Time Analysis
+
+Measure:
+
+Days from Purchase Order to first invoice
+Days from first invoice to final invoice
+Overall billing cycle
+Feature Engineering
+
+Useful features include:
+
+Billing Percentage
+Invoice Sequence
+Contract Completion Status
+Days Between Milestones
+Revenue Realization Percentage
+
+These features are useful for predictive analytics and dashboard development.
+
+#############################################################################################################
+
+RENEW SHED 
+WCC 
+
+Table 1 – WCC Master
+
+Variables:
+
+WCC Number
+WCC Date
+Project Name
+Project Site
+Client Name
+Contractor Name
+Purchase Order Number
+
+Table 2 – Construction Completion Dataset
+
+Variables:
+
+Work Start Date
+Work Completion Date
+Project Duration
+Quantity Completed
+Work Status
+
+Table 3 – Engineering Verification Dataset
+
+Variables:
+
+Description of Work
+UOM
+Quantity
+Completion Status
+Site Engineer Approval
+Site Incharge Approval
+
+Table 4 – Project Performance Dataset
+
+Variables:
+
+Planned Completion Date (from PO)
+Actual Completion Date (from WCC)
+Completion Delay
+Project Status
+
+SQL Relationships
+
+Project
+      │
+      ▼
+Purchase_Order
+      │
+      ▼
+Construction
+      │
+      ▼
+WCC
+      │
+      ▼
+Tax_Invoice
+      │
+      ▼
+Payment
+
+Data Science Concepts
+
+The WCC introduces valuable project execution features:
+
+Project Duration
+
+Calculate:
+
+Days from Work Start to Work Completion.
+Completion Status
+
+Classify projects as:
+
+Completed
+In Progress
+Delayed
+
+Timeline Analysis
+
+Measure:
+
+Average project duration.
+Completion trends across sites.
+Feature Engineering
+
+Potential features:
+
+Project Duration
+Work Status
+Completion Percentage
+Days from PO to Completion
+Days from Completion to Invoice
+
+These features are useful for predictive models related to schedule and performance.
+
+#################################################################################################################
+
+RENEW SHED WORK 
+DRAWINGS
+
+Table 1 – Building Master
+
+Variables:
+
+Building Type
+Building Length
+Building Width
+Building Height
+Roof Type
+Foundation Type
+
+Table 2 – Foundation Dataset
+
+Variables:
+
+Footing Number
+Footing Length
+Footing Width
+Footing Depth
+Column Number
+Foundation Type
+
+Table 3 – Structural Member Dataset
+
+Variables:
+
+Column ID
+Column Size
+Beam Type
+Roof Member
+Base Plate Size
+Anchor Bolt Details
+
+Table 4 – Material Dataset
+
+Variables:
+
+Steel Quantity
+RCC Volume
+PCC Volume
+Brick/ACC Block Quantity
+Roofing Sheet Area
+
+Table 5 – Drawing Metadata
+
+Variables:
+
+Drawing Number
+Revision Number
+Drawing Date
+Engineer
+Project Location
+Client
+
+SQL Relationships
+
+Project
+     │
+     ▼
+Drawing
+     │
+     ▼
+Foundation
+     │
+     ▼
+Structural Members
+     │
+     ▼
+Materials
+     │
+     ▼
+BOQ
+     │
+     ▼
+Purchase Order
+
+Data Science Concepts
+
+These drawings provide opportunities for several analytics applications:
+
+Material Estimation
+
+Estimate steel, concrete, roofing, and masonry requirements from dimensions.
+
+Cost Estimation
+
+Link drawing dimensions with BOQ rates to estimate project cost.
+
+Structural Analytics
+
+Compare building sizes, foundation layouts, and structural configurations across projects.
+
+Feature Engineering
+
+Useful variables include:
+
+Building Area (Length × Width)
+Roof Area
+Number of Columns
+Number of Footings
+Foundation Depth
+Building Height
+Steel Frame Count
+
+Computer Vision (Future Scope)
+
+Engineering drawings could later be processed using AI to:
+
+detect rooms,
+identify dimensions,
+extract symbols,
+automatically generate datasets.
+
+This is an excellent future enhancement for your Construction Intelligence Platform.
+
+
