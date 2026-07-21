@@ -1,0 +1,85 @@
+Table Name,Column Name,Data Type,Constraints,Description
+Damage_Reports,damage_report_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique ID generated to track each site inspection report.
+Damage_Reports,project_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Links this damage report directly to a specific project site location.
+Damage_Reports,turbine_number,VARCHAR(50),NOT NULL,The unique asset identifier for the specific wind turbine inspected.
+Damage_Reports,turbine_model,VARCHAR(100),NOT NULL,The exact model version of the wind turbine asset.
+Damage_Reports,nature_of_damage,VARCHAR(255),NOT NULL,"Descriptive type of structural issue found (e.g., 45° cracking, grout debonding, or tilt)."
+Damage_Reports,damaged_length_approx,"DECIMAL(10,2)",NOT NULL,Approximate measured physical length or area of the crack or defect.
+Damage_Reports,severity_rating,INT,NOT NULL,"Numeric rating baseline indicating urgency of repair (e.g., scale from 1 to 5)."
+Damage_Reports,repair_recommendation,TEXT,NOT NULL,Detailed engineering description of the recommended repair steps or material fix.
+Field_Quality_Logs,quality_log_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique ID generated to track each quality log entry.
+Field_Quality_Logs,project_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Links the quality log entry back to the specific construction project site.
+Field_Quality_Logs,activity_type,VARCHAR(100),NOT NULL,"The technical stage checked on-site (e.g., Excavation, Chipping, Concrete Pour)."
+Field_Quality_Logs,inspection_date,DATE,NOT NULL,Calendar date when the field inspection task was officially conducted.
+Field_Quality_Logs,cube_test_result_mpa,"DECIMAL(5,2)",,Compressive strength measured in MegaPascals (MPa) from lab crushing tests.
+Clients,client_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique ID generated to track each client.
+Clients,client_name,VARCHAR(255),NOT NULL,The legal corporate name of the client (like ReNew or Maharaja Shree Umaid Mills).
+Clients,billing_address,TEXT,NOT NULL,The official head office address for tax filing.
+Clients,gstin,CHAR(15),NOT NULL,The client's 15-digit registration code for government goods and services tax tracking.
+Clients,pan_number,CHAR(10),NOT NULL,Legal 10-digit income tax permanent account number.
+Projects,project_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique code assigned to a specific construction site.
+Projects,client_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Connects the site back to the owner in the Clients table.
+Projects,project_name,VARCHAR(255),NOT NULL,"Name of the build (e.g., Shahuwadi WTG Foundation or Kudligi Shed)."
+Projects,site_location,VARCHAR(255),NOT NULL,Specific area or farm identifier where the team is working.
+Projects,state,VARCHAR(100),NOT NULL,"The state where the site is based (e.g., Maharashtra, Karnataka, Gujarat)."
+Projects,structure_type,VARCHAR(100),NOT NULL,"Differentiates between building a Shed, a new Foundation, or doing a Grouting Repair."
+Projects,start_date,DATE,NOT NULL,Calendar date when work officially kicked off on site.
+Projects,delivery_deadline,DATE,NOT NULL,The contractually agreed-upon target completion date.
+Work_Orders,work_order_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",System ID for tracking this specific execution agreement.
+Work_Orders,work_order_number,VARCHAR(100),NOT NULL,The actual official document number typed on the physical contract paperwork.
+Work_Orders,project_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Links the agreement to a specific construction location.
+Work_Orders,issue_date,DATE,NOT NULL,Date when the contract was formally signed and awarded.
+Work_Orders,total_contract_value,"DECIMAL(15,2)",NOT NULL,Total money awarded for the scope before adding government taxes.
+Work_Orders,payment_terms_description,TEXT,NOT NULL,Text summary of milestones (like 40% advance stage or 5% retention).
+BOQ_Items,boq_item_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique marker for an individual operational task line item.
+BOQ_Items,work_order_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Ties this specific engineering requirement back to the main contract.
+BOQ_Items,item_code,VARCHAR(50),NOT NULL,"Technical shorthand referencing the task number (e.g., Item 2.1 or Section 4)."
+BOQ_Items,description_of_work,TEXT,NOT NULL,Clear text describing what the site engineer must do (like Pedestal Demolition or PCC).
+BOQ_Items,unit_of_measurement,VARCHAR(20),NOT NULL,"Engineering metric used for tracking volume or area (e.g., Cu.m, Sq.m, MT, or LS)."
+BOQ_Items,estimated_quantity,"DECIMAL(12,3)",NOT NULL,The target quantity calculated during estimation before digging starts.
+BOQ_Items,unit_rate,"DECIMAL(12,2)",NOT NULL,The specific fixed cost charged per individual unit of work.
+BOQ_Items,estimated_total_cost,"DECIMAL(15,2)",NOT NULL,Calculated field multiplying standard estimated quantity by unit rate.
+BOQ_Items,sac_code,CHAR(6),NOT NULL,Standard 6-digit Service Accounting Code required for mapping service taxes under Indian law.
+Field_Quality_Logs,ndt_ultrasonic_velocity,INT,,Measured speed from non-destructive tests evaluating internal concrete density.
+Field_Quality_Logs,status,VARCHAR(20),NOT NULL,"Final checklist sign-off evaluation status (e.g., Pass or Fail)."
+Vendors,vendor_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique identifier code used to track each external vendor.
+Vendors,vendor_name,VARCHAR(255),NOT NULL,The legal company name of the material manufacturer or lab supplier.
+Vendors,vendor_code,VARCHAR(50),NOT NULL,The internal supplier shorthand code registered in company systems.
+Vendors,gstin,CHAR(15),NOT NULL,The vendor's official 15-digit tax registration profile code.
+Vendors,vendor_type,VARCHAR(100),NOT NULL,"Classification tracking the vendor's domain (e.g., Material Supplier, Testing Lab, Subcontractor)."
+Materials,material_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Unique ID code generated to track each engineering material master file.
+Materials,material_name,VARCHAR(255),NOT NULL,"Structural name of the material product (e.g., Conbextra BB92-O, Nitowrap FRC)."
+Materials,manufacturer_name,VARCHAR(255),NOT NULL,"Industrial group making the component (e.g., Fosroc, Sika India)."
+Materials,technical_property_summary,TEXT,,"Notes on technical density, viscosity, or target structural usage from data sheets."
+Materials,standard_coverage_rate,VARCHAR(100),,"Manufacturer recommended yield metric (e.g., square meters per liter or per bag)."
+Purchase_Orders,po_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",System baseline tracker code generated for this specific order record.
+Purchase_Orders,po_number,VARCHAR(100),NOT NULL,The legal document sequence code typed on the procurement form.
+Purchase_Orders,project_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Maps the material supply orders back to the construction site location.
+Purchase_Orders,vendor_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Maps the transactional order items back to the target supplier profile.
+Purchase_Orders,issue_date,DATE,NOT NULL,Calendar date when the purchase order authorization form was finalized.
+Purchase_Orders,total_po_value,"DECIMAL(15,2)",NOT NULL,Total baseline purchase financial balance tracking before external taxes.
+Purchase_Orders,delivery_deadline_date,DATE,NOT NULL,Target material logistics expected arrival cut-off tracking date.
+Proforma_Invoices,proforma_invoice_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",System tracker key used to capture advance vendor payment requests.
+Proforma_Invoices,pfi_number,VARCHAR(100),NOT NULL,The literal pre-billing invoice document reference number.
+Proforma_Invoices,po_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Relates this advance deposit request back to an active Purchase Order.
+Proforma_Invoices,issue_date,DATE,NOT NULL,Calendar invoice entry point date documenting the advance fund request.
+Proforma_Invoices,requested_advance_amount,"DECIMAL(15,2)",NOT NULL,"Exact value matching specific upstream deposit step rules (e.g., 50% down payment)."
+Proforma_Invoices,gst_amount,"DECIMAL(15,2)",NOT NULL,Estimated proportional goods and services tax breakdown layer value.
+Proforma_Invoices,gross_total_value,"DECIMAL(15,2)",NOT NULL,Sum total including base balances and calculated tax obligations.
+Tax_Invoices,invoice_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",Internal accounting token code tracking legal milestone billing events.
+Tax_Invoices,invoice_number,VARCHAR(100),NOT NULL,Legal alphanumeric serial identifier required for official corporate audit runs.
+Tax_Invoices,invoice_date,DATE,NOT NULL,Legal date of document filing used to establish official GST tax point reporting.
+Tax_Invoices,work_order_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Relates the outgoing project claim back to the original client master contract.
+Tax_Invoices,milestone_percentage_billed,"DECIMAL(5,2)",NOT NULL,"Exact contract budget stage increment mapped (e.g., 40.00% or 60.00%)."
+Tax_Invoices,taxable_value,"DECIMAL(15,2)",NOT NULL,Net baseline service valuation level total completely stripped of tax layers.
+Tax_Invoices,cgst_amount,"DECIMAL(15,2)",NOT NULL,Proportional Central Goods and Services Tax ledger allocation amount.
+Tax_Invoices,sgst_amount,"DECIMAL(15,2)",NOT NULL,Proportional State Goods and Services Tax ledger allocation amount.
+Tax_Invoices,igst_amount,"DECIMAL(15,2)",NOT NULL,Proportional Integrated Goods and Services Tax allocation used across state boundaries.
+Tax_Invoices,net_payable_amount,"DECIMAL(15,2)",NOT NULL,Gross client financial funding obligation balance total due for collection.
+WCC_Records,wcc_id,VARCHAR(50),"PRIMARY KEY, NOT NULL",System token identifier registering an accepted field completion event.
+WCC_Records,wcc_number,VARCHAR(100),NOT NULL,The document sequence text tracking engineering field authorization forms.
+WCC_Records,work_order_id,VARCHAR(50),"FOREIGN KEY, NOT NULL",Connects field validation clear points back to the contract profile.
+WCC_Records,work_start_date,DATE,NOT NULL,Official tracked entry date when crew deployment kicked off physically on site.
+WCC_Records,work_completion_date,DATE,NOT NULL,Calendar verification point showing task phase handoff completion timing.
+WCC_Records,quantity_completed_verified,"DECIMAL(12,3)",NOT NULL,On-site engineering verified task total counts matching actual output metrics.
+WCC_Records,is_additional_work_included,BOOLEAN,NOT NULL,Status flag noting whether out-of-scope adjustments occurred during production (True/False).

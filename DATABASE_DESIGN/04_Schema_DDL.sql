@@ -1,4 +1,5 @@
-CREATE TABLE Clients (
+-- 04_Schema_DDL.sql
+CREATE TABLE IF NOT EXISTS Clients (
     client_id VARCHAR(50) PRIMARY KEY,
     client_name VARCHAR(255) NOT NULL,
     billing_address TEXT NOT NULL,
@@ -6,8 +7,24 @@ CREATE TABLE Clients (
     pan_number CHAR(10) NOT NULL
 );
 
-CREATE TABLE Projects (
-    project_id VARCHAR(50) PRIMARY KEY ,
+CREATE TABLE IF NOT EXISTS Vendors (
+    vendor_id VARCHAR(50) PRIMARY KEY,
+    vendor_name VARCHAR(255) NOT NULL,
+    vendor_code VARCHAR(50) NOT NULL,
+    gstin CHAR(15) NOT NULL,
+    vendor_type VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Materials (
+    material_id VARCHAR(50) PRIMARY KEY,
+    material_name VARCHAR(255) NOT NULL,
+    manufacturer_name VARCHAR(255) NOT NULL,
+    technical_property_summary TEXT,
+    standard_coverage_rate VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS Projects (
+    project_id VARCHAR(50) PRIMARY KEY,
     client_id VARCHAR(50) NOT NULL,
     project_name VARCHAR(255) NOT NULL,
     site_location VARCHAR(255) NOT NULL,
@@ -18,42 +35,29 @@ CREATE TABLE Projects (
     FOREIGN KEY (client_id) REFERENCES Clients(client_id)
 );
 
-
-CREATE TABLE Work_Orders(
-    work_order_id VARCHAR(50) PRIMARY KEY ,
+CREATE TABLE IF NOT EXISTS Work_Orders (
+    work_order_id VARCHAR(50) PRIMARY KEY,
     work_order_number VARCHAR(100) NOT NULL,
     project_id VARCHAR(50) NOT NULL,
     issue_date DATE NOT NULL,
     total_contract_value DECIMAL(15,2) NOT NULL,
     payment_terms_description TEXT NOT NULL,
-    FOREIGN KEY (project_id) REFERENCES Projects(project_id) 
+    FOREIGN KEY (project_id) REFERENCES Projects(project_id)
 );
 
-
-CREATE TABLE Vendors(
-    vendor_id VARCHAR(50) PRIMARY KEY ,
-    vendor_name VARCHAR(255) NOT NULL,
-    vendor_code VARCHAR(50) NOT NULL,
-    gstin CHAR(15) NOT NULL,
-    vendor_type VARCHAR(100) NOT NULL
-);
-
-
-CREATE TABLE Purchase_Orders(
+CREATE TABLE IF NOT EXISTS Purchase_Orders (
     po_id VARCHAR(50) PRIMARY KEY,
     po_number VARCHAR(100) NOT NULL,
     project_id VARCHAR(50) NOT NULL,
     vendor_id VARCHAR(50) NOT NULL,
     issue_date DATE NOT NULL,
-    total_contract_value DECIMAL(15,2) NOT NULL,
+    total_po_value DECIMAL(15,2) NOT NULL,
     delivery_deadline_date DATE NOT NULL,
     FOREIGN KEY (vendor_id) REFERENCES Vendors(vendor_id),
     FOREIGN KEY (project_id) REFERENCES Projects(project_id)
 );
 
-
-
-CREATE TABLE Proforma_Invoices(
+CREATE TABLE IF NOT EXISTS Proforma_Invoices (
     proforma_invoice_id VARCHAR(50) PRIMARY KEY,
     pfi_number VARCHAR(100) NOT NULL,
     po_id VARCHAR(50) NOT NULL,
@@ -64,12 +68,11 @@ CREATE TABLE Proforma_Invoices(
     FOREIGN KEY (po_id) REFERENCES Purchase_Orders(po_id)
 );
 
-CREATE TABLE Tax_Invoices(
+CREATE TABLE IF NOT EXISTS Tax_Invoices (
     invoice_id VARCHAR(50) PRIMARY KEY,
     invoice_number VARCHAR(100) NOT NULL,
     invoice_date DATE NOT NULL,
     work_order_id VARCHAR(50) NOT NULL,
-    total_invoice_value DECIMAL(15,2) NOT NULL,
     milestone_percentage_billed DECIMAL(5,2) NOT NULL,
     taxable_value DECIMAL(15,2) NOT NULL,
     cgst_amount DECIMAL(15,2) NOT NULL,
@@ -79,15 +82,7 @@ CREATE TABLE Tax_Invoices(
     FOREIGN KEY (work_order_id) REFERENCES Work_Orders(work_order_id)
 );
 
-CREATE TABLE Materials (
-    material_id VARCHAR(50) PRIMARY KEY,
-    material_name VARCHAR(255) NOT NULL,
-    manufacturer_name VARCHAR(255) NOT NULL,
-    technical_property_summary TEXT,
-    standard_coverage_rate VARCHAR(100)
-);
-
-CREATE TABLE BOQ_Items (
+CREATE TABLE IF NOT EXISTS BOQ_Items (
     boq_item_id VARCHAR(50) PRIMARY KEY,
     work_order_id VARCHAR(50) NOT NULL,
     item_code VARCHAR(50) NOT NULL,
@@ -100,7 +95,7 @@ CREATE TABLE BOQ_Items (
     FOREIGN KEY (work_order_id) REFERENCES Work_Orders(work_order_id)
 );
 
-CREATE TABLE WCC_Records (
+CREATE TABLE IF NOT EXISTS WCC_Records (
     wcc_id VARCHAR(50) PRIMARY KEY,
     wcc_number VARCHAR(100) NOT NULL,
     work_order_id VARCHAR(50) NOT NULL,
@@ -111,7 +106,7 @@ CREATE TABLE WCC_Records (
     FOREIGN KEY (work_order_id) REFERENCES Work_Orders(work_order_id)
 );
 
-CREATE TABLE Field_Quality_Logs (
+CREATE TABLE IF NOT EXISTS Field_Quality_Logs (
     quality_log_id VARCHAR(50) PRIMARY KEY,
     project_id VARCHAR(50) NOT NULL,
     activity_type VARCHAR(100) NOT NULL,
@@ -122,7 +117,7 @@ CREATE TABLE Field_Quality_Logs (
     FOREIGN KEY (project_id) REFERENCES Projects(project_id)
 );
 
-CREATE TABLE Damage_Reports (
+CREATE TABLE IF NOT EXISTS Damage_Reports (
     damage_report_id VARCHAR(50) PRIMARY KEY,
     project_id VARCHAR(50) NOT NULL,
     turbine_number VARCHAR(50) NOT NULL,
