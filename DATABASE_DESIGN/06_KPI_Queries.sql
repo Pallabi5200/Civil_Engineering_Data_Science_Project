@@ -10,10 +10,17 @@ WHERE p.project_name = 'WTG Foundation Retrofitting - GAL33'
 GROUP BY p.project_name, wo.work_order_number, wo.total_contract_value;
 
 
-SELECT inspection_date, activity_type, cube_test_result_mpa
+SELECT inspection_date, activity_type, cube_test_result_mpa,
 CASE 
     WHEN cube_test_result_mpa >= 40.00 THEN 'PASS'
     WHEN activity_type LIKE '%7-Day%' THEN 'PENDING_7DAY'
     ELSE 'FAIL'
 END AS quality_check
-FROM Field_Quality_Logs;
+FROM Field_Quality_Logs
+WHERE project_id='PRJ-GAL33';
+
+
+SELECT item_code, description_of_work, unit_of_measurement, estimated_quantity, unit_rate, estimated_total_cost
+FROM BOQ_Items
+WHERE work_order_id = 'WO-MSUM-01'
+ORDER BY estimated_total_cost DESC;

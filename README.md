@@ -19,7 +19,7 @@ This project designs and implements a centralized data solution for a mid-sized 
 
 ## 📂 Repository Structure
 * `Imp_Notes/`: Document intelligence insights and civil engineering workflows.
-* `Database_Design/`: Master Entity List, Data Dictionary, and ERDs *(In Progress)*.
+* `DATABASE_DESIGN/`: Master Entity List, Data Dictionary, ERDs, Schema DDL, and [SQL KPI Queries](file:///c:/Users/vijay/OneDrive/Desktop/Interview_practice/Civil_Engineering_Data_Science_Project/DATABASE_DESIGN/README.md).
 * `Dataset_Engineering/`: Scripts for data synthesis, cleaning, and transformation.
 * `SQL/`: Relational database schemas and advanced analytical queries.
 * `Python/`: Exploratory Data Analysis (EDA) and statistical evaluations.
