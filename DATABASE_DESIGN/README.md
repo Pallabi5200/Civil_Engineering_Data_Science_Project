@@ -79,6 +79,50 @@ WHERE p.project_name = 'WTG Foundation Retrofitting - GAL33';
 
 ---
 
+### 5. Field Quality Compliance & Pass Rate KPI
+* **Query Purpose**: Computes the concrete cube test pass rate percentage for each project site.
+* **Civil Engineering Context**: Quality Control managers audit site compliance by calculating the percentage of poured concrete batches meeting structural strength specifications ($\ge 40.00$ MPa).
+* **Key SQL Techniques**: Conditional Aggregation using `SUM(CASE WHEN ... THEN 1 ELSE 0 END)`, `COUNT(*)`, and floating-point arithmetic (`* 100.0`).
+
+```sql
+SELECT project_id, COUNT(*) AS total_test,
+       SUM(CASE WHEN cube_test_result_mpa >= 40.00 THEN 1 ELSE 0 END) AS passed_tests,
+       (SUM(CASE WHEN cube_test_result_mpa >= 40.00 THEN 1 ELSE 0 END)*100.0/COUNT(*)) AS pass_percentage
+FROM Field_Quality_Logs
+GROUP BY project_id;
+```
+
+---
+
+### 6. Cost Overrun Risk Analysis (CTE)
+* **Query Purpose**: Calculates committed vendor expenditure vs client contract value to assess project budget overrun risk.
+* **Civil Engineering Context**: Ensures vendor Purchase Orders stay within approved Work Order budget limits.
+* **Key SQL Techniques**: Common Table Expressions (`WITH VendorCommitments AS (...)`), `SUM()` aggregation, and multi-table joins.
+
+```sql
+WITH VendorCommitments AS (
+    SELECT 
+        project_id,
+        SUM(total_po_value) AS total_po_commitment
+    FROM Purchase_Orders
+    GROUP BY project_id
+)
+SELECT 
+    p.project_id,
+    p.project_name,
+    wo.work_order_number,
+    wo.total_contract_value,
+    vc.total_po_commitment,
+    (vc.total_po_commitment * 100.0 / wo.total_contract_value) AS cost_commitment_ratio
+FROM Projects p
+JOIN Work_Orders wo ON p.project_id = wo.project_id
+JOIN VendorCommitments vc ON p.project_id = vc.project_id;
+```
+
+
+
+---
+
 ## 🛠️ How to Store & Organize This in Your Main Project
 
 To keep your project structured, maintain clean version control, and follow your **12-Week Construction Intelligence Platform Schedule**:
