@@ -119,7 +119,26 @@ JOIN Work_Orders wo ON p.project_id = wo.project_id
 JOIN VendorCommitments vc ON p.project_id = vc.project_id;
 ```
 
+---
 
+## 🐍 Python Database EDA & Data Cleaning Pipeline (`01_Database_EDA.py`)
+
+The `01_Database_EDA.py` script bridges SQLite database queries with Python Pandas data cleaning, feature engineering, and statistical analysis.
+
+### 1. Feature Engineering: Curing Age Extraction
+* **Purpose**: Parses text descriptions in `activity_type` (e.g., `'7-Day Cube Test'`, `'28-Day Cube Test'`) to create a clean, numeric feature `curing_days` ($7, 28, 0$).
+* **Data Science Context**: Converts unformatted categorical text into continuous numerical values needed for statistical grouping and ML modeling.
+
+### 2. Group-Based Median Imputation Strategy (`ndt_ultrasonic_velocity`)
+* **Problem**: Field sensor logs for Non-Destructive Testing (NDT) Ultrasonic Pulse Velocity contain missing entries.
+* **Imputation Strategy**: Imputes missing values using the **group median** calculated per `curing_days` category.
+* **Why Group Median over Global Mean (Interview Callout)**:
+  1. **Domain Physics**: Ultrasonic pulse velocity increases significantly as concrete cures (7-day vs 28-day). A global mean would underestimate 28-day velocities and overestimate 7-day velocities.
+  2. **Robustness to Sensor Outliers**: Field NDT readings are subject to sensor contact errors or surface voids. Median is robust to extreme outliers (50% breakdown point), whereas mean is heavily skewed by anomalies.
+  3. **Data Leakage Prevention**: Group-wise transformation keeps imputation localized within homogeneous curing stages.
+
+### 3. Concrete Strength Statistical Summaries
+* **Purpose**: Aggregates compressive strength (`cube_test_result_mpa`) across `curing_days` to output `mean`, `std`, `min`, and `max`.
 
 ---
 
@@ -131,7 +150,8 @@ To keep your project structured, maintain clean version control, and follow your
 ```text
 Civil_Engineering_Data_Science_Project/
 │
-├── DATABASE_DESIGN/               <-- 👈 Current Module (Week 2 & Week 5 SQL)
+├── DATABASE_DESIGN/               <-- 👈 Current Module (Week 2 & Week 5 SQL / Python EDA)
+│   ├── 01_Database_EDA.py        <-- Python script for extraction, data cleaning & EDA
 │   ├── 01_Master_Entity_List.xlsx
 │   ├── 02_Master_Data_dict.csv
 │   ├── 03_ER_Diagram_1.pdf
@@ -140,7 +160,7 @@ Civil_Engineering_Data_Science_Project/
 │   ├── 06_KPI_Queries.sql        <-- SQL Analytical Queries & Window Functions
 │   ├── README.md                 <-- 📄 Technical Documentation (This File)
 │   ├── setup_db.py               <-- Python script to build construction_project.db
-│   └── construction_project.db   <-- SQLite Local Database (ignored by git or stored locally)
+│   └── construction_project.db   <-- SQLite Local Database
 │
 ├── SQL/                           <-- Dedicated directory for exported SQL reports / notebooks
 ├── PYTHON/                        <-- Week 6: Python & EDA notebooks
@@ -155,13 +175,18 @@ Civil_Engineering_Data_Science_Project/
    ```bash
    python setup_db.py
    ```
-2. **Execute Queries using Python SQLite client**:
+2. **Execute Python Database EDA & Data Cleaning Pipeline**:
+   ```bash
+   python 01_Database_EDA.py
+   ```
+3. **Execute SQL KPI Queries via Python SQLite Client**:
    ```bash
    python -c "import sqlite3; conn=sqlite3.connect('construction_project.db'); print(conn.cursor().execute(open('06_KPI_Queries.sql').read()).fetchall())"
    ```
-3. **Version Control Git Commit**:
+4. **Version Control Git Commit**:
    ```bash
    git add DATABASE_DESIGN/
-   git commit -m "docs(database): add README documentation for SQL KPI queries"
+   git commit -m "docs(database): update README with Python EDA, feature engineering, and imputation strategy"
    git push origin main
    ```
+
