@@ -1,4 +1,4 @@
-# Construction Intelligence Platform (CIP)
+# Civil Enginnering Data Science Project
 
 An end-to-end Data Science and Business Intelligence platform built using real-world civil engineering project data. This enterprise-grade framework transitions unstructured document streams (BOQs, Work Orders, Invoices) into structured relational databases, predictive machine learning pipelines, and actionable executive dashboards.
 
