@@ -36,7 +36,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 sns.histplot(data=df_quality, x='cube_test_result_mpa', kde=True)
-plt.show()
+plt.savefig(os.path.join(BASE_DIR, "quality_hist.png"))
+plt.close()
 
 ## Computing the IQR 
 q3 = df_quality['cube_test_result_mpa'].quantile(0.75)
@@ -67,7 +68,8 @@ print("\nThe number of outliers in the dataframe:")
 print(df_outliers.shape[0])
 
 sns.boxplot(data=df_quality, x='activity_type', y='cube_test_result_mpa')
-plt.show()
+plt.savefig(os.path.join(BASE_DIR, "quality_eda_summary.png"))
+plt.close()
 
 
 #### Feature Extraction and Engineering #####
