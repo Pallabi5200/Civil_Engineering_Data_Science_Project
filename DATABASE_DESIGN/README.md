@@ -133,30 +133,62 @@ The `01_Database_EDA.py` script handles data extraction, feature engineering, mi
 
 ---
 
-## Directory Layout & Execution
+---
+
+## Automated Enterprise Data Ingestion Engine (`ingest_all_data.py` & `02_Excel_Ingestion.py`)
+
+To transform raw operational records into an enterprise-grade analytics platform, we built two automated Python ETL ingestion scripts that extract, clean, schema-validate, and load heterogeneous data across all **PMPL** and **RENEW** project streams into `construction_project.db`.
+
+---
+
+### 1. Standalone Multi-Spreadsheet BOQ Engine (`02_Excel_Ingestion.py`)
+* **Objective**: Automates header offset cleaning, forward-filling parent codes, and schema normalization across raw Bill of Quantities (BOQ) Excel files (`.xlsx` and `.xls`).
+* **ETL Pipeline Rationale**:
+  1. **Header Offset Alignment (`header=6` / `header=4`)**: Skips non-tabular project title blocks to isolate true line item tables.
+  2. **Parent Code Forward-Fill (`.ffill()`)**: Propagates parent SAC codes down across sub-items to preserve hierarchical billing rules.
+  3. **Data Hygiene & Typing**: Strips leading/trailing column whitespace and casts quantities, unit rates, and totals to float vectors.
+* **Empirical Execution Insights**:
+  * Extracted and mapped **96 total BOQ line items** across 4 major commercial projects:
+    * `WO-PMPL-GAL33`: 29 items (PMPL Wind Turbine Retrofitting)
+    * `WO-RENEW-SHED`: 29 items (Otha Phase 3 Hazardous Storage Shed)
+    * `WO-SHED-PATAN`: 23 items (Patan Hazardous Storage Shed)
+    * `WO-SHED-JAGLUR`: 15 items (Jaglur Industrial Shed)
+
+---
+
+### 2. Master Database Ingestion Orchestrator (`ingest_all_data.py`)
+* **Objective**: Re-initializes the relational schema via `04_Schema_DDL.sql` and executes transactional batch loading across all 12 relational database tables.
+* **Enterprise Ingestion Results**:
+  * **Projects (8 Records)**: Ingested wind turbine foundation retrofitting sites (GAL33, GAL06, GAL07), WTG pedestal grouting (Molagavali & Patan/Kagwad), and industrial storage sheds (Otha, Jaglur, Patan).
+  * **Commercial Transactions**: Ingested 7 Work Orders, 3 Purchase Orders, 1 Proforma Invoice, and 3 Tax Invoices.
+  * **BOQ Line Items (96 Records)**: Populated full bill-of-quantity item structures linked directly to work orders.
+  * **Field Quality & Inspections (7 Quality Logs & 18 Damage Reports)**: Loaded concrete compressive test logs (7-day, 28-day), NDT ultrasonic pulse velocities, and 18 turbine foundation damage inspection logs (`GML-25`, `GML-52`, Patan/Kagwad `KG01`, `RP33`, `RP41`...).
+
+---
+
+## Directory Layout & Execution Commands
 
 ```text
 DATABASE_DESIGN/
-├── 01_Database_EDA.py        # Python data extraction, imputation, and merge pipeline
-├── 01_Master_Entity_List.xlsx# Entity definitions and relationships
-├── 02_Master_Data_dict.csv   # Field definitions and data types
-├── 03_ER_Diagram_1.pdf       # Relational database schema diagram
-├── 04_Schema_DDL.sql         # Table creation DDL statements
-├── 05_insert_data.sql        # Database seed data DML
-├── 06_KPI_Queries.sql        # Analytical SQL queries
-├── README.md                 # Technical documentation
-└── setup_db.py               # Python setup script to build construction_project.db
+├── 01_Database_EDA.py          # Python data extraction, imputation, and merge pipeline
+├── 02_Excel_Ingestion.py       # Standalone multi-spreadsheet BOQ ingestion engine
+├── 04_Schema_DDL.sql           # Table creation DDL statements and foreign key constraints
+├── 05_insert_data.sql          # Database seed data DML
+├── 06_KPI_Queries.sql          # Analytical SQL queries (CTEs, Window functions, aggregations)
+├── ingest_all_data.py          # Master enterprise ETL database ingestion script
+├── construction_project.db     # Populated relational SQLite database
+└── README.md                   # Technical documentation
 ```
 
 ### Execution Commands
 
 ```bash
-# 1. Rebuild SQLite database
-python setup_db.py
+# 1. Execute Master ETL Ingestion (Populates all 12 database tables from PMPL & RENEW)
+python DATABASE_DESIGN/ingest_all_data.py
 
-# 2. Run Data Preparation & Imputation Pipeline
-python 01_Database_EDA.py
+# 2. Run Standalone BOQ Extraction & Cleaning Module
+python DATABASE_DESIGN/02_Excel_Ingestion.py
 
-# 3. Execute SQL KPI Queries
-python -c "import sqlite3; conn=sqlite3.connect('construction_project.db'); print(conn.cursor().execute(open('06_KPI_Queries.sql').read()).fetchall())"
+# 3. Execute SQL Analytical KPI Queries
+python -c "import sqlite3; conn=sqlite3.connect('DATABASE_DESIGN/construction_project.db'); print(conn.cursor().execute(open('DATABASE_DESIGN/06_KPI_Queries.sql').read()).fetchall())"
 ```
