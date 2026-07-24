@@ -9,16 +9,13 @@ PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, ".."))
 DB_PATH = os.path.join(BASE_DIR, "construction_project.db")
 DDL_PATH = os.path.join(BASE_DIR, "04_Schema_DDL.sql")
 
-print(" Starting Master ETL Ingestion Engine for PMPL & RENEW Datasets...")
+print(" Starting Master Enterprise ETL Engine for ALL PMPL & RENEW Datasets...")
 
 # 2. Reset & Re-create Database Schema
 conn = sqlite3.connect(DB_PATH)
 cursor = conn.cursor()
 
-# Disable foreign keys temporarily for clean reset
 cursor.execute("PRAGMA foreign_keys = OFF;")
-
-# Drop existing tables to guarantee clean ingestion
 tables = [
     "Damage_Reports", "Field_Quality_Logs", "WCC_Records", "BOQ_Items",
     "Tax_Invoices", "Proforma_Invoices", "Purchase_Orders", "Work_Orders",
@@ -27,7 +24,6 @@ tables = [
 for table in tables:
     cursor.execute(f"DROP TABLE IF EXISTS {table};")
 
-# Execute Schema DDL
 with open(DDL_PATH, "r") as f:
     cursor.executescript(f.read())
 
@@ -49,14 +45,14 @@ df_clients = pd.DataFrame([
     {
         "client_id": "CLI-RENEW-GROUT",
         "client_name": "ReNew Power Private Limited (WTG Grouting Div)",
-        "billing_address": "Molagavali-1 Wind Farm, Kurnool, Andhra Pradesh - 518385",
+        "billing_address": "Molagavali-1 & Patan Wind Farms, Kurnool & Gujarat",
         "gstin": "37AABCR5678B1Z2",
         "pan_number": "AABCR5678B"
     },
     {
         "client_id": "CLI-RENEW-SHED",
         "client_name": "ReNew Power Private Limited (Infrastructure Div)",
-        "billing_address": "Otha Phase 3 Site, Patan, Gujarat - 384265",
+        "billing_address": "Otha, Jaglur, Patan, Kudligi, Chikodi Sites",
         "gstin": "24AABCR5678B1Z3",
         "pan_number": "AABCR5678B"
     }
@@ -99,10 +95,17 @@ df_materials = pd.DataFrame([
     },
     {
         "material_id": "MAT-EPOXY-GROUT",
-        "material_name": "Low Viscosity Epoxy Grout",
+        "material_name": "Low Viscosity Epoxy Grout (Fosroc Nitomortar)",
         "manufacturer_name": "Fosroc Chemicals",
         "technical_property_summary": "High strength epoxy resin grout for WTG foundation crack repair and pedestal grouting.",
         "standard_coverage_rate": "1.8 kg/L"
+    },
+    {
+        "material_id": "MAT-COATING-PU",
+        "material_name": "Nitocote UR512 PU Protective Coating",
+        "manufacturer_name": "Fosroc Chemicals",
+        "technical_property_summary": "UV resistant aliphatic polyurethane protective coating for concrete structures.",
+        "standard_coverage_rate": "6.0 m2/L"
     },
     {
         "material_id": "MAT-STEEL-STUD",
@@ -160,18 +163,48 @@ df_projects = pd.DataFrame([
         "delivery_deadline": "2026-06-30"
     },
     {
-        "project_id": "PRJ-RENEW-SHED",
+        "project_id": "PRJ-SHED-OTHA",
         "client_id": "CLI-RENEW-SHED",
-        "project_name": "Renew Hazardous Waste Storage Shed 5x6m",
+        "project_name": "Renew Hazardous Waste Storage Shed 5x6m - Otha Ph 3",
         "site_location": "Otha Phase 3 Site, Patan",
         "state": "Gujarat",
         "structure_type": "Industrial Shed & Rain Water Harvesting",
         "start_date": "2026-03-15",
         "delivery_deadline": "2026-07-15"
+    },
+    {
+        "project_id": "PRJ-SHED-JAGLUR",
+        "client_id": "CLI-RENEW-SHED",
+        "project_name": "Renew Storage Shed - Jaglur",
+        "site_location": "Jaglur Site, Karnataka",
+        "state": "Karnataka",
+        "structure_type": "Industrial Storage Shed",
+        "start_date": "2026-03-10",
+        "delivery_deadline": "2026-06-15"
+    },
+    {
+        "project_id": "PRJ-SHED-PATAN",
+        "client_id": "CLI-RENEW-SHED",
+        "project_name": "Renew Hazardous Storage Shed - Patan",
+        "site_location": "Patan Wind Farm Site",
+        "state": "Gujarat",
+        "structure_type": "Industrial Storage Shed",
+        "start_date": "2026-03-12",
+        "delivery_deadline": "2026-06-20"
+    },
+    {
+        "project_id": "PRJ-PATAN-GROUT",
+        "client_id": "CLI-RENEW-GROUT",
+        "project_name": "Renew WTG Grouting Damage Repair - Patan & Kagwad",
+        "site_location": "Patan & Kagwad Wind Farms",
+        "state": "Gujarat",
+        "structure_type": "WTG Pedestal Grouting",
+        "start_date": "2026-03-18",
+        "delivery_deadline": "2026-07-01"
     }
 ])
 df_projects.to_sql("Projects", conn, if_exists="append", index=False)
-print(f" Ingested {len(df_projects)} Projects.")
+print(f" Ingested {len(df_projects)} Projects across PMPL & RENEW.")
 
 # ---------------------------------------------------------
 # 7. Ingest Work Orders
@@ -212,10 +245,26 @@ df_work_orders = pd.DataFrame([
     {
         "work_order_id": "WO-RENEW-SHED",
         "work_order_number": "WO/RENEW/SHED/2026/05",
-        "project_id": "PRJ-RENEW-SHED",
+        "project_id": "PRJ-SHED-OTHA",
         "issue_date": "2026-03-20",
         "total_contract_value": 425000.00,
         "payment_terms_description": "30% Advance, 60% Material delivery & Erection, 10% Final."
+    },
+    {
+        "work_order_id": "WO-SHED-JAGLUR",
+        "work_order_number": "WO/RENEW/JAGLUR/2026/06",
+        "project_id": "PRJ-SHED-JAGLUR",
+        "issue_date": "2026-03-12",
+        "total_contract_value": 380000.00,
+        "payment_terms_description": "30% Advance, 70% Completion."
+    },
+    {
+        "work_order_id": "WO-SHED-PATAN",
+        "work_order_number": "WO/RENEW/PATAN/2026/07",
+        "project_id": "PRJ-SHED-PATAN",
+        "issue_date": "2026-03-15",
+        "total_contract_value": 410000.00,
+        "payment_terms_description": "30% Advance, 70% Completion."
     }
 ])
 df_work_orders.to_sql("Work_Orders", conn, if_exists="append", index=False)
@@ -237,11 +286,20 @@ df_po = pd.DataFrame([
     {
         "po_id": "PO-RENEW-SHED",
         "po_number": "PO/RENEW/SHED/5501",
-        "project_id": "PRJ-RENEW-SHED",
+        "project_id": "PRJ-SHED-OTHA",
         "vendor_id": "VND-PMPL",
         "issue_date": "2026-03-22",
         "total_po_value": 425000.00,
         "delivery_deadline_date": "2026-07-10"
+    },
+    {
+        "po_id": "PO-RENEW-PATAN",
+        "po_number": "PO/RENEW/PATAN/4300061512",
+        "project_id": "PRJ-SHED-PATAN",
+        "vendor_id": "VND-PMPL",
+        "issue_date": "2026-03-18",
+        "total_po_value": 410000.00,
+        "delivery_deadline_date": "2026-06-30"
     }
 ])
 df_po.to_sql("Purchase_Orders", conn, if_exists="append", index=False)
@@ -309,23 +367,24 @@ df_tax_inv.to_sql("Tax_Invoices", conn, if_exists="append", index=False)
 print(f" Ingested {len(df_tax_inv)} Tax Invoices.")
 
 # ---------------------------------------------------------
-# 11. Ingest BOQ Items (PMPL 02_BOQ.xlsx + RENEW BOQs)
+# 11. Ingest BOQ Items Across ALL Project Spreadsheets
 # ---------------------------------------------------------
-pmpl_boq_path = os.path.join(PROJECT_ROOT, "PMPL", "02_BOQ.xlsx")
 boq_records = []
 
+# A. PMPL 02_BOQ.xlsx
+pmpl_boq_path = os.path.join(PROJECT_ROOT, "PMPL", "02_BOQ.xlsx")
 if os.path.exists(pmpl_boq_path):
     df_raw_boq = pd.read_excel(pmpl_boq_path, header=6)
     df_raw_boq.columns = [str(c).strip() for c in df_raw_boq.iloc[0]]
     df_clean_boq = df_raw_boq[1:].reset_index(drop=True)
     
-    sac_col = 'SAC CODE' if 'SAC CODE' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'SAC' in c][0]
-    pos_col = 'Pos' if 'Pos' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'Pos' in c][0]
-    desc_col = 'DESCRIPTION' if 'DESCRIPTION' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'DESC' in c][0]
-    unit_col = 'UNIT' if 'UNIT' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'UNIT' in c][0]
-    qty_col = 'QTY' if 'QTY' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'QTY' in c][0]
-    rate_col = 'RATE' if 'RATE' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'RATE' in c][0]
-    amt_col = 'AMOUNT' if 'AMOUNT' in df_clean_boq.columns else [c for c in df_clean_boq.columns if 'AMT' in c or 'AMOUNT' in c][0]
+    sac_col = [c for c in df_clean_boq.columns if 'SAC' in c][0]
+    pos_col = [c for c in df_clean_boq.columns if 'Pos' in c][0]
+    desc_col = [c for c in df_clean_boq.columns if 'DESC' in c][0]
+    unit_col = [c for c in df_clean_boq.columns if 'UNIT' in c][0]
+    qty_col = [c for c in df_clean_boq.columns if 'QTY' in c][0]
+    rate_col = [c for c in df_clean_boq.columns if 'RATE' in c][0]
+    amt_col = [c for c in df_clean_boq.columns if 'AMT' in c or 'AMOUNT' in c][0]
 
     df_clean_boq[sac_col] = df_clean_boq[sac_col].ffill()
     df_clean_boq = df_clean_boq.dropna(subset=[pos_col]).copy()
@@ -354,7 +413,7 @@ if os.path.exists(pmpl_boq_path):
         except Exception:
             continue
 
-# Add RENEW Shed BOQ Line Items
+# B. RENEW Master Shed BOQ
 renew_shed_boq_path = os.path.join(PROJECT_ROOT, "RENEW", "SHED", "02_BOQ", "Master BOQ-5x6 mtr Haz Shed with Rain Water Harvesting.xlsx")
 if os.path.exists(renew_shed_boq_path):
     df_shed = pd.read_excel(renew_shed_boq_path, header=0)
@@ -372,8 +431,72 @@ if os.path.exists(renew_shed_boq_path):
             rate = float(row['rate']) if pd.notnull(row['rate']) and str(row['rate']).replace('.','',1).isdigit() else amt
             
             boq_records.append({
-                "boq_item_id": f"BOQ-SHED-{item_count}",
+                "boq_item_id": f"BOQ-SHED-OTHA-{item_count}",
                 "work_order_id": "WO-RENEW-SHED",
+                "item_code": str(item_count),
+                "description_of_work": desc,
+                "unit_of_measurement": unit,
+                "estimated_quantity": qty,
+                "unit_rate": rate,
+                "estimated_total_cost": amt,
+                "sac_code": "995428"
+            })
+            item_count += 10
+        except Exception:
+            continue
+
+# C. RENEW Jaglur Shed BOQ (.xls)
+jaglur_boq_path = os.path.join(PROJECT_ROOT, "RENEW", "SHED", "02_BOQ", "BOQ_Jaglur_Shed.xls")
+if os.path.exists(jaglur_boq_path):
+    df_jaglur = pd.read_excel(jaglur_boq_path, header=4)
+    df_jaglur.columns = [str(c).strip() for c in df_jaglur.columns]
+    df_jaglur_clean = df_jaglur.dropna(subset=['Description Of Items', 'Amount']).copy()
+    
+    item_count = 10
+    for idx, row in df_jaglur_clean.iterrows():
+        try:
+            amt = float(row['Amount'])
+            if amt <= 0: continue
+            desc = str(row['Description Of Items']).strip()
+            unit = str(row['Unit']).strip() if pd.notnull(row['Unit']) else "L.S"
+            qty = float(row['Quantity']) if pd.notnull(row['Quantity']) and str(row['Quantity']).replace('.','',1).isdigit() else 1.0
+            rate = float(row['Rate']) if pd.notnull(row['Rate']) and str(row['Rate']).replace('.','',1).isdigit() else amt
+            
+            boq_records.append({
+                "boq_item_id": f"BOQ-SHED-JAGLUR-{item_count}",
+                "work_order_id": "WO-SHED-JAGLUR",
+                "item_code": str(item_count),
+                "description_of_work": desc,
+                "unit_of_measurement": unit,
+                "estimated_quantity": qty,
+                "unit_rate": rate,
+                "estimated_total_cost": amt,
+                "sac_code": "995428"
+            })
+            item_count += 10
+        except Exception:
+            continue
+
+# D. RENEW Patan Shed BOQ (.xls)
+patan_boq_path = os.path.join(PROJECT_ROOT, "RENEW", "SHED", "02_BOQ", "BOQ_Patan.xls")
+if os.path.exists(patan_boq_path):
+    df_patan = pd.read_excel(patan_boq_path, header=4)
+    df_patan.columns = [str(c).strip() for c in df_patan.columns]
+    df_patan_clean = df_patan.dropna(subset=['Description Of Items', 'Amount']).copy()
+    
+    item_count = 10
+    for idx, row in df_patan_clean.iterrows():
+        try:
+            amt = float(row['Amount'])
+            if amt <= 0: continue
+            desc = str(row['Description Of Items']).strip()
+            unit = str(row['Unit']).strip() if pd.notnull(row['Unit']) else "L.S"
+            qty = float(row['Quantity']) if pd.notnull(row['Quantity']) and str(row['Quantity']).replace('.','',1).isdigit() else 1.0
+            rate = float(row['Rate']) if pd.notnull(row['Rate']) and str(row['Rate']).replace('.','',1).isdigit() else amt
+            
+            boq_records.append({
+                "boq_item_id": f"BOQ-SHED-PATAN-{item_count}",
+                "work_order_id": "WO-SHED-PATAN",
                 "item_code": str(item_count),
                 "description_of_work": desc,
                 "unit_of_measurement": unit,
@@ -388,7 +511,7 @@ if os.path.exists(renew_shed_boq_path):
 
 df_boq_final = pd.DataFrame(boq_records)
 df_boq_final.to_sql("BOQ_Items", conn, if_exists="append", index=False)
-print(f" Ingested {len(df_boq_final)} BOQ Line Items (PMPL + RENEW).")
+print(f" Ingested {len(df_boq_final)} BOQ Line Items across PMPL, Otha, Jaglur & Patan.")
 
 # ---------------------------------------------------------
 # 12. Ingest Field Quality Logs (GAL33, GAL06, GAL07 & Renew)
@@ -462,9 +585,9 @@ df_quality_logs.to_sql("Field_Quality_Logs", conn, if_exists="append", index=Fal
 print(f" Ingested {len(df_quality_logs)} Field Quality Logs.")
 
 # ---------------------------------------------------------
-# 13. Ingest Damage Reports (RENEW Grouting Inspection)
+# 13. Ingest Damage Reports (Patan & Kagwad + Molagavalli)
 # ---------------------------------------------------------
-df_damage = pd.DataFrame([
+damage_records = [
     {
         "damage_report_id": "DMG-GML-25",
         "project_id": "PRJ-RENEW-GROUT",
@@ -485,9 +608,38 @@ df_damage = pd.DataFrame([
         "severity_rating": 3,
         "repair_recommendation": "Rebuild perimeter section using low viscosity epoxy resin."
     }
-])
+]
+
+# Extract Patan & Kagwad Grouting Damaged Details Report
+patan_dmg_path = os.path.join(PROJECT_ROOT, "RENEW", "GROUTING", "07_Engineering", "Damage_Reports", "Patan & Kagwad Foundation grouting damaged report.xlsx")
+if os.path.exists(patan_dmg_path):
+    df_raw_dmg = pd.read_excel(patan_dmg_path, header=0)
+    df_raw_dmg.columns = ['sr', 'wtg_no', 'wtg_model', 'site', 'state', 'photo', 'issue', 'work_desc', 'remarks']
+    df_clean_dmg = df_raw_dmg.iloc[1:].dropna(subset=['wtg_no', 'issue']).copy()
+    
+    for idx, row in df_clean_dmg.iterrows():
+        try:
+            wtg = str(row['wtg_no']).replace('\n','').strip()
+            model = str(row['wtg_model']).replace('\n','').strip() if pd.notnull(row['wtg_model']) else "SGRE-G9X"
+            issue = str(row['issue']).replace('\n',' ').strip()
+            work = str(row['work_desc']).replace('\n',' ').strip() if pd.notnull(row['work_desc']) else issue
+            
+            damage_records.append({
+                "damage_report_id": f"DMG-PATAN-{idx}",
+                "project_id": "PRJ-PATAN-GROUT",
+                "turbine_number": wtg,
+                "turbine_model": model,
+                "nature_of_damage": issue[:255],
+                "damaged_length_approx": 10.00,
+                "severity_rating": 4,
+                "repair_recommendation": work
+            })
+        except Exception:
+            continue
+
+df_damage = pd.DataFrame(damage_records)
 df_damage.to_sql("Damage_Reports", conn, if_exists="append", index=False)
-print(f" Ingested {len(df_damage)} Damage Reports.")
+print(f" Ingested {len(df_damage)} Damage Reports (Molagavalli + Patan & Kagwad).")
 
 # ---------------------------------------------------------
 # 14. Ingest WCC Records
@@ -516,4 +668,4 @@ df_wcc.to_sql("WCC_Records", conn, if_exists="append", index=False)
 print(f" Ingested {len(df_wcc)} WCC Records.")
 
 conn.close()
-print("\n Master Data Ingestion Completed Successfully! All PMPL & RENEW datasets populated into SQLite.")
+print("\n Comprehensive Enterprise ETL Ingestion Completed! All PMPL & RENEW subprojects populated into SQLite.")
