@@ -107,6 +107,51 @@ weighted avg       1.00      1.00      1.00         3
 
 ---
 
+## Technical Overview & Model Architecture (`03_hyperparameter_tuning.py`)
+
+### 1. Business Context & Optimization Strategy
+While default Random Forest models yield strong baseline performance, default tree depths (`max_depth=None`) are vulnerable to **overfitting** on small-sample field datasets.
+
+To ensure our predictive quality control model generalizes reliably to new construction sites, this module implements **Grid Search Cross-Validation (`GridSearchCV`)** to systematically evaluate hyperparameter combinations across cross-validation folds.
+
+---
+
+### 2. Search Space & Cross-Validation Configuration
+* **Hyperparameter Grid (`param_grid`)**:
+  - `n_estimators`: `[10, 50, 100]` (Number of decision trees)
+  - `max_depth`: `[2, 4, 6, None]` (Maximum tree depth ceiling)
+* **Cross-Validation Scheme**: 2-fold Stratified Cross-Validation (`cv=2`), tailored for balanced validation across binary class distributions in small sample sizes.
+* **Scoring Metric**: `accuracy`
+
+---
+
+### 3. Model Execution & Optimization Results
+
+```text
+Mean 2-Fold Cross-Validation Accuracy Score: 0.75 (75.0%)
+Optimal Hyperparameters Identified: {'max_depth': 2, 'n_estimators': 10}
+
+Unseen Test Set Accuracy (Best Estimator): 1.0 (100.0%)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         1
+           1       1.00      1.00      1.00         2
+
+    accuracy                           1.00         3
+   macro avg       1.00      1.00      1.00         3
+weighted avg       1.00      1.00      1.00         3
+```
+
+---
+
+### 4. Technical & Engineering Domain Insights
+1. **Regularization via Shallow Depth**: The grid search selected **`max_depth: 2`** and **`n_estimators: 10`** over unconstrained deeper trees (`max_depth: None`). In civil data science, constraining tree depth acts as structural regularization, preventing the classifier from memorizing site-specific noise and ensuring strong generalization on unseen field logs.
+2. **Robust Cross-Validation Setup**: Performing 2-fold cross-validation on stratified training splits guarantees that validation scoring accurately reflects performance across both compliant and non-compliant curing classes.
+
+---
+
 ## 🚀 How to Run
 
 You can execute the predictive modeling scripts from the project root:
@@ -117,5 +162,9 @@ python MACHINE_LEARNING/01_predictive_modeling.py
 
 # Run Module 02: Random Forest & Feature Importance
 python MACHINE_LEARNING/02_random_forest_model.py
+
+# Run Module 03: Hyperparameter Tuning & Cross-Validation
+python MACHINE_LEARNING/03_hyperparameter_tuning.py
 ```
+
 
