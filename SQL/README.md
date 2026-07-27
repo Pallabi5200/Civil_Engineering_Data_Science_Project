@@ -96,8 +96,42 @@ When executed against `construction_project.db`, the query returns:
 
 ---
 
-### 3. Concrete Quality Compliance Pass Rates (`03_quality_pass_rate.sql`)
-*(In Progress — Conditional aggregations of 7-day vs 28-day concrete cube test results)*
+### 3. Concrete Quality Compliance & Pass Rate Analytics (`03_quality_pass_rate.sql`)
+
+#### Business Context
+On civil infrastructure sites (such as wind turbine foundation retrofitting and grouting operations), structural integrity is verified using compressive strength cube tests. For **M-40 grade structural concrete**, samples must reach a design strength of **$\ge 40.0 \text{ MPa}$**. Quality Assurance (QA/QC) leaders require automated site-level compliance reporting to track pass rates, identify defective batches early, and ensure compliance with structural engineering standards (IS 456 / BS 8110).
+
+#### SQL Technical Implementation
+* **Single-Pass Conditional Aggregation**: Utilizes `SUM(CASE WHEN ql.cube_test_result_mpa >= 40.0 THEN 1 ELSE 0 END)` and `SUM(CASE WHEN ql.cube_test_result_mpa < 40.0 THEN 1 ELSE 0 END)` to evaluate pass/fail criteria in a single table scan, avoiding redundant subqueries or multiple `JOIN` operations.
+* **Derived Pass Rate KPI**: Computes the percentage pass rate using `ROUND(SUM(...) * 100.0 / COUNT(*), 2)`.
+* **Relational Grouping**: Connects `Projects` (`p`) to `Field_Quality_Logs` (`ql`) via `project_id`, aggregating records by `p.project_name`.
+
+```sql
+SELECT 
+    p.project_name, 
+    COUNT(*) AS total_tests,
+    SUM(CASE WHEN ql.cube_test_result_mpa >= 40.0 THEN 1 ELSE 0 END) AS passed_tests,
+    SUM(CASE WHEN ql.cube_test_result_mpa < 40.0 THEN 1 ELSE 0 END) AS failed_tests,
+    ROUND(SUM(CASE WHEN ql.cube_test_result_mpa >= 40.0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*), 2) AS pass_rate_pct,
+    ROUND(AVG(ql.cube_test_result_mpa), 2) AS avg_strength_mpa
+FROM Projects p 
+JOIN Field_Quality_Logs AS ql ON p.project_id = ql.project_id
+GROUP BY p.project_name;
+```
+
+#### Query Execution Results
+When executed against `construction_project.db`, the query returns:
+
+| Project Name | Total Tests | Passed Tests | Failed Tests | Pass Rate (%) | Avg Strength (MPa) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Renew WTG Grouting Repair - Molagavali | 1 | 1 | 0 | **100.0%** | 58.40 |
+| WTG Foundation Retrofitting - GAL06 | 2 | 1 | 1 | **50.0%** | 36.80 |
+| WTG Foundation Retrofitting - GAL07 | 2 | 1 | 1 | **50.0%** | 38.65 |
+| WTG Foundation Retrofitting - GAL33 | 2 | 1 | 1 | **50.0%** | 38.35 |
+
+#### Key Engineering & Quality Control Insights
+1. **High-Performance Grouting**: The *Renew WTG Grouting Repair* project shows a **100% pass rate** with an exceptional average compressive strength of **58.40 MPa**, well exceeding the 40.0 MPa target due to high-strength epoxy grout specification (Fosroc Nitomortar).
+2. **Curing Timeline Variance Analysis**: The retrofitting sites (GAL06, GAL07, GAL33) show a **50.0% pass rate**. Domain analysis reveals this is driven by test scheduling: each site records one **7-day test** ($\approx 30.5 - 32.1 \text{ MPa}$) and one **28-day test** ($\approx 43.1 - 45.2 \text{ MPa}$). Evaluated statically against the final 28-day standard of $40.0 \text{ MPa}$, 7-day curing logs naturally fall below threshold, highlighting an opportunity for future query enhancement to partition compliance thresholds by curing duration (`activity_type`).
 
 ---
 
