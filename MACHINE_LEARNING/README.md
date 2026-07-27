@@ -60,10 +60,62 @@ weighted avg       1.00      1.00      1.00         3
 
 ---
 
+## Technical Overview & Model Architecture (`02_random_forest_model.py`)
+
+### 1. Model Concept & Architecture
+While linear models like Logistic Regression provide a simple baseline, ensemble decision tree models—specifically **Random Forest Classifiers**—capture non-linear interactions between continuous physical non-destructive predictors and curing durations without assuming linearity.
+
+Using bootstrap aggregation (bagging), the `RandomForestClassifier` constructs an ensemble of decision trees to evaluate concrete structural compliance (`is_compliant` $\ge 40.0 \text{ MPa}$).
+
+---
+
+### 2. Feature Importance Extraction Strategy
+In civil structural health monitoring, stakeholders need to know which operational predictor holds greater explanatory power when forecasting concrete compliance.
+
+`scikit-learn` measures Feature Importance via **Mean Decrease in Impurity (MDI)**—tracking how much each feature reduces Gini impurity across all decision trees in the forest.
+
+---
+
+### 3. Model Execution & Feature Importance Results
+
+```text
+Accuracy Score: 1.0 (100.0%)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00         1
+           1       1.00      1.00      1.00         2
+
+    accuracy                           1.00         3
+   macro avg       1.00      1.00      1.00         3
+weighted avg       1.00      1.00      1.00         3
+```
+
+#### Empirical Feature Importance Table
+
+| Rank | Feature Name | Feature Description | Relative Importance | Share (%) |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | `ndt_ultrasonic_velocity` | Ultrasonic Pulse Velocity (m/s) | **0.5402** | **54.02%** |
+| **2** | `curing_days` | Curing Duration Age (Days) | **0.4598** | **45.98%** |
+
+---
+
+### 4. Technical & Engineering Domain Insights
+1. **Primary Physical Predictor**: **Ultrasonic Pulse Velocity (`ndt_ultrasonic_velocity`)** dominates feature importance at **54.02%**. This aligns with structural non-destructive testing principles—acoustic wave speed directly measures internal concrete density, compaction uniformity, and air void ratio.
+2. **Temporal Baseline Support**: **Curing Age (`curing_days`)** contributes **45.98%** to the model, acting as a secondary temporal gate to differentiate early 7-day hydration stages from 28-day characteristic design maturity.
+
+---
+
 ## 🚀 How to Run
 
-Execute the predictive modeling script from the project root:
+You can execute the predictive modeling scripts from the project root:
 
 ```bash
+# Run Module 01: Logistic Regression Baseline
 python MACHINE_LEARNING/01_predictive_modeling.py
+
+# Run Module 02: Random Forest & Feature Importance
+python MACHINE_LEARNING/02_random_forest_model.py
 ```
+
