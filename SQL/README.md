@@ -133,6 +133,46 @@ When executed against `construction_project.db`, the query returns:
 1. **High-Performance Grouting**: The *Renew WTG Grouting Repair* project shows a **100% pass rate** with an exceptional average compressive strength of **58.40 MPa**, well exceeding the 40.0 MPa target due to high-strength epoxy grout specification (Fosroc Nitomortar).
 2. **Curing Timeline Variance Analysis**: The retrofitting sites (GAL06, GAL07, GAL33) show a **50.0% pass rate**. Domain analysis reveals this is driven by test scheduling: each site records one **7-day test** ($\approx 30.5 - 32.1 \text{ MPa}$) and one **28-day test** ($\approx 43.1 - 45.2 \text{ MPa}$). Evaluated statically against the final 28-day standard of $40.0 \text{ MPa}$, 7-day curing logs naturally fall below threshold, highlighting an opportunity for future query enhancement to partition compliance thresholds by curing duration (`activity_type`).
 
+### 4. BOQ Cost Distribution & Major Expense Analysis (`04_boq_cost_distribution.sql`)
+
+#### Business Context
+In civil construction contracts, a **Bill of Quantities (BOQ)** breaks down total project scope into itemized work packages (e.g., earthwork excavation, rebar anchoring, structural steel fabrication, high-strength grouting). Commercial leads and project managers need to isolate **high-value line items** ($\ge ₹50,000.00$) and evaluate what percentage of the overall contract value each item consumes. This identifies cost concentration risks and ensures material procurement is closely monitored.
+
+#### SQL Technical Implementation
+* **Multi-Table Relational Join**: Joins `Projects` (`p`), `Work_Orders` (`wo`), and `BOQ_Items` (`boq`) across foreign key relationships (`project_id` and `work_order_id`).
+* **Derived Percentage Share**: Calculates `ROUND(boq.estimated_total_cost * 100.0 / wo.total_contract_value, 2)` to measure individual line item cost share against total project budget.
+* **Cost Threshold Filtering & Ranking**: Applies `WHERE boq.estimated_total_cost >= 50000.0` and sorts results with `ORDER BY boq.estimated_total_cost DESC`.
+
+```sql
+SELECT 
+    p.project_name, 
+    boq.description_of_work, 
+    boq.unit_rate, 
+    boq.estimated_quantity,
+    boq.estimated_total_cost,
+    ROUND(boq.estimated_total_cost * 100.0 / wo.total_contract_value, 2) AS boq_cost_share_pct
+FROM Projects p
+JOIN Work_Orders wo ON wo.project_id = p.project_id
+JOIN BOQ_Items boq ON boq.work_order_id = wo.work_order_id
+WHERE boq.estimated_total_cost >= 50000.0
+ORDER BY boq.estimated_total_cost DESC;
+```
+
+#### Query Execution Results
+When executed against `construction_project.db`, the query identifies **41 high-value BOQ items**. The top items by total cost are summarized below:
+
+| Project Name | Description of Work | Unit Rate (₹) | Quantity | Total Cost (₹) | Budget Share (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **WTG Foundation Retrofitting - GAL33** | EP 10 High Strength Expandable Grout | ₹782.00 | 500 kg | **₹3,91,000.00** | **30.42%** |
+| **Renew Storage Shed - Patan** | Supplying & Erection of Structural Steel | ₹7,926.36 | 22 MT | **₹1,74,380.00** | **42.53%** |
+| **WTG Foundation Retrofitting - GAL33** | High Tensile Stud Fixing & Rebar Anchor | ₹4,534.97 | 38 Nos | **₹1,72,329.00** | **13.41%** |
+| **Renew Storage Shed - Patan** | Galvanized Profile Roofing Sheets | ₹8,456.00 | 18.5 m² | **₹1,56,436.00** | **38.15%** |
+| **WTG Foundation Retrofitting - GAL33** | Ultra High Strength Micro-Concrete (M80) | ₹1,639.00 | 50 m³ | **₹81,950.00** | **6.38%** |
+
+#### Key Engineering & Financial Insights
+1. **Budget Concentration Risk**: For *Renew Storage Shed - Patan*, structural steel fabrication alone accounts for **42.53%** of the entire contract budget (₹1.74L out of ₹4.10L total). Any market price volatility or steel supply chain delay directly impacts overall project profitability.
+2. **High-Tech Material Allocation**: For *WTG Foundation Retrofitting - GAL33*, specialized high-strength expandable grout (Fosroc Nitomortar EP10) represents **30.42%** of the project value (₹3.91L out of ₹12.85L). This demonstrates that structural rehabilitation projects heavily allocate budget toward technical specialty chemical materials rather than standard bulk earthworks.
+
 ---
 
 ## 🚀 How to Run Queries
@@ -148,4 +188,8 @@ python SQL/run_sql.py SQL/02_vendor_risk_cte.sql
 
 # Run Challenge 3: Quality Compliance Pass Rates
 python SQL/run_sql.py SQL/03_quality_pass_rate.sql
+
+# Run Challenge 4: BOQ Cost Distribution & Major Expense Analysis
+python SQL/run_sql.py SQL/04_boq_cost_distribution.sql
 ```
+
