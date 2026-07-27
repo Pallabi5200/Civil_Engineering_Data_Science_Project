@@ -173,6 +173,53 @@ When executed against `construction_project.db`, the query identifies **41 high-
 1. **Budget Concentration Risk**: For *Renew Storage Shed - Patan*, structural steel fabrication alone accounts for **42.53%** of the entire contract budget (₹1.74L out of ₹4.10L total). Any market price volatility or steel supply chain delay directly impacts overall project profitability.
 2. **High-Tech Material Allocation**: For *WTG Foundation Retrofitting - GAL33*, specialized high-strength expandable grout (Fosroc Nitomortar EP10) represents **30.42%** of the project value (₹3.91L out of ₹12.85L). This demonstrates that structural rehabilitation projects heavily allocate budget toward technical specialty chemical materials rather than standard bulk earthworks.
 
+### 5. Top-N BOQ Item Ranking Per Project (`05_top_items_per_project.sql`)
+
+#### Business Context
+While global cost sorting highlights top expenses across the entire portfolio, executive project directors need **localized project-level visibility**—specifically isolating the Top 2 major cost drivers for *each individual site*. This enables site engineers to focus value engineering and procurement audits on the specific items that dominate each project's cost structure.
+
+#### SQL Technical Implementation
+* **Common Table Expression (CTE)**: Defines `RankedItems` to partition dataset evaluation by project.
+* **Window Ranking Function (`DENSE_RANK`)**: Computes `DENSE_RANK() OVER (PARTITION BY p.project_name ORDER BY boq.estimated_total_cost DESC) AS item_rank`.
+* **Subquery Scope Filtering**: Wraps the window function within the CTE and applies `WHERE item_rank <= 2` in the outer query, bypassing SQL's execution order restriction where `WHERE` clauses execute prior to windowing functions.
+
+```sql
+WITH RankedItems AS (
+    SELECT 
+        p.project_name, 
+        boq.description_of_work, 
+        boq.estimated_total_cost,
+        DENSE_RANK() OVER (
+            PARTITION BY p.project_name 
+            ORDER BY boq.estimated_total_cost DESC
+        ) AS item_rank
+    FROM Projects p 
+    JOIN Work_Orders wo ON p.project_id = wo.project_id
+    JOIN BOQ_Items boq ON wo.work_order_id = boq.work_order_id
+)
+SELECT * 
+FROM RankedItems
+WHERE item_rank <= 2;
+```
+
+#### Query Execution Results
+When executed against `construction_project.db`, the query returns exactly **8 rows** representing the top 2 cost drivers across all 4 project sites:
+
+| Project Name | Description of Work | Total Cost (₹) | Item Rank |
+| :--- | :--- | :--- | :--- |
+| **Renew Storage Shed - Jaglur** | Structural Steel Erection & Fabrication | **₹10,00,440.00** | **1** |
+| **Renew Storage Shed - Jaglur** | M-25 Reinforced Concrete Work | **₹5,51,541.00** | **2** |
+| **WTG Foundation Retrofitting - GAL33** | Pedestal Concreting (C30/M37 Mix) | **₹10,73,650.00** | **1** |
+| **WTG Foundation Retrofitting - GAL33** | Rebar Steel Work (16mm & 20mm BBS) | **₹8,32,324.00** | **2** |
+| **Renew Storage Shed - Patan** | Structural Steel Fabrication & Erection | **₹2,85,200.00** | **1** |
+| **Renew Storage Shed - Patan** | Foundation PCC Concrete (1:3:6 Mix) | **₹1,44,548.68** | **2** |
+| **Renew Storage Shed - Otha Ph 3** | Structural Steel Fabrication & Erection | **₹2,36,800.00** | **1** |
+| **Renew Storage Shed - Otha Ph 3** | TMT Rebar Reinforcement Steel | **₹88,354.50** | **2** |
+
+#### Key Engineering & Financial Insights
+1. **Primary Structural Driver Uniformity**: Across all three storage shed projects (Jaglur, Patan, Otha), **Structural Steel Fabrication** consistently claims Rank #1, followed by Concrete / Rebar Work as Rank #2. This uniform cost hierarchy confirms that structural steel framing is the primary expenditure driver across light industrial building projects.
+2. **Foundation Retrofitting Dominance**: For wind turbine generator foundation retrofitting (GAL33), **Pedestal Concreting (₹10.73L)** and **Rebar Anchor Steel Work (₹8.32L)** occupy Ranks #1 and #2 respectively, demonstrating that heavy structural repair projects are heavily weighted toward deep foundation volume and high-grade rebar density.
+
 ---
 
 ## 🚀 How to Run Queries
@@ -191,5 +238,9 @@ python SQL/run_sql.py SQL/03_quality_pass_rate.sql
 
 # Run Challenge 4: BOQ Cost Distribution & Major Expense Analysis
 python SQL/run_sql.py SQL/04_boq_cost_distribution.sql
+
+# Run Challenge 5: Top-N BOQ Item Ranking Per Project
+python SQL/run_sql.py SQL/05_top_items_per_project.sql
 ```
+
 
