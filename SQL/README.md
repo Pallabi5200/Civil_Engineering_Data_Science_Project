@@ -222,7 +222,7 @@ When executed against `construction_project.db`, the query returns exactly **8 r
 
 ---
 
-## 🚀 How to Run Queries
+##  How to Run Queries
 
 You can execute any SQL script directly from the project root using the provided CLI helper runner:
 
