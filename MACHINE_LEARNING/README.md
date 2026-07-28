@@ -172,7 +172,7 @@ python MACHINE_LEARNING/04_damage_multiclass.py
 
 ---
 
-## Technical Overview & Model Architecture (`04_damage_multiclass.py`)
+##  Overview & Model Architecture (`04_damage_multiclass.py`)
 
 ### 1. Business Context & Engineering Problem
 While binary compliance modeling evaluates concrete strength, wind turbine foundations and structural towers require multi-level defect tracking. Physical inspection logs in `Damage_Reports` categorize structural damage on an ordinal scale ($1$ to $5$ severity). Automated multi-class classification standardizes severity assessments across maintenance teams and flags high-risk structural defects.
@@ -214,10 +214,14 @@ Confusion Matrix:
 
 ---
 
-### 4. Technical Interview Callouts & Small-Sample Insights
+### 4. Insights
 
 1. **Handling Small-Sample Class Imbalance**: In field datasets, minor or extreme classes may contain very few instances (e.g., 1 record for Class 3 vs. 17 records for Class 4). Single-instance classes prevent standard stratified cross-validation splits.
 2. **Evaluation Metrics Beyond Accuracy**: In multi-class structural risk modeling, accuracy can mask poor minority-class recall. Tracking macro and weighted F1-scores ensures severe defects are highlighted for site engineers.
+
+
+
+eers.
 
 
 
