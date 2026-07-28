@@ -49,6 +49,8 @@ Civil_Engineering_Data_Science_Project/
 ├── MACHINE_LEARNING/           # Predictive Modeling & Quality Control Pipelines
 │   ├── 01_predictive_modeling.py      # Logistic Regression compliance classifier
 │   ├── 02_random_forest_model.py      # Random Forest & Feature Importance (UPV vs Curing Age)
+│   ├── 03_hyperparameter_tuning.py    # GridSearch CV hyperparameter optimization
+│   ├── 04_damage_multiclass.py        # Multi-class structural damage severity classifier
 │   └── README.md                      # Machine Learning architecture & results documentation
 └── README.md                   # Main repository overview & business documentation
 ```
@@ -64,6 +66,8 @@ Civil_Engineering_Data_Science_Project/
 3. **Supervised Classification & Feature Importance**:
    - Predicts characteristic design strength compliance ($\ge 40.0 \text{ MPa}$) using `LogisticRegression` and `RandomForestClassifier`.
    - Feature Importance analysis established that **Ultrasonic Pulse Velocity (`ndt_ultrasonic_velocity`)** dominates predictive power (**54.02%**) over curing duration (**45.98%**).
+4. **Multi-Class Defect Severity Modeling**:
+   - Classifies structural damage severity ratings ($1$ to $5$) using encoded inspection features (`nature_of_damage`, `turbine_model`, `damaged_length_approx`) to automate site risk triage.
 
 ---
 
@@ -96,4 +100,10 @@ python MACHINE_LEARNING/01_predictive_modeling.py
 
 # Run Random Forest Classifier & Feature Importance
 python MACHINE_LEARNING/02_random_forest_model.py
+
+# Run Hyperparameter Tuning & Cross-Validation
+python MACHINE_LEARNING/03_hyperparameter_tuning.py
+
+# Run Multi-Class Damage Severity Classification
+python MACHINE_LEARNING/04_damage_multiclass.py
 ```

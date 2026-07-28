@@ -165,6 +165,59 @@ python MACHINE_LEARNING/02_random_forest_model.py
 
 # Run Module 03: Hyperparameter Tuning & Cross-Validation
 python MACHINE_LEARNING/03_hyperparameter_tuning.py
+
+# Run Module 04: Multi-Class Structural Damage Severity Classification
+python MACHINE_LEARNING/04_damage_multiclass.py
 ```
+
+---
+
+## Technical Overview & Model Architecture (`04_damage_multiclass.py`)
+
+### 1. Business Context & Engineering Problem
+While binary compliance modeling evaluates concrete strength, wind turbine foundations and structural towers require multi-level defect tracking. Physical inspection logs in `Damage_Reports` categorize structural damage on an ordinal scale ($1$ to $5$ severity). Automated multi-class classification standardizes severity assessments across maintenance teams and flags high-risk structural defects.
+
+---
+
+### 2. Feature Preprocessing & Pipeline Construction
+* **Target Feature ($y$)**: `severity_rating`
+* **Predictive Features ($X$)**:
+  - `damaged_length_approx` (Numeric measurement in meters)
+  - `nature_of_damage` (Categorical text feature e.g., *Delamination*, *Core Crack*, *Surface Erosion*)
+  - `turbine_model` (Structural specification e.g., *WTG-2.1MW*, *WTG-3.0MW*)
+* **Dropped Identifiers**: `damage_report_id`, `project_id`, `turbine_number`, `repair_recommendation`.
+* **Categorical Encoding**: `pd.get_dummies(..., drop_first=True)` converts string categories into binary indicator features.
+
+---
+
+### 3. Model Execution & Multi-Class Evaluation Results
+
+```text
+Damage_Reports extracted successfully. Total rows: 18
+
+Accuracy Score: 0.75 (75.0%)
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           3       0.00      0.00      0.00         1
+           4       0.75      1.00      0.86         3
+
+    accuracy                           0.75         4
+   macro avg       0.38      0.50      0.43         4
+weighted avg       0.56      0.75      0.64         4
+
+Confusion Matrix:
+[[0, 1],
+ [0, 3]]
+```
+
+---
+
+### 4. Technical Interview Callouts & Small-Sample Insights
+
+1. **Handling Small-Sample Class Imbalance**: In field datasets, minor or extreme classes may contain very few instances (e.g., 1 record for Class 3 vs. 17 records for Class 4). Single-instance classes prevent standard stratified cross-validation splits.
+2. **Evaluation Metrics Beyond Accuracy**: In multi-class structural risk modeling, accuracy can mask poor minority-class recall. Tracking macro and weighted F1-scores ensures severe defects are highlighted for site engineers.
+
 
 
