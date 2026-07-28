@@ -6,7 +6,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 
 ---
 
-##  Commercial Impact & Core Business Solutions
+## Commercial Impact & Core Business Solutions
 
 | Business Domain | Operational Problem | Technical Solution | Financial & Business Impact |
 | :--- | :--- | :--- | :--- |
@@ -17,7 +17,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 
 ---
 
-##  Tech Stack & Technical Architecture
+## Tech Stack & Technical Architecture
 
 * **Core Language**: Python 3.14, ANSI SQL
 * **Data Engineering & Manipulation**: Pandas, NumPy, Regular Expressions (`re`)
@@ -27,7 +27,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 
 ---
 
-##  Repository Structure
+## Repository Structure
 
 ```text
 Civil_Engineering_Data_Science_Project/
@@ -57,7 +57,7 @@ Civil_Engineering_Data_Science_Project/
 
 ---
 
-## 🔬 Key Data Science & Feature Engineering Techniques
+## Key Data Science & Feature Engineering Techniques
 
 1. **Domain-Aware Two-Stage Imputation**:
    - Fills missing Non-Destructive Testing (NDT) Ultrasonic Pulse Velocity values using a **group-wise median** partitioned by concrete curing age (`curing_days`). This preserves subgroup distributions and prevents data leakage across curing phases.
@@ -71,7 +71,7 @@ Civil_Engineering_Data_Science_Project/
 
 ---
 
-##  How to Run the Platform Locally
+## How to Run the Platform Locally
 
 ### 1. Re-initialize Database & Run Data ETL
 ```bash

@@ -53,7 +53,7 @@ weighted avg       1.00      1.00      1.00         3
 
 ---
 
-### 5. Technical Interview Callouts & Domain Insights
+### 5. Domain & Engineering Insights
 
 1. **Physical Sound Velocity Correlation**: Ultrasonic pulse velocity combined with curing duration provides a strong physical proxy for concrete density and compressive strength. The logistic regression model effectively establishes a linear decision boundary separating under-strength 7-day curing logs ($<40 \text{ MPa}$) from compliant 28-day logs ($\ge 40 \text{ MPa}$).
 2. **Preventing Data Leakage**: Performing median imputation grouped by `curing_days` ensures that 7-day velocity distributions do not artificially inflate 28-day baseline estimates.
@@ -152,7 +152,7 @@ weighted avg       1.00      1.00      1.00         3
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 You can execute the predictive modeling scripts from the project root:
 
@@ -218,10 +218,3 @@ Confusion Matrix:
 
 1. **Handling Small-Sample Class Imbalance**: In field datasets, minor or extreme classes may contain very few instances (e.g., 1 record for Class 3 vs. 17 records for Class 4). Single-instance classes prevent standard stratified cross-validation splits.
 2. **Evaluation Metrics Beyond Accuracy**: In multi-class structural risk modeling, accuracy can mask poor minority-class recall. Tracking macro and weighted F1-scores ensures severe defects are highlighted for site engineers.
-
-
-
-eers.
-
-
-

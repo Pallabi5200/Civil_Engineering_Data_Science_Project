@@ -57,7 +57,7 @@ merged_quality_projects = pd.merge(
 
 ---
 
-## 🎯 Technical Interview Callouts & Best Practices
+## Key Data Science Insights & Best Practices
 
 1. **Why Pandas Named Aggregations?**
    * Computes multiple custom aggregate metrics in a **single vectorized pass**, significantly reducing memory footprint and runtime compared to manual dictionary construction.
