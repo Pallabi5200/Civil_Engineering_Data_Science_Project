@@ -2,7 +2,7 @@
 
 A production-grade Data Engineering, Business Analytics, and Machine Learning platform built for EPC (Engineering, Procurement, and Construction) civil infrastructure projects.
 
-This platform integrates commercial financial records (Work Orders, Purchase Orders, Tax Invoices, BOQ Line Items) with field quality inspection logs to solve three critical business challenges: **working capital liquidity bottlenecks**, **sub-contractor cost overruns**, and **28-day client payment retention delays**.
+This platform integrates commercial financial records (Work Orders, Purchase Orders, Tax Invoices, BOQ Line Items) with field quality inspection logs to solve three critical business challenges: **working capital liquidity bottlenecks**, **subcontractor cost overruns**, and **28-day client payment retention delays**.
 
 ---
 
@@ -11,7 +11,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 | Business Domain | Operational Problem | Technical Solution | Financial & Business Impact |
 | :--- | :--- | :--- | :--- |
 | **Cashflow & Revenue Realization** | Unmonitored progressive milestone billing leads to working capital deficits and site labor halts. | **Cumulative Billing Trajectories** (`SQL/01_cashflow_trajectory.sql`) using ANSI SQL Window Functions (`SUM() OVER`). | Guarantees predictable working capital flow and prevents cash flow bottlenecks during execution. |
-| **Vendor Risk & Budget Governance** | Unbudgeted sub-contractor PO variation claims exceed client contract ceilings, destroying net profit margins. | **PO Commitment Ratio Auditing** (`SQL/02_vendor_risk_cte.sql`) using CTEs and conditional risk flags (`HIGH` > 80%). | Stops cost leakage by detecting 100% budget exhaustion before approving sub-contractor variations. |
+| **Vendor Risk & Budget Governance** | Unbudgeted subcontractor PO variation claims exceed client contract ceilings, destroying net profit margins. | **PO Commitment Ratio Auditing** (`SQL/02_vendor_risk_cte.sql`) using CTEs and conditional risk flags (`HIGH` > 80%). | Stops cost leakage by detecting 100% budget exhaustion before approving subcontractor variations. |
 | **Material Procurement Strategy** | Inflation spikes in bulk materials (structural steel, high-grade grout) erode project profitability. | **BOQ Cost Distribution & Top-N Ranking** (`SQL/04_boq_cost_distribution.sql`, `SQL/05_top_items_per_project.sql`). | Pinpoints top cost drivers per site (e.g. steel at 42.53% of shed budget) to lock in bulk supplier discounts. |
 | **Accelerated Payment Collection** | Clients withhold 10-30% retention payments for 28 days until destructive concrete cube tests cure. | **Predictive Non-Destructive Quality ML** (`MACHINE_LEARNING/01_predictive_modeling.py`, `02_random_forest_model.py`). | Uses Ultrasonic Pulse Velocity (UPV) to forecast 28-day compliance with 100% precision, **accelerating client billing cycles by up to 21–28 days**. |
 | **Executive Intelligence & ML Serving** | C-suite executives lack real-time visibility across multi-site financial progress and live ML what-if model simulation. | **Interactive Streamlit & Plotly Dashboard** (`DASHBOARD/app.py`). | Live mobile/web dashboard delivering instant KPI summaries, vendor tables, and real-time ML quality prediction sliders. |
