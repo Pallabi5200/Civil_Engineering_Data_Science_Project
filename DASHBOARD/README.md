@@ -35,14 +35,14 @@ It pulls data directly from the project database (`construction_project.db`) and
 
 ---
 
-## Interactive Visualizations (Tabs)
+## Interactive Visualizations & Machine Learning Serving (4 Tabs)
 
-The dashboard includes three interactive Plotly charts organized into clean tabs:
+The dashboard includes four interactive Plotly & Machine Learning tabs:
 
-### Tab 1: Commercial Financial Trajectory
-* **Type**: Grouped Bar Chart
-* **Function**: Compares Contract Value Ceiling (Blue), Vendor PO Commitments (Orange), and Total Billed Invoices (Green) side-by-side for each site.
-* **Insight**: Shows executives which project sites are actively generating revenue versus those still in early mobilization.
+### Tab 1: Commercial Financial Trajectory & Vendor Risk Table
+* **Type**: Grouped Bar Chart + Vendor Performance Data Table
+* **Function**: Compares Contract Value Ceiling (Blue), Vendor PO Commitments (Orange), and Total Billed Invoices (Green) side-by-side for each site, alongside an enterprise Vendor Procurement Performance table.
+* **Insight**: Shows executives which project sites are actively generating revenue vs those in early mobilization, while auditing subcontractor commitments.
 
 ### Tab 2: Quality & Strength Audit
 * **Type**: NDT Scatter Plot with Specification Threshold
@@ -54,14 +54,21 @@ The dashboard includes three interactive Plotly charts organized into clean tabs
 * **Function**: Displays physical structural inspection logs grouped by severity rating (1 = Minor, 5 = Critical) and defect type (e.g. surface cracking, foundation erosion).
 * **Insight**: Helps site engineers prioritize urgent repairs before structural damage escalates.
 
+### Tab 4: Live ML Quality & Damage Predictor
+* **Type**: Interactive What-If Machine Learning Model Predictor
+* **Function**: Uses Random Forest classification models to predict 28-day concrete strength compliance and structural damage severity live based on user slider inputs (UPV velocity, curing age, crack length).
+* **Insight**: Demonstrates live ML model serving to non-technical business leaders and recruiters.
+
 ---
 
-## Tech Stack
+## Tech Stack & Power BI Architecture
 
 * **Frontend Framework**: Streamlit
 * **Data Visualization**: Plotly Express & Plotly Graph Objects
+* **Machine Learning**: Scikit-Learn (`RandomForestClassifier`)
 * **Data Pipeline**: Pandas, SQLite3
 * **Database**: `construction_project.db`
+* **Enterprise Power BI Specification**: Refer to [`DASHBOARD/POWER_BI/README.md`](file:///c:/Users/vijay/DataScienceProjectForCivilEngineeringFirm/Civil_Engineering_Data_Science_Project/DASHBOARD/POWER_BI/README.md) for Star Schema model architecture and DAX measures.
 
 ---
 

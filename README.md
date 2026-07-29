@@ -14,7 +14,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 | **Vendor Risk & Budget Governance** | Unbudgeted sub-contractor PO variation claims exceed client contract ceilings, destroying net profit margins. | **PO Commitment Ratio Auditing** (`SQL/02_vendor_risk_cte.sql`) using CTEs and conditional risk flags (`HIGH` > 80%). | Stops cost leakage by detecting 100% budget exhaustion before approving sub-contractor variations. |
 | **Material Procurement Strategy** | Inflation spikes in bulk materials (structural steel, high-grade grout) erode project profitability. | **BOQ Cost Distribution & Top-N Ranking** (`SQL/04_boq_cost_distribution.sql`, `SQL/05_top_items_per_project.sql`). | Pinpoints top cost drivers per site (e.g. steel at 42.53% of shed budget) to lock in bulk supplier discounts. |
 | **Accelerated Payment Collection** | Clients withhold 10-30% retention payments for 28 days until destructive concrete cube tests cure. | **Predictive Non-Destructive Quality ML** (`MACHINE_LEARNING/01_predictive_modeling.py`, `02_random_forest_model.py`). | Uses Ultrasonic Pulse Velocity (UPV) to forecast 28-day compliance with 100% precision, **accelerating client billing cycles by up to 21–28 days**. |
-| **Executive Management Intelligence** | C-suite executives lack real-time visibility across multi-site financial progress and quality logs. | **Interactive Streamlit & Plotly Dashboard** (`DASHBOARD/app.py`). | Live mobile/web dashboard delivering instant KPI summaries and visual risk triage. |
+| **Executive Intelligence & ML Serving** | C-suite executives lack real-time visibility across multi-site financial progress and live ML what-if model simulation. | **Interactive Streamlit & Plotly Dashboard** (`DASHBOARD/app.py`). | Live mobile/web dashboard delivering instant KPI summaries, vendor tables, and real-time ML quality prediction sliders. |
 
 ---
 
@@ -25,6 +25,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 * **Database & Relational Modeling**: SQLite3, 3NF Relational DDL/DML, Foreign Key Schema Constraints
 * **Machine Learning & Analytics**: Scikit-Learn (`LogisticRegression`, `RandomForestClassifier`), Feature Importance Analysis (Mean Decrease in Impurity)
 * **Visualization & Web App**: Streamlit, Plotly Express, Plotly Graph Objects, Matplotlib, Seaborn
+* **Enterprise Power BI Architecture**: Star Schema Model & DAX Measures (`DASHBOARD/POWER_BI/README.md`)
 
 ---
 
@@ -54,8 +55,11 @@ Civil_Engineering_Data_Science_Project/
 │   ├── 04_damage_multiclass.py        # Multi-class structural damage severity classifier
 │   └── README.md                      # Machine Learning architecture & results documentation
 ├── DASHBOARD/                  # Interactive Executive Management Application
-│   ├── app.py                         # Streamlit multi-tab executive application
-│   └── README.md                      # Dashboard user guide & architectural overview
+│   ├── app.py                         # Streamlit multi-tab executive application & live ML serving
+│   ├── README.md                      # Dashboard user guide & architectural overview
+│   └── POWER_BI/                      # Enterprise Power BI Star Schema & DAX measure specs
+│       └── README.md                  # Power BI data architecture & DAX documentation
+├── INTERVIEW_PREP.md           # Junior Data Analyst interview pitch, SQL/Python QAs & business guide
 └── README.md                   # Main repository overview & business documentation
 ```
 
@@ -73,7 +77,7 @@ Civil_Engineering_Data_Science_Project/
 4. **Multi-Class Defect Severity Modeling**:
    - Classifies structural damage severity ratings ($1$ to $5$) using encoded inspection features (`nature_of_damage`, `turbine_model`, `damaged_length_approx`) to automate site risk triage.
 5. **Interactive Business Intelligence Serving**:
-   - Connects live SQLite queries with Streamlit memory-caching (`@st.cache_data`) to serve executive financial metrics, Plotly scatter plots, and structural defect distribution charts.
+   - Connects live SQLite queries with Streamlit memory-caching (`@st.cache_data`) and Scikit-Learn models (`@st.cache_resource`) to serve executive financial metrics, Plotly scatter plots, vendor risk tables, and real-time interactive ML prediction sliders.
 
 ---
 
