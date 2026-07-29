@@ -6,6 +6,10 @@
 .DS_Store
 Thumbs.db
 
+# Ignore Python cache and bytecode
+__pycache__/
+*.pyc
+
 # Ignore local python environments or credentials if added later
 .venv/
 *.env

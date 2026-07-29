@@ -14,6 +14,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 | **Vendor Risk & Budget Governance** | Unbudgeted sub-contractor PO variation claims exceed client contract ceilings, destroying net profit margins. | **PO Commitment Ratio Auditing** (`SQL/02_vendor_risk_cte.sql`) using CTEs and conditional risk flags (`HIGH` > 80%). | Stops cost leakage by detecting 100% budget exhaustion before approving sub-contractor variations. |
 | **Material Procurement Strategy** | Inflation spikes in bulk materials (structural steel, high-grade grout) erode project profitability. | **BOQ Cost Distribution & Top-N Ranking** (`SQL/04_boq_cost_distribution.sql`, `SQL/05_top_items_per_project.sql`). | Pinpoints top cost drivers per site (e.g. steel at 42.53% of shed budget) to lock in bulk supplier discounts. |
 | **Accelerated Payment Collection** | Clients withhold 10-30% retention payments for 28 days until destructive concrete cube tests cure. | **Predictive Non-Destructive Quality ML** (`MACHINE_LEARNING/01_predictive_modeling.py`, `02_random_forest_model.py`). | Uses Ultrasonic Pulse Velocity (UPV) to forecast 28-day compliance with 100% precision, **accelerating client billing cycles by up to 21–28 days**. |
+| **Executive Management Intelligence** | C-suite executives lack real-time visibility across multi-site financial progress and quality logs. | **Interactive Streamlit & Plotly Dashboard** (`DASHBOARD/app.py`). | Live mobile/web dashboard delivering instant KPI summaries and visual risk triage. |
 
 ---
 
@@ -23,7 +24,7 @@ This platform integrates commercial financial records (Work Orders, Purchase Ord
 * **Data Engineering & Manipulation**: Pandas, NumPy, Regular Expressions (`re`)
 * **Database & Relational Modeling**: SQLite3, 3NF Relational DDL/DML, Foreign Key Schema Constraints
 * **Machine Learning & Analytics**: Scikit-Learn (`LogisticRegression`, `RandomForestClassifier`), Feature Importance Analysis (Mean Decrease in Impurity)
-* **Visualization & Reporting**: Matplotlib, Seaborn
+* **Visualization & Web App**: Streamlit, Plotly Express, Plotly Graph Objects, Matplotlib, Seaborn
 
 ---
 
@@ -52,6 +53,9 @@ Civil_Engineering_Data_Science_Project/
 │   ├── 03_hyperparameter_tuning.py    # GridSearch CV hyperparameter optimization
 │   ├── 04_damage_multiclass.py        # Multi-class structural damage severity classifier
 │   └── README.md                      # Machine Learning architecture & results documentation
+├── DASHBOARD/                  # Interactive Executive Management Application
+│   ├── app.py                         # Streamlit multi-tab executive application
+│   └── README.md                      # Dashboard user guide & architectural overview
 └── README.md                   # Main repository overview & business documentation
 ```
 
@@ -68,6 +72,8 @@ Civil_Engineering_Data_Science_Project/
    - Feature Importance analysis established that **Ultrasonic Pulse Velocity (`ndt_ultrasonic_velocity`)** dominates predictive power (**54.02%**) over curing duration (**45.98%**).
 4. **Multi-Class Defect Severity Modeling**:
    - Classifies structural damage severity ratings ($1$ to $5$) using encoded inspection features (`nature_of_damage`, `turbine_model`, `damaged_length_approx`) to automate site risk triage.
+5. **Interactive Business Intelligence Serving**:
+   - Connects live SQLite queries with Streamlit memory-caching (`@st.cache_data`) to serve executive financial metrics, Plotly scatter plots, and structural defect distribution charts.
 
 ---
 
@@ -106,4 +112,9 @@ python MACHINE_LEARNING/03_hyperparameter_tuning.py
 
 # Run Multi-Class Damage Severity Classification
 python MACHINE_LEARNING/04_damage_multiclass.py
+```
+
+### 5. Launch Executive Streamlit Dashboard
+```bash
+python -m streamlit run DASHBOARD/app.py
 ```
