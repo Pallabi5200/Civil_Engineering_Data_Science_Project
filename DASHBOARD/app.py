@@ -348,8 +348,9 @@ with tab4:
         input_curing = st.slider("Concrete Curing Age (Days):", min_value=7, max_value=28, value=28, step=7)
         
         if quality_model is not None:
-            pred_class = quality_model.predict([[input_upv, input_curing]])[0]
-            pred_proba = quality_model.predict_proba([[input_upv, input_curing]])[0]
+            input_df_qual = pd.DataFrame([[input_upv, input_curing]], columns=["ndt_ultrasonic_velocity", "curing_days"])
+            pred_class = quality_model.predict(input_df_qual)[0]
+            pred_proba = quality_model.predict_proba(input_df_qual)[0]
             
             st.markdown("**Random Forest Model Verdict:**")
             if pred_class == 1:
@@ -366,7 +367,8 @@ with tab4:
         input_length = st.slider("Approximate Damaged Crack Length (Meters):", min_value=0.5, max_value=15.0, value=4.5, step=0.5)
         
         if damage_model is not None:
-            pred_severity = damage_model.predict([[input_length]])[0]
+            input_df_dmg = pd.DataFrame([[input_length]], columns=["damaged_length_approx"])
+            pred_severity = damage_model.predict(input_df_dmg)[0]
             
             st.markdown("**Predicted Severity Rating (1-5 Scale):**")
             if pred_severity >= 4:
