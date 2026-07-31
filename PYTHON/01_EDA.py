@@ -67,7 +67,9 @@ df_outliers = df_quality[(df_quality['cube_test_result_mpa'] < lower_limit) | (d
 print("\nThe number of outliers in the dataframe:")
 print(df_outliers.shape[0])
 
-sns.boxplot(data=df_quality, x='activity_type', y='cube_test_result_mpa')
+ax = sns.boxplot(data=df_quality, x='activity_type', y='cube_test_result_mpa', hue='activity_type', legend=False, palette='Set2')
+plt.xticks(rotation=15, ha='right')
+plt.tight_layout()
 plt.savefig(os.path.join(BASE_DIR, "quality_eda_summary.png"))
 plt.close()
 
