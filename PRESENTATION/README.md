@@ -1,6 +1,6 @@
 # Presentation Guide & Reference Notes
 
-This document contains detailed presentation notes for each slide of the Civil Construction Intelligence & Analytics Engine presentation deck (`Civil_Project.pptx`), along with key business impact notes for civil engineering contractors.
+This document contains detailed presentation notes for each slide of the Civil Construction Intelligence & Analytics Engine presentation deck (`Civil_Project.pptx` and `Civil_Project.pdf`), along with key business impact notes for civil engineering contractors.
 
 ---
 
